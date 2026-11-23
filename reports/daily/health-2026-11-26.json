@@ -1,12 +1,14 @@
 {
   "day": "2026-11-26",
-  "generated_at": "2026-11-23T09:59:36.244Z",
+  "generated_at": "2026-11-23T11:57:51.516Z",
   "totals": {
     "accounts": 15,
     "healthy": 12,
     "warning": 1,
-    "failing": 2
+    "failing": 2,
+    "not_checked": 0
   },
+  "not_checked": [],
   "alerts": [
     {
       "account_id": "IG-001",
@@ -41,7 +43,7 @@
   ],
   "results": [
     {
-      "id": 181,
+      "id": 46,
       "account_id": "FB-001",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -66,7 +68,7 @@
       "health": "healthy"
     },
     {
-      "id": 182,
+      "id": 47,
       "account_id": "FB-002",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -93,7 +95,7 @@
       "health": "healthy"
     },
     {
-      "id": 183,
+      "id": 48,
       "account_id": "FB-003",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -120,7 +122,7 @@
       "health": "healthy"
     },
     {
-      "id": 184,
+      "id": 49,
       "account_id": "IG-001",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -149,7 +151,7 @@
       "health": "failing"
     },
     {
-      "id": 185,
+      "id": 50,
       "account_id": "IG-002",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -174,7 +176,7 @@
       "health": "healthy"
     },
     {
-      "id": 186,
+      "id": 51,
       "account_id": "IG-003",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -201,7 +203,7 @@
       "health": "healthy"
     },
     {
-      "id": 187,
+      "id": 52,
       "account_id": "LI-001",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -226,7 +228,7 @@
       "health": "healthy"
     },
     {
-      "id": 188,
+      "id": 53,
       "account_id": "LI-002",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -252,7 +254,7 @@
       "health": "healthy"
     },
     {
-      "id": 189,
+      "id": 54,
       "account_id": "LI-003",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -280,7 +282,7 @@
       "health": "warning"
     },
     {
-      "id": 190,
+      "id": 55,
       "account_id": "TT-001",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -300,13 +302,13 @@
       "anomalies": [],
       "message": "OK",
       "attempts": 1,
-      "latency_ms": 1,
+      "latency_ms": 0,
       "run_mode": "simulated-clock",
       "platform": "TikTok",
       "health": "healthy"
     },
     {
-      "id": 191,
+      "id": 56,
       "account_id": "TT-002",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -334,7 +336,7 @@
       "health": "failing"
     },
     {
-      "id": 192,
+      "id": 57,
       "account_id": "TT-003",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -360,7 +362,7 @@
       "health": "healthy"
     },
     {
-      "id": 193,
+      "id": 58,
       "account_id": "X-001",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -386,7 +388,7 @@
       "health": "healthy"
     },
     {
-      "id": 194,
+      "id": 59,
       "account_id": "X-002",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",
@@ -413,7 +415,7 @@
       "health": "healthy"
     },
     {
-      "id": 195,
+      "id": 60,
       "account_id": "X-003",
       "checked_at": "2026-11-26T12:00:00.000Z",
       "check_day": "2026-11-26",

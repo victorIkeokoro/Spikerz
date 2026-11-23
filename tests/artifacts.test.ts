@@ -1,4 +1,4 @@
-import { mkdtempSync, writeFileSync, readFileSync, existsSync } from "node:fs";
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, existsSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
@@ -48,6 +48,19 @@ describe("artifacts and state rebuild", () => {
     expect(fresh.healthChecks()).toEqual(first.healthChecks().map((r) => ({ ...r, id: expect.any(Number) })));
     expect(fresh.get("X-001")?.connection_status).toBe("disconnected");
     expect(fresh.auditTrail().some((e) => e.action === "connect" && e.detail.includes("shot.png"))).toBe(true);
+  });
+
+  it("removes issue files that no longer correspond to an issue", async () => {
+    const paths = workspace();
+    const store = memoryStore();
+    rebuildState(store, paths);
+    await runHealthCheck(store, new MockPlatformClient({ monitoring_start: "2026-01-01", events: [] }), { day: "2026-01-01", sleep: noSleep });
+    mkdirSync(join(paths.docsDir, "issues"), { recursive: true });
+    writeFileSync(join(paths.docsDir, "issues", "ISS-009.md"), "stale");
+    writeFileSync(join(paths.docsDir, "issues", "notes.md"), "keep me");
+    writeSummaryArtifacts(store, paths);
+    expect(existsSync(join(paths.docsDir, "issues", "ISS-009.md"))).toBe(false);
+    expect(existsSync(join(paths.docsDir, "issues", "notes.md"))).toBe(true);
   });
 
   it("writes the dashboard, final report, issue log, maintenance log and inventory export", async () => {

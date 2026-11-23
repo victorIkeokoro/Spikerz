@@ -57,3 +57,20 @@ async function defaultPost(url: string, body: string): Promise<void> {
   const res = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, body });
   if (!res.ok) throw new Error(`alert webhook responded ${res.status}`);
 }
+
+/**
+ * Like sendAlerts, but a webhook failure is returned instead of thrown.
+ * Alerting is best-effort: it must never fail a health check whose results
+ * are already saved.
+ */
+export async function notify(
+  alerts: DayAlert[],
+  webhookUrl: string | undefined,
+  post?: (url: string, body: string) => Promise<void>
+): Promise<{ sent: number; error?: string }> {
+  try {
+    return { sent: await sendAlerts(alerts, webhookUrl, post) };
+  } catch (err) {
+    return { sent: 0, error: (err as Error).message };
+  }
+}

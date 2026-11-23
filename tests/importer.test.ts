@@ -35,6 +35,22 @@ describe("inventory import", () => {
     expect(() => parseInventory(csv, "csv")).toThrow(/Secrets must not be stored/);
   });
 
+  it.each(["accessToken", "authToken", "sessionCookie", "passwordHash", "apiKey", "API_KEY", "private-key", "pwd", "sessionId"])(
+    "rejects the secret-like %s column regardless of naming convention",
+    (field) => {
+      const csv = `account_id,platform,${field},credential_ref_id\nX-001,X,sensitive-value,CRED-X-001\n`;
+      expect(() => parseInventory(csv, "csv")).toThrow(/Secrets must not be stored/);
+    }
+  );
+
+  it("rejects unknown columns instead of silently dropping them", () => {
+    const csv = `account_id,platform,credential_ref_id,login_hint\nX-001,X,CRED-X-001,whatever\n`;
+    expect(() => parseInventory(csv, "csv")).toThrow(/unknown field\(s\): login_hint/);
+    expect(() => parseInventory(JSON.stringify([{ account_id: "X-001", platform: "X", credential_ref_id: "C", extra: 1 }]), "json")).toThrow(
+      /unknown field\(s\): extra/
+    );
+  });
+
   it("reports invalid rows without aborting the valid ones", () => {
     const store = memoryStore();
     const csv = `${HEADER}\nX-001,X,profile,qa,qa,active,pending,,,,,CRED-X-001\nBAD-1,Myspace,profile,qa,qa,active,pending,,,,,CRED-B\n`;

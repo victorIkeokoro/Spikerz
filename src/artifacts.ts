@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { accountsToCsv, importFile } from "./importer.js";
 import { issueToMarkdown } from "./issues.js";
@@ -126,6 +126,15 @@ export function writeSummaryArtifacts(store: Store, paths: Paths = DEFAULT_PATHS
     "| ID | Account | Platform | Code | Severity | First seen | Status |",
     "|---|---|---|---|---|---|---|",
   ];
+  // Issue IDs are derived from history, so a re-run can yield fewer issues
+  // than before. Remove files that no longer correspond to an issue.
+  const issuesDir = join(paths.docsDir, "issues");
+  const current = new Set(final.issues.map((i) => `${i.id}.md`));
+  if (existsSync(issuesDir)) {
+    for (const f of readdirSync(issuesDir)) {
+      if (/^ISS-\d+\.md$/.test(f) && !current.has(f)) rmSync(join(issuesDir, f), { force: true });
+    }
+  }
   for (const issue of final.issues) {
     written.push(write(join(paths.docsDir, "issues", `${issue.id}.md`), issueToMarkdown(issue)));
     index.push(

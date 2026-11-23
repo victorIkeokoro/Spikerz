@@ -4,7 +4,7 @@
     "account_id": "LI-001",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -12,7 +12,7 @@
     "account_id": "LI-002",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -20,7 +20,7 @@
     "account_id": "LI-003",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -28,7 +28,7 @@
     "account_id": "FB-001",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -36,7 +36,7 @@
     "account_id": "FB-002",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -44,7 +44,7 @@
     "account_id": "FB-003",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -52,7 +52,7 @@
     "account_id": "IG-001",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -60,7 +60,7 @@
     "account_id": "IG-002",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -68,7 +68,7 @@
     "account_id": "IG-003",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -76,7 +76,7 @@
     "account_id": "TT-001",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -84,7 +84,7 @@
     "account_id": "TT-002",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -92,7 +92,7 @@
     "account_id": "TT-003",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -100,7 +100,7 @@
     "account_id": "X-001",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -108,7 +108,7 @@
     "account_id": "X-002",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
@@ -116,71 +116,70 @@
     "account_id": "X-003",
     "kind": "connect",
     "actor": "qa-engineer",
-    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created",
     "evidence": "docs/connection-workflow.md"
   },
   {
     "day": "2026-11-24",
     "account_id": "X-003",
     "kind": "maintenance",
-    "actor": "qa-engineer",
-    "detail": "Reviewed RETRY_RECOVERED warning: two HTTP 429 responses, third attempt succeeded. No action; watching for recurrence."
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response to RETRY_RECOVERED (two HTTP 429 responses, third attempt succeeded): no action, watch for recurrence."
   },
   {
     "day": "2026-11-24",
     "account_id": "FB-003",
     "kind": "maintenance",
-    "actor": "qa-engineer",
-    "detail": "Confirmed pages_manage_posts missing from granted scopes. Raised with Page owner to restore the admin role."
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response to PERMISSION_MISSING: confirm which scope is missing (pages_manage_posts) and ask the Page owner to restore the admin role. Not carried out - there is no real Page or owner behind this mock account."
   },
   {
     "day": "2026-11-25",
     "account_id": "FB-003",
     "kind": "maintenance",
-    "actor": "qa-engineer",
-    "detail": "Admin role restored on Mock QA Page B and account reconnected so pages_manage_posts is re-granted. Expect clear on next check."
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response, next step: once the admin role is restored, reconnect so pages_manage_posts is re-granted. Not carried out - the scenario script clears the anomaly on the next day."
   },
   {
     "day": "2026-11-25",
     "account_id": "LI-002",
     "kind": "maintenance",
-    "actor": "qa-engineer",
-    "detail": "Token expired. Re-authorised the account to mint a new access token; opened follow-up to find out why refresh did not run."
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response to TOKEN_EXPIRED: re-authorise to mint a new access token and investigate why the refresh did not run. Not carried out - no real token exists; the scenario script clears the anomaly on the next day."
   },
   {
     "day": "2026-11-25",
     "account_id": "TT-002",
     "kind": "maintenance",
-    "actor": "qa-engineer",
-    "detail": "Account restricted by platform. Paused all tests that use TT-002; will re-check for 48h before replacing."
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response to ACCOUNT_RESTRICTED: pause tests that use TT-002 and re-check for 48h before replacing it. Not carried out."
   },
   {
     "day": "2026-11-26",
     "account_id": "IG-001",
-    "kind": "connect",
-    "actor": "qa-engineer",
-    "detail": "Reconnected through the connection workflow after the session was invalidated by a password change",
-    "evidence": "docs/connection-workflow.md"
+    "kind": "maintenance",
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response to DISCONNECTED: reconnect through the proposed connection workflow. Not carried out - no UI reconnection was performed; the scenario script clears the anomaly on the next day."
   },
   {
     "day": "2026-11-26",
     "account_id": "LI-003",
     "kind": "maintenance",
-    "actor": "qa-engineer",
-    "detail": "Token expiring in 3 days. Re-authorised proactively to avoid a disconnect."
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response to TOKEN_EXPIRING_SOON: re-authorise before the token expires. Not carried out."
   },
   {
     "day": "2026-11-27",
     "account_id": "TT-002",
     "kind": "maintenance",
-    "actor": "qa-engineer",
-    "detail": "Restriction has now lasted 3 checks (>48h). Proposed retirement via `account retire TT-002` and requested a standby TikTok test account."
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response when a restriction lasts more than 48h: retire the account with `account retire TT-002` and request a standby TikTok test account. Not carried out."
   },
   {
     "day": "2026-11-27",
     "account_id": "FB-002",
     "kind": "maintenance",
-    "actor": "qa-engineer",
-    "detail": "Mock QA Page A no longer returned for the connected user. Investigating whether the Page was unlinked or the user lost access; issue left open."
+    "actor": "scenario-script",
+    "detail": "Simulated: Runbook response to ASSET_MISSING: check whether the Page was unlinked or the connected user lost access. Not carried out; issue left open."
   }
 ]

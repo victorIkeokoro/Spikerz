@@ -20,9 +20,33 @@ export interface Issue {
   corrective_actions: AuditEntry[];
 }
 
+const CONNECTION_DEPENDENT_ANOMALIES = new Set([
+  "TOKEN_EXPIRED",
+  "TOKEN_EXPIRING_SOON",
+  "PERMISSION_MISSING",
+  "PERMISSION_UNEXPECTED",
+  "ASSET_MISSING",
+]);
+
+/** Whether this check can prove that a previously observed anomaly has cleared. */
+export function canResolve(
+  code: string,
+  row: Pick<HealthCheckResult, "anomalies" | "connection_status">
+): boolean {
+  if (row.anomalies.includes("CHECK_FAILED")) return false;
+  if (
+    CONNECTION_DEPENDENT_ANOMALIES.has(code) &&
+    (row.connection_status === "disconnected" || row.anomalies.includes("DISCONNECTED"))
+  ) {
+    return false;
+  }
+  return true;
+}
+
 /**
  * Derive issues from the health-check history: every contiguous run of days on
- * which an account shows the same failing anomaly becomes one issue.
+ * which an account shows the same failing anomaly becomes one issue. An issue
+ * stays open when a later check cannot observe whether that anomaly cleared.
  */
 export function deriveIssues(
   history: HealthCheckResult[],
@@ -70,7 +94,7 @@ export function deriveIssues(
         }
       }
       for (const [code, issue] of [...open]) {
-        if (!failing.includes(code)) {
+        if (!failing.includes(code) && canResolve(code, row)) {
           issue.resolved_on = row.check_day;
           issue.status = "resolved";
           issues.push(issue);
@@ -110,7 +134,9 @@ export function issueToMarkdown(issue: Issue): string {
   lines.push(`| First seen | ${issue.first_seen} |`);
   lines.push(`| Last seen | ${issue.last_seen} |`);
   lines.push(`| Days affected | ${issue.days_affected} |`);
-  lines.push(`| Data source | ${first.run_mode === "live" ? "live check" : "simulated-clock check"} against the mock platform layer |`);
+    lines.push(
+    `| Data source | ${first.run_mode === "live" ? "live-clock check" : "simulated-clock check"} against the mock platform layer. No real social platform or Spikerz workspace was involved. |`
+  );
   lines.push("");
   lines.push(`## Summary`);
   lines.push("");
@@ -146,7 +172,9 @@ export function issueToMarkdown(issue: Issue): string {
   lines.push("");
   lines.push(issue.recommended_action);
   lines.push("");
-  lines.push(`## Corrective actions taken`);
+  lines.push(`## Corrective actions`);
+  lines.push("");
+  lines.push(`Entries starting "Simulated:" describe the runbook response for this anomaly. They were not carried out.`);
   lines.push("");
   if (issue.corrective_actions.length === 0) {
     lines.push(`_None recorded yet._`);

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildAlerts, sendAlerts } from "../src/alerts.js";
+import { buildAlerts, notify, sendAlerts } from "../src/alerts.js";
 import { runHealthCheck } from "../src/healthcheck.js";
 import { parseCsv } from "../src/importer.js";
 import { deriveIssues, issueToMarkdown } from "../src/issues.js";
@@ -35,7 +35,7 @@ async function seeded(): Promise<Store> {
 describe("daily report", () => {
   it("summarises one day and lists every account", async () => {
     const report = buildDailyReport(await seeded(), "2026-01-02");
-    expect(report.totals).toEqual({ accounts: 2, healthy: 0, warning: 1, failing: 1 });
+    expect(report.totals).toEqual({ accounts: 2, healthy: 0, warning: 1, failing: 1, not_checked: 0 });
     expect(report.results.map((r) => [r.account_id, r.health])).toEqual([
       ["LI-001", "failing"],
       ["X-001", "warning"],
@@ -77,6 +77,35 @@ describe("alerts", () => {
   });
 });
 
+describe("alert webhook failures", () => {
+  it("reports a failing webhook instead of throwing, so the health check still completes", async () => {
+    const store = await seeded();
+    const alerts = buildDailyReport(store, "2026-01-02").alerts;
+    const failing = async () => {
+      throw new Error("alert webhook responded 500");
+    };
+    await expect(sendAlerts(alerts, "https://hooks.example.test/x", failing)).rejects.toThrow("500");
+    expect(await notify(alerts, "https://hooks.example.test/x", failing)).toEqual({ sent: 0, error: "alert webhook responded 500" });
+    expect(await notify(alerts, undefined, failing)).toEqual({ sent: 0 });
+  });
+});
+
+describe("partial runs", () => {
+  it("lists the accounts a partial run did not check", async () => {
+    const store = memoryStore();
+    store.upsert(account());
+    store.upsert(account({ account_id: "X-001", platform: "X", credential_ref_id: "CRED-X-001" }));
+    store.upsert(account({ account_id: "X-OLD", platform: "X", status: "retired", credential_ref_id: "CRED-X-OLD" }));
+    const client = new MockPlatformClient({ monitoring_start: DAYS[0]!, events: [] });
+    await runHealthCheck(store, client, { day: DAYS[0]!, sleep: noSleep, accountIds: ["LI-001"] });
+    const report = buildDailyReport(store, DAYS[0]!);
+    expect(report.totals).toMatchObject({ accounts: 1, not_checked: 1 });
+    expect(report.not_checked).toEqual(["X-001"]);
+    expect(buildMaintenanceLog(store)).toContain("Partial run: 1 account(s) not checked");
+    expect(renderDashboard(buildFinalReport(store))).toContain("No check recorded");
+  });
+});
+
 describe("issues", () => {
   it("groups consecutive failing days into one issue and tracks resolution", async () => {
     const store = await seeded();
@@ -95,6 +124,78 @@ describe("issues", () => {
     });
     expect(issues[0]?.corrective_actions.map((a) => a.detail)).toEqual(["re-authorised"]);
     expect(issues[1]).toMatchObject({ account_id: "X-001", code: "ACCOUNT_RESTRICTED", status: "open", resolved_on: null });
+  });
+
+  it("keeps a permission issue open when a disconnected day cannot verify it", async () => {
+    const store = memoryStore();
+    store.upsert(account());
+    const client = new MockPlatformClient({
+      monitoring_start: DAYS[0]!,
+      events: [
+        { account_id: "LI-001", from_day: 1, to_day: 1, effect: "permission_removed", value: "write" },
+        { account_id: "LI-001", from_day: 2, to_day: 2, effect: "disconnected" },
+      ],
+    });
+    for (const day of DAYS.slice(0, 2)) {
+      await runHealthCheck(store, client, { day, sleep: noSleep, runMode: "simulated-clock" });
+    }
+    const issue = deriveIssues(store.healthChecks(), store.list()).find((i) => i.code === "PERMISSION_MISSING");
+    expect(issue).toMatchObject({ status: "open", resolved_on: null, last_seen: DAYS[0] });
+  });
+
+  it("keeps an issue open when a failed check cannot verify that it cleared", async () => {
+    const store = memoryStore();
+    store.upsert(account());
+    const client = new MockPlatformClient({
+      monitoring_start: DAYS[0]!,
+      events: [
+        { account_id: "LI-001", from_day: 1, to_day: 1, effect: "token_expired" },
+        { account_id: "LI-001", from_day: 2, to_day: 2, effect: "outage" },
+      ],
+    });
+    for (const day of DAYS.slice(0, 2)) {
+      await runHealthCheck(store, client, { day, sleep: noSleep, runMode: "simulated-clock" });
+    }
+    const issue = deriveIssues(store.healthChecks(), store.list()).find((i) => i.code === "TOKEN_EXPIRED");
+    expect(issue).toMatchObject({ status: "open", resolved_on: null, last_seen: DAYS[0] });
+  });
+
+  it("resolves the issue once a later check can observe the anomaly again and it is gone", async () => {
+    const store = memoryStore();
+    store.upsert(account());
+    const client = new MockPlatformClient({
+      monitoring_start: DAYS[0]!,
+      events: [
+        { account_id: "LI-001", from_day: 1, to_day: 1, effect: "permission_removed", value: "write" },
+        { account_id: "LI-001", from_day: 2, to_day: 2, effect: "disconnected" },
+      ],
+    });
+    for (const day of DAYS.slice(0, 3)) {
+      await runHealthCheck(store, client, { day, sleep: noSleep, runMode: "simulated-clock" });
+    }
+    const issue = deriveIssues(store.healthChecks(), store.list()).find((i) => i.code === "PERMISSION_MISSING");
+    expect(issue).toMatchObject({ status: "resolved", resolved_on: DAYS[2] });
+  });
+
+  it("does not report an unverifiable anomaly as cleared in the maintenance log", async () => {
+    const store = memoryStore();
+    store.upsert(account());
+    const client = new MockPlatformClient({
+      monitoring_start: DAYS[0]!,
+      events: [
+        { account_id: "LI-001", from_day: 1, to_day: 1, effect: "permission_removed", value: "write" },
+        { account_id: "LI-001", from_day: 2, to_day: 2, effect: "disconnected" },
+      ],
+    });
+    for (const day of DAYS.slice(0, 3)) {
+      await runHealthCheck(store, client, { day, sleep: noSleep, runMode: "simulated-clock" });
+    }
+    const log = buildMaintenanceLog(store);
+    const day2 = log.slice(log.indexOf("## Day 2"), log.indexOf("## Day 3"));
+    const day3 = log.slice(log.indexOf("## Day 3"));
+    expect(day2).toContain("`PERMISSION_MISSING` not assessable");
+    expect(day2).not.toContain("cleared `PERMISSION_MISSING`");
+    expect(day3).toContain("cleared `PERMISSION_MISSING`");
   });
 
   it("does not open issues for warnings", async () => {

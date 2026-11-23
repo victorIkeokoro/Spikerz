@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T09:59:36.248Z",
+  "generated_at": "2026-11-23T11:57:51.521Z",
   "days": [
     "2026-11-23",
     "2026-11-24",
@@ -464,7 +464,7 @@
   "matrix": {
     "FB-001": {
       "2026-11-23": {
-        "id": 136,
+        "id": 1,
         "account_id": "FB-001",
         "checked_at": "2026-11-23T09:37:42.328Z",
         "check_day": "2026-11-23",
@@ -488,7 +488,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 151,
+        "id": 16,
         "account_id": "FB-001",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -507,12 +507,12 @@
         "anomalies": [],
         "message": "OK",
         "attempts": 1,
-        "latency_ms": 0,
+        "latency_ms": 1,
         "run_mode": "simulated-clock",
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 166,
+        "id": 31,
         "account_id": "FB-001",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -536,7 +536,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 181,
+        "id": 46,
         "account_id": "FB-001",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -560,7 +560,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 196,
+        "id": 61,
         "account_id": "FB-001",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -586,7 +586,7 @@
     },
     "FB-002": {
       "2026-11-23": {
-        "id": 137,
+        "id": 2,
         "account_id": "FB-002",
         "checked_at": "2026-11-23T09:37:42.331Z",
         "check_day": "2026-11-23",
@@ -612,7 +612,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 152,
+        "id": 17,
         "account_id": "FB-002",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -638,7 +638,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 167,
+        "id": 32,
         "account_id": "FB-002",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -664,7 +664,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 182,
+        "id": 47,
         "account_id": "FB-002",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -690,7 +690,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 197,
+        "id": 62,
         "account_id": "FB-002",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -718,7 +718,7 @@
     },
     "FB-003": {
       "2026-11-23": {
-        "id": 138,
+        "id": 3,
         "account_id": "FB-003",
         "checked_at": "2026-11-23T09:37:42.331Z",
         "check_day": "2026-11-23",
@@ -744,7 +744,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 153,
+        "id": 18,
         "account_id": "FB-003",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -771,7 +771,7 @@
         "health": "failing"
       },
       "2026-11-25": {
-        "id": 168,
+        "id": 33,
         "account_id": "FB-003",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -798,7 +798,7 @@
         "health": "failing"
       },
       "2026-11-26": {
-        "id": 183,
+        "id": 48,
         "account_id": "FB-003",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -824,7 +824,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 198,
+        "id": 63,
         "account_id": "FB-003",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -852,7 +852,7 @@
     },
     "IG-001": {
       "2026-11-23": {
-        "id": 139,
+        "id": 4,
         "account_id": "IG-001",
         "checked_at": "2026-11-23T09:37:42.331Z",
         "check_day": "2026-11-23",
@@ -878,7 +878,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 154,
+        "id": 19,
         "account_id": "IG-001",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -904,7 +904,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 169,
+        "id": 34,
         "account_id": "IG-001",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -930,7 +930,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 184,
+        "id": 49,
         "account_id": "IG-001",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -958,7 +958,7 @@
         "health": "failing"
       },
       "2026-11-27": {
-        "id": 199,
+        "id": 64,
         "account_id": "IG-001",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -986,7 +986,7 @@
     },
     "IG-002": {
       "2026-11-23": {
-        "id": 140,
+        "id": 5,
         "account_id": "IG-002",
         "checked_at": "2026-11-23T09:37:42.331Z",
         "check_day": "2026-11-23",
@@ -1010,7 +1010,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 155,
+        "id": 20,
         "account_id": "IG-002",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -1034,7 +1034,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 170,
+        "id": 35,
         "account_id": "IG-002",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -1058,7 +1058,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 185,
+        "id": 50,
         "account_id": "IG-002",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -1082,7 +1082,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 200,
+        "id": 65,
         "account_id": "IG-002",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -1108,7 +1108,7 @@
     },
     "IG-003": {
       "2026-11-23": {
-        "id": 141,
+        "id": 6,
         "account_id": "IG-003",
         "checked_at": "2026-11-23T09:37:42.331Z",
         "check_day": "2026-11-23",
@@ -1134,7 +1134,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 156,
+        "id": 21,
         "account_id": "IG-003",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -1160,7 +1160,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 171,
+        "id": 36,
         "account_id": "IG-003",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -1186,7 +1186,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 186,
+        "id": 51,
         "account_id": "IG-003",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -1212,7 +1212,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 201,
+        "id": 66,
         "account_id": "IG-003",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -1240,7 +1240,7 @@
     },
     "LI-001": {
       "2026-11-23": {
-        "id": 142,
+        "id": 7,
         "account_id": "LI-001",
         "checked_at": "2026-11-23T09:37:42.331Z",
         "check_day": "2026-11-23",
@@ -1264,7 +1264,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 157,
+        "id": 22,
         "account_id": "LI-001",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -1288,7 +1288,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 172,
+        "id": 37,
         "account_id": "LI-001",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -1307,12 +1307,12 @@
         "anomalies": [],
         "message": "OK",
         "attempts": 1,
-        "latency_ms": 1,
+        "latency_ms": 0,
         "run_mode": "simulated-clock",
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 187,
+        "id": 52,
         "account_id": "LI-001",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -1336,7 +1336,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 202,
+        "id": 67,
         "account_id": "LI-001",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -1362,7 +1362,7 @@
     },
     "LI-002": {
       "2026-11-23": {
-        "id": 143,
+        "id": 8,
         "account_id": "LI-002",
         "checked_at": "2026-11-23T09:37:42.331Z",
         "check_day": "2026-11-23",
@@ -1387,7 +1387,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 158,
+        "id": 23,
         "account_id": "LI-002",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -1412,7 +1412,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 173,
+        "id": 38,
         "account_id": "LI-002",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -1439,7 +1439,7 @@
         "health": "failing"
       },
       "2026-11-26": {
-        "id": 188,
+        "id": 53,
         "account_id": "LI-002",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -1464,7 +1464,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 203,
+        "id": 68,
         "account_id": "LI-002",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -1491,7 +1491,7 @@
     },
     "LI-003": {
       "2026-11-23": {
-        "id": 144,
+        "id": 9,
         "account_id": "LI-003",
         "checked_at": "2026-11-23T09:37:42.331Z",
         "check_day": "2026-11-23",
@@ -1516,7 +1516,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 159,
+        "id": 24,
         "account_id": "LI-003",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -1541,7 +1541,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 174,
+        "id": 39,
         "account_id": "LI-003",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -1566,7 +1566,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 189,
+        "id": 54,
         "account_id": "LI-003",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -1593,7 +1593,7 @@
         "health": "warning"
       },
       "2026-11-27": {
-        "id": 204,
+        "id": 69,
         "account_id": "LI-003",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -1620,7 +1620,7 @@
     },
     "TT-001": {
       "2026-11-23": {
-        "id": 145,
+        "id": 10,
         "account_id": "TT-001",
         "checked_at": "2026-11-23T09:37:42.332Z",
         "check_day": "2026-11-23",
@@ -1645,7 +1645,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 160,
+        "id": 25,
         "account_id": "TT-001",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -1670,7 +1670,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 175,
+        "id": 40,
         "account_id": "TT-001",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -1695,7 +1695,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 190,
+        "id": 55,
         "account_id": "TT-001",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -1715,12 +1715,12 @@
         "anomalies": [],
         "message": "OK",
         "attempts": 1,
-        "latency_ms": 1,
+        "latency_ms": 0,
         "run_mode": "simulated-clock",
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 205,
+        "id": 70,
         "account_id": "TT-001",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -1747,7 +1747,7 @@
     },
     "TT-002": {
       "2026-11-23": {
-        "id": 146,
+        "id": 11,
         "account_id": "TT-002",
         "checked_at": "2026-11-23T09:37:42.332Z",
         "check_day": "2026-11-23",
@@ -1772,7 +1772,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 161,
+        "id": 26,
         "account_id": "TT-002",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -1797,7 +1797,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 176,
+        "id": 41,
         "account_id": "TT-002",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -1824,7 +1824,7 @@
         "health": "failing"
       },
       "2026-11-26": {
-        "id": 191,
+        "id": 56,
         "account_id": "TT-002",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -1851,7 +1851,7 @@
         "health": "failing"
       },
       "2026-11-27": {
-        "id": 206,
+        "id": 71,
         "account_id": "TT-002",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -1880,7 +1880,7 @@
     },
     "TT-003": {
       "2026-11-23": {
-        "id": 147,
+        "id": 12,
         "account_id": "TT-003",
         "checked_at": "2026-11-23T09:37:42.332Z",
         "check_day": "2026-11-23",
@@ -1905,7 +1905,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 162,
+        "id": 27,
         "account_id": "TT-003",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -1930,7 +1930,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 177,
+        "id": 42,
         "account_id": "TT-003",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -1955,7 +1955,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 192,
+        "id": 57,
         "account_id": "TT-003",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -1980,7 +1980,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 207,
+        "id": 72,
         "account_id": "TT-003",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -2007,7 +2007,7 @@
     },
     "X-001": {
       "2026-11-23": {
-        "id": 148,
+        "id": 13,
         "account_id": "X-001",
         "checked_at": "2026-11-23T09:37:42.332Z",
         "check_day": "2026-11-23",
@@ -2032,7 +2032,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 163,
+        "id": 28,
         "account_id": "X-001",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -2057,7 +2057,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 178,
+        "id": 43,
         "account_id": "X-001",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -2082,7 +2082,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 193,
+        "id": 58,
         "account_id": "X-001",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -2107,7 +2107,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 208,
+        "id": 73,
         "account_id": "X-001",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -2134,7 +2134,7 @@
     },
     "X-002": {
       "2026-11-23": {
-        "id": 149,
+        "id": 14,
         "account_id": "X-002",
         "checked_at": "2026-11-23T09:37:42.332Z",
         "check_day": "2026-11-23",
@@ -2160,7 +2160,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 164,
+        "id": 29,
         "account_id": "X-002",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -2186,7 +2186,7 @@
         "health": "healthy"
       },
       "2026-11-25": {
-        "id": 179,
+        "id": 44,
         "account_id": "X-002",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -2207,12 +2207,12 @@
         "anomalies": [],
         "message": "OK",
         "attempts": 1,
-        "latency_ms": 1,
+        "latency_ms": 0,
         "run_mode": "simulated-clock",
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 194,
+        "id": 59,
         "account_id": "X-002",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -2238,7 +2238,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 209,
+        "id": 74,
         "account_id": "X-002",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -2266,7 +2266,7 @@
     },
     "X-003": {
       "2026-11-23": {
-        "id": 150,
+        "id": 15,
         "account_id": "X-003",
         "checked_at": "2026-11-23T09:37:42.334Z",
         "check_day": "2026-11-23",
@@ -2293,7 +2293,7 @@
         "health": "healthy"
       },
       "2026-11-24": {
-        "id": 165,
+        "id": 30,
         "account_id": "X-003",
         "checked_at": "2026-11-24T12:00:00.000Z",
         "check_day": "2026-11-24",
@@ -2322,7 +2322,7 @@
         "health": "warning"
       },
       "2026-11-25": {
-        "id": 180,
+        "id": 45,
         "account_id": "X-003",
         "checked_at": "2026-11-25T12:00:00.000Z",
         "check_day": "2026-11-25",
@@ -2349,7 +2349,7 @@
         "health": "healthy"
       },
       "2026-11-26": {
-        "id": 195,
+        "id": 60,
         "account_id": "X-003",
         "checked_at": "2026-11-26T12:00:00.000Z",
         "check_day": "2026-11-26",
@@ -2376,7 +2376,7 @@
         "health": "healthy"
       },
       "2026-11-27": {
-        "id": 210,
+        "id": 75,
         "account_id": "X-003",
         "checked_at": "2026-11-27T12:00:00.000Z",
         "check_day": "2026-11-27",
@@ -2419,7 +2419,7 @@
       "days_affected": 2,
       "evidence": [
         {
-          "id": 153,
+          "id": 18,
           "account_id": "FB-003",
           "checked_at": "2026-11-24T12:00:00.000Z",
           "check_day": "2026-11-24",
@@ -2445,7 +2445,7 @@
           "run_mode": "simulated-clock"
         },
         {
-          "id": 168,
+          "id": 33,
           "account_id": "FB-003",
           "checked_at": "2026-11-25T12:00:00.000Z",
           "check_day": "2026-11-25",
@@ -2475,20 +2475,20 @@
       "recommended_action": "Restore the role/scope on the platform side, then reconnect in Spikerz so the missing permission is re-granted.",
       "corrective_actions": [
         {
-          "id": 236,
+          "id": 47,
           "account_id": "FB-003",
           "action": "maintenance",
-          "actor": "qa-engineer",
+          "actor": "scenario-script",
           "at": "2026-11-24T14:30:00.000Z",
-          "detail": "Confirmed pages_manage_posts missing from granted scopes. Raised with Page owner to restore the admin role."
+          "detail": "Simulated: Runbook response to PERMISSION_MISSING: confirm which scope is missing (pages_manage_posts) and ask the Page owner to restore the admin role. Not carried out - there is no real Page or owner behind this mock account."
         },
         {
-          "id": 237,
+          "id": 48,
           "account_id": "FB-003",
           "action": "maintenance",
-          "actor": "qa-engineer",
+          "actor": "scenario-script",
           "at": "2026-11-25T14:30:00.000Z",
-          "detail": "Admin role restored on Mock QA Page B and account reconnected so pages_manage_posts is re-granted. Expect clear on next check."
+          "detail": "Simulated: Runbook response, next step: once the admin role is restored, reconnect so pages_manage_posts is re-granted. Not carried out - the scenario script clears the anomaly on the next day."
         }
       ]
     },
@@ -2506,7 +2506,7 @@
       "days_affected": 1,
       "evidence": [
         {
-          "id": 173,
+          "id": 38,
           "account_id": "LI-002",
           "checked_at": "2026-11-25T12:00:00.000Z",
           "check_day": "2026-11-25",
@@ -2536,12 +2536,12 @@
       "recommended_action": "Re-authorise the account to mint a new token; check why the scheduled refresh did not run.",
       "corrective_actions": [
         {
-          "id": 238,
+          "id": 49,
           "account_id": "LI-002",
           "action": "maintenance",
-          "actor": "qa-engineer",
+          "actor": "scenario-script",
           "at": "2026-11-25T14:30:00.000Z",
-          "detail": "Token expired. Re-authorised the account to mint a new access token; opened follow-up to find out why refresh did not run."
+          "detail": "Simulated: Runbook response to TOKEN_EXPIRED: re-authorise to mint a new access token and investigate why the refresh did not run. Not carried out - no real token exists; the scenario script clears the anomaly on the next day."
         }
       ]
     },
@@ -2559,7 +2559,7 @@
       "days_affected": 3,
       "evidence": [
         {
-          "id": 176,
+          "id": 41,
           "account_id": "TT-002",
           "checked_at": "2026-11-25T12:00:00.000Z",
           "check_day": "2026-11-25",
@@ -2585,7 +2585,7 @@
           "run_mode": "simulated-clock"
         },
         {
-          "id": 191,
+          "id": 56,
           "account_id": "TT-002",
           "checked_at": "2026-11-26T12:00:00.000Z",
           "check_day": "2026-11-26",
@@ -2611,7 +2611,7 @@
           "run_mode": "simulated-clock"
         },
         {
-          "id": 206,
+          "id": 71,
           "account_id": "TT-002",
           "checked_at": "2026-11-27T12:00:00.000Z",
           "check_day": "2026-11-27",
@@ -2641,20 +2641,20 @@
       "recommended_action": "Pause tests using this account, complete any platform verification prompts manually, and swap in a standby account if the restriction lasts more than 48h.",
       "corrective_actions": [
         {
-          "id": 239,
+          "id": 50,
           "account_id": "TT-002",
           "action": "maintenance",
-          "actor": "qa-engineer",
+          "actor": "scenario-script",
           "at": "2026-11-25T14:30:00.000Z",
-          "detail": "Account restricted by platform. Paused all tests that use TT-002; will re-check for 48h before replacing."
+          "detail": "Simulated: Runbook response to ACCOUNT_RESTRICTED: pause tests that use TT-002 and re-check for 48h before replacing it. Not carried out."
         },
         {
-          "id": 242,
+          "id": 53,
           "account_id": "TT-002",
           "action": "maintenance",
-          "actor": "qa-engineer",
+          "actor": "scenario-script",
           "at": "2026-11-27T14:30:00.000Z",
-          "detail": "Restriction has now lasted 3 checks (>48h). Proposed retirement via `account retire TT-002` and requested a standby TikTok test account."
+          "detail": "Simulated: Runbook response when a restriction lasts more than 48h: retire the account with `account retire TT-002` and request a standby TikTok test account. Not carried out."
         }
       ]
     },
@@ -2672,7 +2672,7 @@
       "days_affected": 1,
       "evidence": [
         {
-          "id": 184,
+          "id": 49,
           "account_id": "IG-001",
           "checked_at": "2026-11-26T12:00:00.000Z",
           "check_day": "2026-11-26",
@@ -2703,12 +2703,12 @@
       "recommended_action": "Reconnect the account through the Spikerz UI connection flow and re-run the health check.",
       "corrective_actions": [
         {
-          "id": 240,
+          "id": 51,
           "account_id": "IG-001",
-          "action": "connect",
-          "actor": "qa-engineer",
-          "at": "2026-11-26T07:00:00.000Z",
-          "detail": "Reconnected through the connection workflow after the session was invalidated by a password change [evidence: docs/connection-workflow.md]"
+          "action": "maintenance",
+          "actor": "scenario-script",
+          "at": "2026-11-26T14:30:00.000Z",
+          "detail": "Simulated: Runbook response to DISCONNECTED: reconnect through the proposed connection workflow. Not carried out - no UI reconnection was performed; the scenario script clears the anomaly on the next day."
         }
       ]
     },
@@ -2726,7 +2726,7 @@
       "days_affected": 1,
       "evidence": [
         {
-          "id": 197,
+          "id": 62,
           "account_id": "FB-002",
           "checked_at": "2026-11-27T12:00:00.000Z",
           "check_day": "2026-11-27",
@@ -2755,12 +2755,12 @@
       "recommended_action": "Confirm the asset still exists and the connected user still has access, then re-select it in Spikerz.",
       "corrective_actions": [
         {
-          "id": 243,
+          "id": 54,
           "account_id": "FB-002",
           "action": "maintenance",
-          "actor": "qa-engineer",
+          "actor": "scenario-script",
           "at": "2026-11-27T14:30:00.000Z",
-          "detail": "Mock QA Page A no longer returned for the connected user. Investigating whether the Page was unlinked or the user lost access; issue left open."
+          "detail": "Simulated: Runbook response to ASSET_MISSING: check whether the Page was unlinked or the connected user lost access. Not carried out; issue left open."
         }
       ]
     }
@@ -2789,439 +2789,439 @@
   ],
   "audit": [
     {
-      "id": 190,
+      "id": 1,
       "account_id": "LI-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.195Z",
+      "at": "2026-11-23T11:57:51.463Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 191,
+      "id": 2,
       "account_id": "LI-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.195Z",
+      "at": "2026-11-23T11:57:51.463Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 192,
+      "id": 3,
       "account_id": "LI-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.195Z",
+      "at": "2026-11-23T11:57:51.464Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 193,
+      "id": 4,
       "account_id": "FB-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.195Z",
+      "at": "2026-11-23T11:57:51.464Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 194,
+      "id": 5,
       "account_id": "FB-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.195Z",
+      "at": "2026-11-23T11:57:51.464Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 195,
+      "id": 6,
       "account_id": "FB-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.464Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 196,
+      "id": 7,
       "account_id": "IG-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.464Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 197,
+      "id": 8,
       "account_id": "IG-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.464Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 198,
+      "id": 9,
       "account_id": "IG-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.464Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 199,
+      "id": 10,
       "account_id": "TT-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.465Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 200,
+      "id": 11,
       "account_id": "TT-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.465Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 201,
+      "id": 12,
       "account_id": "TT-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.465Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 202,
+      "id": 13,
       "account_id": "X-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.465Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 203,
+      "id": 14,
       "account_id": "X-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.465Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 204,
+      "id": 15,
       "account_id": "X-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-23T09:59:36.196Z",
+      "at": "2026-11-23T11:57:51.465Z",
       "detail": "imported from inventory file"
     },
     {
-      "id": 205,
+      "id": 16,
       "account_id": "LI-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.197Z",
+      "at": "2026-11-23T11:57:51.466Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 206,
+      "id": 17,
       "account_id": "LI-001",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 207,
+      "id": 18,
       "account_id": "LI-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.197Z",
+      "at": "2026-11-23T11:57:51.466Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 208,
+      "id": 19,
       "account_id": "LI-002",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 209,
+      "id": 20,
       "account_id": "LI-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.197Z",
+      "at": "2026-11-23T11:57:51.466Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 210,
+      "id": 21,
       "account_id": "LI-003",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 211,
+      "id": 22,
       "account_id": "FB-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.198Z",
+      "at": "2026-11-23T11:57:51.466Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 212,
+      "id": 23,
       "account_id": "FB-001",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 213,
+      "id": 24,
       "account_id": "FB-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.198Z",
+      "at": "2026-11-23T11:57:51.466Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 214,
+      "id": 25,
       "account_id": "FB-002",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 215,
+      "id": 26,
       "account_id": "FB-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.198Z",
+      "at": "2026-11-23T11:57:51.467Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 216,
+      "id": 27,
       "account_id": "FB-003",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 217,
+      "id": 28,
       "account_id": "IG-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.198Z",
+      "at": "2026-11-23T11:57:51.467Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 218,
+      "id": 29,
       "account_id": "IG-001",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 219,
+      "id": 30,
       "account_id": "IG-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.198Z",
+      "at": "2026-11-23T11:57:51.467Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 220,
+      "id": 31,
       "account_id": "IG-002",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 221,
+      "id": 32,
       "account_id": "IG-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.198Z",
+      "at": "2026-11-23T11:57:51.467Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 222,
+      "id": 33,
       "account_id": "IG-003",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 223,
+      "id": 34,
       "account_id": "TT-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.198Z",
+      "at": "2026-11-23T11:57:51.467Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 224,
+      "id": 35,
       "account_id": "TT-001",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 225,
+      "id": 36,
       "account_id": "TT-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.199Z",
+      "at": "2026-11-23T11:57:51.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 226,
+      "id": 37,
       "account_id": "TT-002",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 227,
+      "id": 38,
       "account_id": "TT-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.199Z",
+      "at": "2026-11-23T11:57:51.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 228,
+      "id": 39,
       "account_id": "TT-003",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 229,
+      "id": 40,
       "account_id": "X-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.199Z",
+      "at": "2026-11-23T11:57:51.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 230,
+      "id": 41,
       "account_id": "X-001",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 231,
+      "id": 42,
       "account_id": "X-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.199Z",
+      "at": "2026-11-23T11:57:51.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 232,
+      "id": 43,
       "account_id": "X-002",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 233,
+      "id": 44,
       "account_id": "X-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-23T09:59:36.199Z",
+      "at": "2026-11-23T11:57:51.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
-      "id": 234,
+      "id": 45,
       "account_id": "X-003",
       "action": "connect",
       "actor": "qa-engineer",
       "at": "2026-11-23T07:00:00.000Z",
-      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+      "detail": "Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md]"
     },
     {
-      "id": 235,
+      "id": 46,
       "account_id": "X-003",
       "action": "maintenance",
-      "actor": "qa-engineer",
+      "actor": "scenario-script",
       "at": "2026-11-24T14:30:00.000Z",
-      "detail": "Reviewed RETRY_RECOVERED warning: two HTTP 429 responses, third attempt succeeded. No action; watching for recurrence."
+      "detail": "Simulated: Runbook response to RETRY_RECOVERED (two HTTP 429 responses, third attempt succeeded): no action, watch for recurrence."
     },
     {
-      "id": 236,
+      "id": 47,
       "account_id": "FB-003",
       "action": "maintenance",
-      "actor": "qa-engineer",
+      "actor": "scenario-script",
       "at": "2026-11-24T14:30:00.000Z",
-      "detail": "Confirmed pages_manage_posts missing from granted scopes. Raised with Page owner to restore the admin role."
+      "detail": "Simulated: Runbook response to PERMISSION_MISSING: confirm which scope is missing (pages_manage_posts) and ask the Page owner to restore the admin role. Not carried out - there is no real Page or owner behind this mock account."
     },
     {
-      "id": 237,
+      "id": 48,
       "account_id": "FB-003",
       "action": "maintenance",
-      "actor": "qa-engineer",
+      "actor": "scenario-script",
       "at": "2026-11-25T14:30:00.000Z",
-      "detail": "Admin role restored on Mock QA Page B and account reconnected so pages_manage_posts is re-granted. Expect clear on next check."
+      "detail": "Simulated: Runbook response, next step: once the admin role is restored, reconnect so pages_manage_posts is re-granted. Not carried out - the scenario script clears the anomaly on the next day."
     },
     {
-      "id": 238,
+      "id": 49,
       "account_id": "LI-002",
       "action": "maintenance",
-      "actor": "qa-engineer",
+      "actor": "scenario-script",
       "at": "2026-11-25T14:30:00.000Z",
-      "detail": "Token expired. Re-authorised the account to mint a new access token; opened follow-up to find out why refresh did not run."
+      "detail": "Simulated: Runbook response to TOKEN_EXPIRED: re-authorise to mint a new access token and investigate why the refresh did not run. Not carried out - no real token exists; the scenario script clears the anomaly on the next day."
     },
     {
-      "id": 239,
+      "id": 50,
       "account_id": "TT-002",
       "action": "maintenance",
-      "actor": "qa-engineer",
+      "actor": "scenario-script",
       "at": "2026-11-25T14:30:00.000Z",
-      "detail": "Account restricted by platform. Paused all tests that use TT-002; will re-check for 48h before replacing."
+      "detail": "Simulated: Runbook response to ACCOUNT_RESTRICTED: pause tests that use TT-002 and re-check for 48h before replacing it. Not carried out."
     },
     {
-      "id": 240,
+      "id": 51,
       "account_id": "IG-001",
-      "action": "connect",
-      "actor": "qa-engineer",
-      "at": "2026-11-26T07:00:00.000Z",
-      "detail": "Reconnected through the connection workflow after the session was invalidated by a password change [evidence: docs/connection-workflow.md]"
-    },
-    {
-      "id": 241,
-      "account_id": "LI-003",
       "action": "maintenance",
-      "actor": "qa-engineer",
+      "actor": "scenario-script",
       "at": "2026-11-26T14:30:00.000Z",
-      "detail": "Token expiring in 3 days. Re-authorised proactively to avoid a disconnect."
+      "detail": "Simulated: Runbook response to DISCONNECTED: reconnect through the proposed connection workflow. Not carried out - no UI reconnection was performed; the scenario script clears the anomaly on the next day."
     },
     {
-      "id": 242,
+      "id": 52,
+      "account_id": "LI-003",
+      "action": "maintenance",
+      "actor": "scenario-script",
+      "at": "2026-11-26T14:30:00.000Z",
+      "detail": "Simulated: Runbook response to TOKEN_EXPIRING_SOON: re-authorise before the token expires. Not carried out."
+    },
+    {
+      "id": 53,
       "account_id": "TT-002",
       "action": "maintenance",
-      "actor": "qa-engineer",
+      "actor": "scenario-script",
       "at": "2026-11-27T14:30:00.000Z",
-      "detail": "Restriction has now lasted 3 checks (>48h). Proposed retirement via `account retire TT-002` and requested a standby TikTok test account."
+      "detail": "Simulated: Runbook response when a restriction lasts more than 48h: retire the account with `account retire TT-002` and request a standby TikTok test account. Not carried out."
     },
     {
-      "id": 243,
+      "id": 54,
       "account_id": "FB-002",
       "action": "maintenance",
-      "actor": "qa-engineer",
+      "actor": "scenario-script",
       "at": "2026-11-27T14:30:00.000Z",
-      "detail": "Mock QA Page A no longer returned for the connected user. Investigating whether the Page was unlinked or the user lost access; issue left open."
+      "detail": "Simulated: Runbook response to ASSET_MISSING: check whether the Page was unlinked or the connected user lost access. Not carried out; issue left open."
     },
     {
-      "id": 244,
+      "id": 55,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3229,7 +3229,7 @@
       "detail": "healthy"
     },
     {
-      "id": 245,
+      "id": 56,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3237,7 +3237,7 @@
       "detail": "healthy"
     },
     {
-      "id": 246,
+      "id": 57,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3245,7 +3245,7 @@
       "detail": "healthy"
     },
     {
-      "id": 247,
+      "id": 58,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3253,7 +3253,7 @@
       "detail": "healthy"
     },
     {
-      "id": 248,
+      "id": 59,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3261,7 +3261,7 @@
       "detail": "healthy"
     },
     {
-      "id": 249,
+      "id": 60,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3269,7 +3269,7 @@
       "detail": "healthy"
     },
     {
-      "id": 250,
+      "id": 61,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3277,7 +3277,7 @@
       "detail": "healthy"
     },
     {
-      "id": 251,
+      "id": 62,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3285,7 +3285,7 @@
       "detail": "healthy"
     },
     {
-      "id": 252,
+      "id": 63,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3293,7 +3293,7 @@
       "detail": "healthy"
     },
     {
-      "id": 253,
+      "id": 64,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3301,7 +3301,7 @@
       "detail": "healthy"
     },
     {
-      "id": 254,
+      "id": 65,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3309,7 +3309,7 @@
       "detail": "healthy"
     },
     {
-      "id": 255,
+      "id": 66,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3317,7 +3317,7 @@
       "detail": "healthy"
     },
     {
-      "id": 256,
+      "id": 67,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3325,7 +3325,7 @@
       "detail": "healthy"
     },
     {
-      "id": 257,
+      "id": 68,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3333,7 +3333,7 @@
       "detail": "healthy"
     },
     {
-      "id": 258,
+      "id": 69,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3341,7 +3341,7 @@
       "detail": "healthy"
     },
     {
-      "id": 259,
+      "id": 70,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3349,7 +3349,7 @@
       "detail": "healthy"
     },
     {
-      "id": 260,
+      "id": 71,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3357,7 +3357,7 @@
       "detail": "healthy"
     },
     {
-      "id": 261,
+      "id": 72,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3365,7 +3365,7 @@
       "detail": "anomalies: PERMISSION_MISSING"
     },
     {
-      "id": 262,
+      "id": 73,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3373,7 +3373,7 @@
       "detail": "healthy"
     },
     {
-      "id": 263,
+      "id": 74,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3381,7 +3381,7 @@
       "detail": "healthy"
     },
     {
-      "id": 264,
+      "id": 75,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3389,7 +3389,7 @@
       "detail": "healthy"
     },
     {
-      "id": 265,
+      "id": 76,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3397,7 +3397,7 @@
       "detail": "healthy"
     },
     {
-      "id": 266,
+      "id": 77,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3405,7 +3405,7 @@
       "detail": "healthy"
     },
     {
-      "id": 267,
+      "id": 78,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3413,7 +3413,7 @@
       "detail": "healthy"
     },
     {
-      "id": 268,
+      "id": 79,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3421,7 +3421,7 @@
       "detail": "healthy"
     },
     {
-      "id": 269,
+      "id": 80,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3429,7 +3429,7 @@
       "detail": "healthy"
     },
     {
-      "id": 270,
+      "id": 81,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3437,7 +3437,7 @@
       "detail": "healthy"
     },
     {
-      "id": 271,
+      "id": 82,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3445,7 +3445,7 @@
       "detail": "healthy"
     },
     {
-      "id": 272,
+      "id": 83,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3453,7 +3453,7 @@
       "detail": "healthy"
     },
     {
-      "id": 273,
+      "id": 84,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3461,7 +3461,7 @@
       "detail": "healthy"
     },
     {
-      "id": 274,
+      "id": 85,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3469,7 +3469,7 @@
       "detail": "healthy"
     },
     {
-      "id": 275,
+      "id": 86,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3477,7 +3477,7 @@
       "detail": "healthy"
     },
     {
-      "id": 276,
+      "id": 87,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3485,7 +3485,7 @@
       "detail": "anomalies: PERMISSION_MISSING"
     },
     {
-      "id": 277,
+      "id": 88,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3493,7 +3493,7 @@
       "detail": "healthy"
     },
     {
-      "id": 278,
+      "id": 89,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3501,7 +3501,7 @@
       "detail": "healthy"
     },
     {
-      "id": 279,
+      "id": 90,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3509,7 +3509,7 @@
       "detail": "healthy"
     },
     {
-      "id": 280,
+      "id": 91,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3517,7 +3517,7 @@
       "detail": "healthy"
     },
     {
-      "id": 281,
+      "id": 92,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3525,7 +3525,7 @@
       "detail": "anomalies: TOKEN_EXPIRED"
     },
     {
-      "id": 282,
+      "id": 93,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3533,7 +3533,7 @@
       "detail": "healthy"
     },
     {
-      "id": 283,
+      "id": 94,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3541,7 +3541,7 @@
       "detail": "healthy"
     },
     {
-      "id": 284,
+      "id": 95,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3549,7 +3549,7 @@
       "detail": "anomalies: ACCOUNT_RESTRICTED"
     },
     {
-      "id": 285,
+      "id": 96,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3557,7 +3557,7 @@
       "detail": "healthy"
     },
     {
-      "id": 286,
+      "id": 97,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3565,7 +3565,7 @@
       "detail": "healthy"
     },
     {
-      "id": 287,
+      "id": 98,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3573,7 +3573,7 @@
       "detail": "healthy"
     },
     {
-      "id": 288,
+      "id": 99,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3581,7 +3581,7 @@
       "detail": "healthy"
     },
     {
-      "id": 289,
+      "id": 100,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3589,7 +3589,7 @@
       "detail": "healthy"
     },
     {
-      "id": 290,
+      "id": 101,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3597,7 +3597,7 @@
       "detail": "healthy"
     },
     {
-      "id": 291,
+      "id": 102,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3605,7 +3605,7 @@
       "detail": "healthy"
     },
     {
-      "id": 292,
+      "id": 103,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3613,7 +3613,7 @@
       "detail": "anomalies: DISCONNECTED"
     },
     {
-      "id": 293,
+      "id": 104,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3621,7 +3621,7 @@
       "detail": "healthy"
     },
     {
-      "id": 294,
+      "id": 105,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3629,7 +3629,7 @@
       "detail": "healthy"
     },
     {
-      "id": 295,
+      "id": 106,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3637,7 +3637,7 @@
       "detail": "healthy"
     },
     {
-      "id": 296,
+      "id": 107,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3645,7 +3645,7 @@
       "detail": "healthy"
     },
     {
-      "id": 297,
+      "id": 108,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3653,7 +3653,7 @@
       "detail": "healthy"
     },
     {
-      "id": 298,
+      "id": 109,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3661,7 +3661,7 @@
       "detail": "healthy"
     },
     {
-      "id": 299,
+      "id": 110,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3669,7 +3669,7 @@
       "detail": "anomalies: ACCOUNT_RESTRICTED"
     },
     {
-      "id": 300,
+      "id": 111,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3677,7 +3677,7 @@
       "detail": "healthy"
     },
     {
-      "id": 301,
+      "id": 112,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3685,7 +3685,7 @@
       "detail": "healthy"
     },
     {
-      "id": 302,
+      "id": 113,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3693,7 +3693,7 @@
       "detail": "healthy"
     },
     {
-      "id": 303,
+      "id": 114,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3701,7 +3701,7 @@
       "detail": "healthy"
     },
     {
-      "id": 304,
+      "id": 115,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3709,7 +3709,7 @@
       "detail": "healthy"
     },
     {
-      "id": 305,
+      "id": 116,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3717,7 +3717,7 @@
       "detail": "anomalies: ASSET_MISSING"
     },
     {
-      "id": 306,
+      "id": 117,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3725,7 +3725,7 @@
       "detail": "healthy"
     },
     {
-      "id": 307,
+      "id": 118,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3733,7 +3733,7 @@
       "detail": "healthy"
     },
     {
-      "id": 308,
+      "id": 119,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3741,7 +3741,7 @@
       "detail": "healthy"
     },
     {
-      "id": 309,
+      "id": 120,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3749,7 +3749,7 @@
       "detail": "healthy"
     },
     {
-      "id": 310,
+      "id": 121,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3757,7 +3757,7 @@
       "detail": "healthy"
     },
     {
-      "id": 311,
+      "id": 122,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3765,7 +3765,7 @@
       "detail": "healthy"
     },
     {
-      "id": 312,
+      "id": 123,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3773,7 +3773,7 @@
       "detail": "healthy"
     },
     {
-      "id": 313,
+      "id": 124,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3781,7 +3781,7 @@
       "detail": "healthy"
     },
     {
-      "id": 314,
+      "id": 125,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3789,7 +3789,7 @@
       "detail": "anomalies: ACCOUNT_RESTRICTED"
     },
     {
-      "id": 315,
+      "id": 126,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3797,7 +3797,7 @@
       "detail": "healthy"
     },
     {
-      "id": 316,
+      "id": 127,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3805,7 +3805,7 @@
       "detail": "healthy"
     },
     {
-      "id": 317,
+      "id": 128,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3813,7 +3813,7 @@
       "detail": "healthy"
     },
     {
-      "id": 318,
+      "id": 129,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3821,7 +3821,7 @@
       "detail": "healthy"
     },
     {
-      "id": 319,
+      "id": 130,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3829,7 +3829,7 @@
       "detail": "healthy"
     },
     {
-      "id": 320,
+      "id": 131,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3837,7 +3837,7 @@
       "detail": "healthy"
     },
     {
-      "id": 321,
+      "id": 132,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3845,7 +3845,7 @@
       "detail": "anomalies: PERMISSION_MISSING"
     },
     {
-      "id": 322,
+      "id": 133,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3853,7 +3853,7 @@
       "detail": "healthy"
     },
     {
-      "id": 323,
+      "id": 134,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3861,7 +3861,7 @@
       "detail": "healthy"
     },
     {
-      "id": 324,
+      "id": 135,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3869,7 +3869,7 @@
       "detail": "healthy"
     },
     {
-      "id": 325,
+      "id": 136,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3877,7 +3877,7 @@
       "detail": "healthy"
     },
     {
-      "id": 326,
+      "id": 137,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3885,7 +3885,7 @@
       "detail": "healthy"
     },
     {
-      "id": 327,
+      "id": 138,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3893,7 +3893,7 @@
       "detail": "healthy"
     },
     {
-      "id": 328,
+      "id": 139,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3901,7 +3901,7 @@
       "detail": "healthy"
     },
     {
-      "id": 329,
+      "id": 140,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3909,7 +3909,7 @@
       "detail": "healthy"
     },
     {
-      "id": 330,
+      "id": 141,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3917,7 +3917,7 @@
       "detail": "healthy"
     },
     {
-      "id": 331,
+      "id": 142,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3925,7 +3925,7 @@
       "detail": "healthy"
     },
     {
-      "id": 332,
+      "id": 143,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3933,7 +3933,7 @@
       "detail": "healthy"
     },
     {
-      "id": 333,
+      "id": 144,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3941,7 +3941,7 @@
       "detail": "healthy"
     },
     {
-      "id": 334,
+      "id": 145,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3949,7 +3949,7 @@
       "detail": "healthy"
     },
     {
-      "id": 335,
+      "id": 146,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3957,7 +3957,7 @@
       "detail": "healthy"
     },
     {
-      "id": 336,
+      "id": 147,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3965,7 +3965,7 @@
       "detail": "anomalies: PERMISSION_MISSING"
     },
     {
-      "id": 337,
+      "id": 148,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3973,7 +3973,7 @@
       "detail": "healthy"
     },
     {
-      "id": 338,
+      "id": 149,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3981,7 +3981,7 @@
       "detail": "healthy"
     },
     {
-      "id": 339,
+      "id": 150,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3989,7 +3989,7 @@
       "detail": "healthy"
     },
     {
-      "id": 340,
+      "id": 151,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -3997,7 +3997,7 @@
       "detail": "healthy"
     },
     {
-      "id": 341,
+      "id": 152,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4005,7 +4005,7 @@
       "detail": "anomalies: TOKEN_EXPIRED"
     },
     {
-      "id": 342,
+      "id": 153,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4013,7 +4013,7 @@
       "detail": "healthy"
     },
     {
-      "id": 343,
+      "id": 154,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4021,7 +4021,7 @@
       "detail": "healthy"
     },
     {
-      "id": 344,
+      "id": 155,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4029,7 +4029,7 @@
       "detail": "anomalies: ACCOUNT_RESTRICTED"
     },
     {
-      "id": 345,
+      "id": 156,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4037,7 +4037,7 @@
       "detail": "healthy"
     },
     {
-      "id": 346,
+      "id": 157,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4045,7 +4045,7 @@
       "detail": "healthy"
     },
     {
-      "id": 347,
+      "id": 158,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4053,7 +4053,7 @@
       "detail": "healthy"
     },
     {
-      "id": 348,
+      "id": 159,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4061,7 +4061,7 @@
       "detail": "healthy"
     },
     {
-      "id": 349,
+      "id": 160,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4069,7 +4069,7 @@
       "detail": "healthy"
     },
     {
-      "id": 350,
+      "id": 161,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4077,7 +4077,7 @@
       "detail": "healthy"
     },
     {
-      "id": 351,
+      "id": 162,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4085,7 +4085,7 @@
       "detail": "healthy"
     },
     {
-      "id": 352,
+      "id": 163,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4093,7 +4093,7 @@
       "detail": "anomalies: DISCONNECTED"
     },
     {
-      "id": 353,
+      "id": 164,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4101,7 +4101,7 @@
       "detail": "healthy"
     },
     {
-      "id": 354,
+      "id": 165,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4109,7 +4109,7 @@
       "detail": "healthy"
     },
     {
-      "id": 355,
+      "id": 166,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4117,7 +4117,7 @@
       "detail": "healthy"
     },
     {
-      "id": 356,
+      "id": 167,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4125,7 +4125,7 @@
       "detail": "healthy"
     },
     {
-      "id": 357,
+      "id": 168,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4133,7 +4133,7 @@
       "detail": "healthy"
     },
     {
-      "id": 358,
+      "id": 169,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4141,7 +4141,7 @@
       "detail": "healthy"
     },
     {
-      "id": 359,
+      "id": 170,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4149,7 +4149,7 @@
       "detail": "anomalies: ACCOUNT_RESTRICTED"
     },
     {
-      "id": 360,
+      "id": 171,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4157,7 +4157,7 @@
       "detail": "healthy"
     },
     {
-      "id": 361,
+      "id": 172,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4165,7 +4165,7 @@
       "detail": "healthy"
     },
     {
-      "id": 362,
+      "id": 173,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4173,7 +4173,7 @@
       "detail": "healthy"
     },
     {
-      "id": 363,
+      "id": 174,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4181,7 +4181,7 @@
       "detail": "healthy"
     },
     {
-      "id": 364,
+      "id": 175,
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4189,7 +4189,7 @@
       "detail": "healthy"
     },
     {
-      "id": 365,
+      "id": 176,
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4197,7 +4197,7 @@
       "detail": "anomalies: ASSET_MISSING"
     },
     {
-      "id": 366,
+      "id": 177,
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4205,7 +4205,7 @@
       "detail": "healthy"
     },
     {
-      "id": 367,
+      "id": 178,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4213,7 +4213,7 @@
       "detail": "healthy"
     },
     {
-      "id": 368,
+      "id": 179,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4221,7 +4221,7 @@
       "detail": "healthy"
     },
     {
-      "id": 369,
+      "id": 180,
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4229,7 +4229,7 @@
       "detail": "healthy"
     },
     {
-      "id": 370,
+      "id": 181,
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4237,7 +4237,7 @@
       "detail": "healthy"
     },
     {
-      "id": 371,
+      "id": 182,
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4245,7 +4245,7 @@
       "detail": "healthy"
     },
     {
-      "id": 372,
+      "id": 183,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4253,7 +4253,7 @@
       "detail": "healthy"
     },
     {
-      "id": 373,
+      "id": 184,
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4261,7 +4261,7 @@
       "detail": "healthy"
     },
     {
-      "id": 374,
+      "id": 185,
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4269,7 +4269,7 @@
       "detail": "anomalies: ACCOUNT_RESTRICTED"
     },
     {
-      "id": 375,
+      "id": 186,
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4277,7 +4277,7 @@
       "detail": "healthy"
     },
     {
-      "id": 376,
+      "id": 187,
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4285,7 +4285,7 @@
       "detail": "healthy"
     },
     {
-      "id": 377,
+      "id": 188,
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
@@ -4293,7 +4293,7 @@
       "detail": "healthy"
     },
     {
-      "id": 378,
+      "id": 189,
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",

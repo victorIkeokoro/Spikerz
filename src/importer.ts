@@ -56,17 +56,45 @@ function splitList(v: unknown): string[] {
     .filter(Boolean);
 }
 
-/** Field names that must never appear in an inventory file. */
-const FORBIDDEN_FIELDS = ["password", "token", "secret", "cookie", "access_token", "refresh_token"];
+/** Reject secret-like fields across snake_case, kebab-case and camelCase naming. */
+const FORBIDDEN_FIELD_PATTERN =
+  /password|passwd|passphrase|pwd|token|secret|cookie|apikey|privatekey|session|bearer|otp|mfa|2fa/;
+
+/**
+ * The only columns an inventory may contain. Anything else is rejected rather
+ * than silently dropped: the allowlist is the actual safeguard, the pattern
+ * above exists to give a clearer error for the obvious cases.
+ */
+const KNOWN_FIELDS = new Set([
+  "account_id",
+  "platform",
+  "account_type",
+  "environment",
+  "owner",
+  "status",
+  "connection_status",
+  "connected_assets",
+  "permissions",
+  "last_health_check",
+  "notes",
+  "credential_ref_id",
+]);
 
 export function recordToAccount(rec: Record<string, unknown>, defaultEnv = "qa"): Account {
   for (const key of Object.keys(rec)) {
-    if (FORBIDDEN_FIELDS.includes(key.toLowerCase())) {
+    const normalizedKey = key.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (FORBIDDEN_FIELD_PATTERN.test(normalizedKey)) {
       throw new Error(
         `inventory contains a "${key}" field. Secrets must not be stored in the inventory - ` +
           `use credential_ref_id and supply the secret through the environment.`
       );
     }
+  }
+  const unknown = Object.keys(rec)
+    .map((k) => k.trim())
+    .filter((k) => k !== "" && !KNOWN_FIELDS.has(k));
+  if (unknown.length) {
+    throw new Error(`inventory contains unknown field(s): ${unknown.join(", ")}`);
   }
   const str = (k: string, fallback = ""): string => {
     const v = rec[k];

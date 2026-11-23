@@ -1,7 +1,7 @@
 import { healthState, type HealthState } from "./anomalies.js";
 import { buildAlerts, type DayAlert } from "./alerts.js";
 import { csvEscape } from "./importer.js";
-import { deriveIssues, type Issue } from "./issues.js";
+import { canResolve, deriveIssues, type Issue } from "./issues.js";
 import type { Store } from "./store.js";
 import { PLATFORMS, type Account, type AuditEntry, type HealthCheckResult } from "./types.js";
 
@@ -30,7 +30,9 @@ const DAILY_COLUMNS = [
 export interface DailyReport {
   day: string;
   generated_at: string;
-  totals: { accounts: number; healthy: number; warning: number; failing: number };
+  totals: { accounts: number; healthy: number; warning: number; failing: number; not_checked: number };
+  /** Non-retired inventory accounts with no result for this day (partial run). */
+  not_checked: string[];
   alerts: DayAlert[];
   results: Array<HealthCheckResult & { platform: string; health: HealthState }>;
 }
@@ -47,6 +49,10 @@ export function buildDailyReport(store: Store, day: string, now: Date = new Date
     platform: platformOf.get(r.account_id) ?? "unknown",
     health: healthState(r.anomalies),
   }));
+  const checked = new Set(today.map((r) => r.account_id));
+  const not_checked = accounts
+    .filter((a) => a.status !== "retired" && !checked.has(a.account_id))
+    .map((a) => a.account_id);
   return {
     day,
     generated_at: now.toISOString(),
@@ -55,7 +61,9 @@ export function buildDailyReport(store: Store, day: string, now: Date = new Date
       healthy: results.filter((r) => r.health === "healthy").length,
       warning: results.filter((r) => r.health === "warning").length,
       failing: results.filter((r) => r.health === "failing").length,
+      not_checked: not_checked.length,
     },
+    not_checked,
     alerts: buildAlerts(today, accounts, previous),
     results,
   };
@@ -172,7 +180,7 @@ export function buildMaintenanceLog(store: Store): string {
       `> **Data source.** All accounts are mock accounts served by the mock platform layer. ` +
         `${simulatedDays.length} of ${days.length} day(s) below (${simulatedDays.join(", ")}) are simulated-clock runs: ` +
         `the real health-check engine executed with an injected date, and the actions logged on those days are the ` +
-        `scripted responses from \`data/maintenance-actions.json\`. Days marked "live run" were executed on that calendar day.`
+        `scripted responses from \`data/maintenance-actions.json\`. Days marked "live-clock run" were executed on that calendar day.`
     );
     lines.push("");
   }
@@ -191,7 +199,7 @@ export function buildMaintenanceLog(store: Store): string {
     lines.push(`  - ${p}: ${accounts.filter((a) => a.platform === p).length}`);
   }
   lines.push(
-    `- ${onboarding.size} of ${accounts.length} account(s) taken through the connection workflow (docs/connection-workflow.md):`
+    `- ${onboarding.size} of ${accounts.length} account(s) with mock onboarding records for the proposed connection workflow (docs/connection-workflow.md):`
   );
   const byDetail = new Map<string, AuditEntry[]>();
   for (const e of onboarding.values()) {
@@ -204,28 +212,49 @@ export function buildMaintenanceLog(store: Store): string {
   lines.push("");
 
   let previous: HealthCheckResult[] = [];
+  // Anomalies last seen on an account that later checks could not assess.
+  const carried = new Map<string, Set<string>>();
   days.forEach((day, idx) => {
     const today = store.healthChecks({ day });
     const mode = today[0]?.run_mode ?? "live";
     const states = today.map((r) => healthState(r.anomalies));
+    const expected = accounts.filter((a) => a.status !== "retired").length;
     lines.push(`## Day ${idx + 1} - ${day}`);
     lines.push("");
     lines.push(
-      `- Check type: ${mode === "live" ? "live run" : "simulated-clock run"} · ` +
+      `- Check type: ${mode === "live" ? "live-clock run" : "simulated-clock run"} · ` +
         `${today.length} accounts checked · ` +
         `${states.filter((s) => s === "healthy").length} healthy, ` +
         `${states.filter((s) => s === "warning").length} warning, ` +
-        `${states.filter((s) => s === "failing").length} failing.`
+        `${states.filter((s) => s === "failing").length} failing.` +
+        (today.length < expected ? ` Partial run: ${expected - today.length} account(s) not checked.` : "")
     );
 
     const prevMap = new Map(previous.map((r) => [r.account_id, r]));
     const changes: string[] = [];
     for (const r of today) {
       const before = prevMap.get(r.account_id);
-      const beforeCodes = new Set(before?.anomalies ?? []);
+      const pending = carried.get(r.account_id) ?? new Set<string>();
+      const beforeCodes = new Set([...(before?.anomalies ?? []), ...pending]);
       const nowCodes = new Set(r.anomalies);
+      const stillUnknown = new Set<string>();
       for (const c of nowCodes) if (!beforeCodes.has(c)) changes.push(`**${r.account_id}** raised \`${c}\` - ${r.message}`);
-      for (const c of beforeCodes) if (!nowCodes.has(c)) changes.push(`**${r.account_id}** cleared \`${c}\``);
+      for (const c of beforeCodes) {
+        if (nowCodes.has(c)) continue;
+        if (canResolve(c, r)) {
+          changes.push(`**${r.account_id}** cleared \`${c}\``);
+        } else {
+          // Same rule as the issue log: a check that could not observe the
+          // anomaly does not prove it cleared.
+          stillUnknown.add(c);
+          if (!pending.has(c)) {
+            changes.push(
+              `**${r.account_id}** \`${c}\` not assessable (check failed or account disconnected) - still treated as open`
+            );
+          }
+        }
+      }
+      carried.set(r.account_id, stillUnknown);
       if (before && before.connection_status !== r.connection_status) {
         changes.push(`**${r.account_id}** connection ${before.connection_status} -> ${r.connection_status}`);
       }
@@ -241,7 +270,7 @@ export function buildMaintenanceLog(store: Store): string {
         (e.action === "maintenance" || (e.action === "connect" && !onboardingIds.has(e.id))) &&
         e.at.slice(0, 10) === day
     );
-    lines.push(`- Corrective / maintenance actions:${actions.length ? "" : " none required."}`);
+    lines.push(`- Actions recorded ("Simulated:" = runbook response, not carried out):${actions.length ? "" : " none."}`);
     for (const a of actions) lines.push(`  - ${a.account_id} - ${a.detail} _(by ${a.actor})_`);
     lines.push("");
     previous = today;
@@ -268,7 +297,7 @@ export function renderDashboard(report: FinalReport): string {
   const t = report.totals;
   const modeOf = (d: string): string => {
     const modes = new Set(Object.values(report.matrix).map((m) => m[d]?.run_mode).filter(Boolean));
-    return modes.size === 1 && modes.has("live") ? "live run" : "simulated clock";
+    return modes.size === 1 && modes.has("live") ? "live-clock run" : "simulated clock";
   };
   const dayHeads = report.days
     .map(
@@ -347,10 +376,10 @@ export function renderDashboard(report: FinalReport): string {
     modes.size === 0
       ? ""
       : modes.has("simulated-clock") && modes.has("live")
-        ? "Mix of live runs and simulated-clock runs against the mock platform layer."
+        ? "Mix of live-clock runs and simulated-clock runs against the mock platform layer."
         : modes.has("simulated-clock")
           ? "All runs are simulated-clock runs against the mock platform layer."
-          : "All runs are live runs against the mock platform layer.";
+          : "All runs are live-clock runs against the mock platform layer.";
 
   return `<!doctype html>
 <html lang="en">

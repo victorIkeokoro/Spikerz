@@ -2,7 +2,7 @@
 
 Generated from the health-check history and audit trail by `qa-accounts report all`. One section per monitored calendar day. Do not edit by hand - record actions with `qa-accounts maintenance add` and regenerate.
 
-> **Data source.** All accounts are mock accounts served by the mock platform layer. 4 of 5 day(s) below (2026-11-24, 2026-11-25, 2026-11-26, 2026-11-27) are simulated-clock runs: the real health-check engine executed with an injected date, and the actions logged on those days are the scripted responses from `data/maintenance-actions.json`. Days marked "live run" were executed on that calendar day.
+> **Data source.** All accounts are mock accounts served by the mock platform layer. 4 of 5 day(s) below (2026-11-24, 2026-11-25, 2026-11-26, 2026-11-27) are simulated-clock runs: the real health-check engine executed with an injected date, and the actions logged on those days are the scripted responses from `data/maintenance-actions.json`. Days marked "live-clock run" were executed on that calendar day.
 
 ## Day 0 - setup and onboarding
 
@@ -12,14 +12,14 @@ Generated from the health-check history and audit trail by `qa-accounts report a
   - Instagram: 3
   - TikTok: 3
   - X: 3
-- 15 of 15 account(s) taken through the connection workflow (docs/connection-workflow.md):
-  - LI-001, LI-002, LI-003, FB-001, FB-002, FB-003, IG-001, IG-002, IG-003, TT-001, TT-002, TT-003, X-001, X-002, X-003: 2026-11-23 - Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md] _(by qa-engineer)_
+- 15 of 15 account(s) with mock onboarding records for the proposed connection workflow (docs/connection-workflow.md):
+  - LI-001, LI-002, LI-003, FB-001, FB-002, FB-003, IG-001, IG-002, IG-003, TT-001, TT-002, TT-003, X-001, X-002, X-003: 2026-11-23 - Mock onboarding record: proposed manual connection workflow documented; no Spikerz UI steps performed and no live connection created [evidence: docs/connection-workflow.md] _(by qa-engineer)_
 
 ## Day 1 - 2026-11-23
 
-- Check type: live run · 15 accounts checked · 15 healthy, 0 warning, 0 failing.
+- Check type: live-clock run · 15 accounts checked · 15 healthy, 0 warning, 0 failing.
 - Changes since previous check: none.
-- Corrective / maintenance actions: none required.
+- Actions recorded ("Simulated:" = runbook response, not carried out): none.
 
 ## Day 2 - 2026-11-24
 
@@ -27,9 +27,9 @@ Generated from the health-check history and audit trail by `qa-accounts report a
 - Changes since previous check:
   - **FB-003** raised `PERMISSION_MISSING` - Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts
   - **X-003** raised `RETRY_RECOVERED` - succeeded on attempt 3 after: HTTP 429 Too Many Requests returned by mock X API on the first two attempts
-- Corrective / maintenance actions:
-  - X-003 - Reviewed RETRY_RECOVERED warning: two HTTP 429 responses, third attempt succeeded. No action; watching for recurrence. _(by qa-engineer)_
-  - FB-003 - Confirmed pages_manage_posts missing from granted scopes. Raised with Page owner to restore the admin role. _(by qa-engineer)_
+- Actions recorded ("Simulated:" = runbook response, not carried out):
+  - X-003 - Simulated: Runbook response to RETRY_RECOVERED (two HTTP 429 responses, third attempt succeeded): no action, watch for recurrence. _(by scenario-script)_
+  - FB-003 - Simulated: Runbook response to PERMISSION_MISSING: confirm which scope is missing (pages_manage_posts) and ask the Page owner to restore the admin role. Not carried out - there is no real Page or owner behind this mock account. _(by scenario-script)_
 
 ## Day 3 - 2026-11-25
 
@@ -40,10 +40,10 @@ Generated from the health-check history and audit trail by `qa-accounts report a
   - **TT-002** raised `ACCOUNT_RESTRICTED` - Account flagged by platform integrity checks; API returns account_restricted
   - **TT-002** account status active -> restricted
   - **X-003** cleared `RETRY_RECOVERED`
-- Corrective / maintenance actions:
-  - FB-003 - Admin role restored on Mock QA Page B and account reconnected so pages_manage_posts is re-granted. Expect clear on next check. _(by qa-engineer)_
-  - LI-002 - Token expired. Re-authorised the account to mint a new access token; opened follow-up to find out why refresh did not run. _(by qa-engineer)_
-  - TT-002 - Account restricted by platform. Paused all tests that use TT-002; will re-check for 48h before replacing. _(by qa-engineer)_
+- Actions recorded ("Simulated:" = runbook response, not carried out):
+  - FB-003 - Simulated: Runbook response, next step: once the admin role is restored, reconnect so pages_manage_posts is re-granted. Not carried out - the scenario script clears the anomaly on the next day. _(by scenario-script)_
+  - LI-002 - Simulated: Runbook response to TOKEN_EXPIRED: re-authorise to mint a new access token and investigate why the refresh did not run. Not carried out - no real token exists; the scenario script clears the anomaly on the next day. _(by scenario-script)_
+  - TT-002 - Simulated: Runbook response to ACCOUNT_RESTRICTED: pause tests that use TT-002 and re-check for 48h before replacing it. Not carried out. _(by scenario-script)_
 
 ## Day 4 - 2026-11-26
 
@@ -55,9 +55,9 @@ Generated from the health-check history and audit trail by `qa-accounts report a
   - **LI-002** cleared `TOKEN_EXPIRED`
   - **LI-002** connection error -> connected
   - **LI-003** raised `TOKEN_EXPIRING_SOON` - Access token reaches end of lifetime in 3 days | token expires in 3 day(s)
-- Corrective / maintenance actions:
-  - IG-001 - Reconnected through the connection workflow after the session was invalidated by a password change [evidence: docs/connection-workflow.md] _(by qa-engineer)_
-  - LI-003 - Token expiring in 3 days. Re-authorised proactively to avoid a disconnect. _(by qa-engineer)_
+- Actions recorded ("Simulated:" = runbook response, not carried out):
+  - IG-001 - Simulated: Runbook response to DISCONNECTED: reconnect through the proposed connection workflow. Not carried out - no UI reconnection was performed; the scenario script clears the anomaly on the next day. _(by scenario-script)_
+  - LI-003 - Simulated: Runbook response to TOKEN_EXPIRING_SOON: re-authorise before the token expires. Not carried out. _(by scenario-script)_
 
 ## Day 5 - 2026-11-27
 
@@ -67,7 +67,7 @@ Generated from the health-check history and audit trail by `qa-accounts report a
   - **IG-001** cleared `DISCONNECTED`
   - **IG-001** connection disconnected -> connected
   - **LI-003** cleared `TOKEN_EXPIRING_SOON`
-- Corrective / maintenance actions:
-  - TT-002 - Restriction has now lasted 3 checks (>48h). Proposed retirement via `account retire TT-002` and requested a standby TikTok test account. _(by qa-engineer)_
-  - FB-002 - Mock QA Page A no longer returned for the connected user. Investigating whether the Page was unlinked or the user lost access; issue left open. _(by qa-engineer)_
+- Actions recorded ("Simulated:" = runbook response, not carried out):
+  - TT-002 - Simulated: Runbook response when a restriction lasts more than 48h: retire the account with `account retire TT-002` and request a standby TikTok test account. Not carried out. _(by scenario-script)_
+  - FB-002 - Simulated: Runbook response to ASSET_MISSING: check whether the Page was unlinked or the connected user lost access. Not carried out; issue left open. _(by scenario-script)_
 

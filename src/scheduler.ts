@@ -1,4 +1,4 @@
-import cron from "node-cron";
+import cron, { type ScheduledTask } from "node-cron";
 
 /**
  * Run `job` on a cron schedule inside a long-lived process.
@@ -7,9 +7,9 @@ import cron from "node-cron";
  *
  *   0 8 * * *  cd /path/to/repo && npm run cli -- check run
  */
-export function scheduleDaily(expression: string, job: () => Promise<void>): void {
+export function scheduleDaily(expression: string, job: () => Promise<void>): ScheduledTask {
   if (!cron.validate(expression)) throw new Error(`invalid cron expression "${expression}"`);
-  cron.schedule(
+  const task = cron.schedule(
     expression,
     () => {
       job().catch((err) => console.error(`[scheduler] run failed: ${(err as Error).message}`));
@@ -17,4 +17,5 @@ export function scheduleDaily(expression: string, job: () => Promise<void>): voi
     { timezone: "UTC" }
   );
   console.log(`[scheduler] daily health check scheduled with "${expression}" (UTC). Ctrl+C to stop.`);
+  return task;
 }

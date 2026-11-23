@@ -8,19 +8,19 @@ A TypeScript/Node command-line tool, `qa-accounts`, that manages an inventory of
 - **Health-check engine** that records account status, connection status, token validity and expiry, connected assets, permissions, anomalies and a timestamp for every account, and compares what the platform reports against the inventory baseline to catch permission and asset drift.
 - **Retry with exponential backoff** for rate limits and timeouts, so a temporary 429 is a warning and not a false failure.
 - **Reports**: per-day CSV and JSON, a final JSON report, and a static HTML dashboard showing health by account, platform and day.
-- **Issue log** generated from the history: consecutive failing days become one issue with reproduction steps, evidence, likely root cause, severity, next action and the corrective actions taken.
-- **Maintenance log** generated from day-over-day changes plus recorded human actions.
+- **Issue log** generated from the history: consecutive failing days become one issue with reproduction steps, evidence, likely root cause, severity, next action and corrective or explicitly simulated responses.
+- **Maintenance log** generated from day-over-day changes plus recorded actions, with simulated responses explicitly labelled.
 - **Alerts** for new problems, with an optional webhook.
 - **Audit trail** of who changed which record and when, including old and new values.
-- **CI**: one workflow runs type-check and 54 unit tests on every push; a second runs the health check on a daily schedule and commits the reports.
+- **CI**: one workflow is configured to run type-check and 87 tests on every push; a second is configured to run the health check daily and commit the reports.
 
 The platforms sit behind one interface (`PlatformClient`). This submission ships a mock implementation driven by a scenario file; a real adapter per platform replaces it without changes to the engine, reports or tests.
 
 ## What challenges did I face?
 
-**The brief asks for five calendar days of monitoring and a 72-hour deadline.** Both cannot be true with real time. I chose to be explicit about it and not to backfill data that looks live. Every health-check row carries a `run_mode`: `live` for a check executed on that calendar day, `simulated-clock` for a check executed with an injected date. The dashboard, maintenance log and issue files all state which is which. Day 1 (2026-11-23) is a live run. Later days are simulated-clock runs until their date arrives, at which point the scheduled job replaces them with live results. The actions logged on simulated days are scripted responses, labelled as such.
+**The brief asks for five calendar days of monitoring and a 72-hour deadline.** Both cannot be true with real time. I chose to be explicit about it and not to backfill data that looks live. Every health-check row carries a `run_mode`: `live` for a check executed on that calendar day, `simulated-clock` for a check executed with an injected date. Both modes use the mock platform. The dashboard, maintenance log and issue files all state which is which. Day 1 (2026-11-23) is a live-clock mock run, not a live platform integration. Later days are simulated-clock runs until their date arrives, at which point the scheduled job replaces them with live-clock mock results. Every scripted action on simulated days is prefixed `Simulated:` and does not assert real external activity.
 
-**Real accounts were not a responsible option.** Creating 15 accounts across five platforms in two days means fake identities and automated sign-ups, which breaks each platform's terms and tends to end in restricted accounts. I used mock accounts, which the brief allows, and put the effort into making the mock layer behave like the failures real test accounts have: expired tokens, revoked scopes, restrictions, invalidated sessions, unlinked Pages, rate limits.
+**Real accounts were not a responsible option.** Creating 15 accounts across five platforms inside that deadline means fake identities and automated sign-ups, which breaks each platform's terms and tends to end in restricted accounts. I used mock accounts, which the brief allows, and put the effort into making the mock layer behave like the failures real test accounts have: expired tokens, revoked scopes, restrictions, invalidated sessions, unlinked Pages, rate limits.
 
 **No Spikerz workspace access.** I could not capture screenshots of the Spikerz connection flow. `docs/connection-workflow.md` documents the manual procedure and how each connection is recorded, with an evidence table ready for screenshots.
 
@@ -36,7 +36,7 @@ The platforms sit behind one interface (`PlatformClient`). This submission ships
 4. **Playwright checks of the Spikerz UI** to confirm each account shows as connected there, with screenshots saved as evidence automatically.
 5. **Trend detection**: an account that needs a retry three days in a row should become an issue.
 6. **Auto-create tickets** in Jira or Linear from new issues, and close them when the anomaly clears.
-7. **Stricter input validation on the CLI** and an end-to-end test of the CLI itself. The unit tests cover the modules, not the command wiring.
+7. **Contract tests for real adapters.** The suite includes end-to-end CLI tests, but everything runs against the mock platform. Each real adapter needs tests proving it honours the same `PlatformClient` contract.
 
 ## How would this scale from 15 accounts to 100+ accounts?
 

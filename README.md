@@ -8,14 +8,14 @@ Take-home submission, Option B (JavaScript/TypeScript).
 
 | Area | Status |
 |---|---|
-| The tool, health-check engine, retry logic, reports, tests, CI | Real, working code. 54 unit tests. |
+| The tool, health-check engine, retry logic, reports, tests, CI | Implemented and tested locally: 87 tests, including end-to-end tests of the CLI. CI workflow definitions are included in `.github/workflows/`. |
 | The 15 accounts | **Mock.** No real social-media accounts were created. |
 | The platforms | **Mock.** A scenario file scripts what each "platform" reports on each day. No network calls. |
-| Connection to the Spikerz UI | **Manual procedure, documented.** No live Spikerz connection exists behind a mock account, and there are no Spikerz screenshots. |
-| The five monitored days (2026-11-23 to 2026-11-27) | Each check row is labelled `live` (executed on that calendar day) or `simulated-clock` (executed with an injected date). Day 1 is live. Days not yet reached at submission time are simulated-clock. |
-| Corrective actions on simulated days | Scripted in `data/maintenance-actions.json`, and labelled as such in the maintenance log. |
+| Connection to the Spikerz UI | **Proposed manual procedure, documented.** No Spikerz UI steps were performed, no live connection exists, and there are no Spikerz screenshots. |
+| The five monitored days (2026-11-23 to 2026-11-27) | Each check row is labelled `live` (executed on that calendar day against the mock platform) or `simulated-clock` (executed with an injected date). Day 1 is a live-clock mock run, not a live platform integration. Days not yet reached at submission time are simulated-clock. |
+| Corrective actions on simulated days | Scripted in `data/maintenance-actions.json`; every one is prefixed `Simulated:`, describes the runbook response for that anomaly, and says it was not carried out. |
 
-Why: the brief asks for five calendar days inside a 72-hour deadline, and creating 15 real accounts in that window would mean breaking platform terms. The reasoning is in [REFLECTION.md](REFLECTION.md) and [docs/connection-workflow.md](docs/connection-workflow.md).
+Why: the brief asks for five calendar days of monitoring inside a 72-hour deadline, and creating 15 real accounts in that window would mean breaking platform terms. The reasoning is in [REFLECTION.md](REFLECTION.md) and [docs/connection-workflow.md](docs/connection-workflow.md).
 
 ## Where each deliverable is
 
@@ -38,7 +38,7 @@ Requires Node.js 20 or newer; 22 is what CI uses (`node --version`).
 ```bash
 npm install
 cp .env.example .env     # optional; defaults work without it
-npm test                 # 54 unit tests
+npm test                 # 87 tests
 ```
 
 ## How to run
@@ -185,7 +185,7 @@ data/
 ## Security approach
 
 - **No secrets in the repository, the database or the reports.** The inventory holds a credential reference ID such as `CRED-LI-001`. The secret is read at runtime from the environment variable `QA_CRED_LI_001`, which a secrets manager or GitHub Actions secrets would supply.
-- **The importer rejects inventories with secret columns.** A file with a `password`, `token`, `secret` or `cookie` column fails with an explanation.
+- **The importer accepts only the twelve inventory columns.** Any other column fails the import, so nothing is silently dropped. Columns that look like secrets (`password`, `accessToken`, `sessionCookie`, `apiKey`, `private-key` and similar, in any naming style) fail with an explanation of where secrets belong.
 - **`creds` shows whether a secret is present and never prints it.**
 - `.env` is git-ignored. `.env.example` has empty values.
 - **No passwords are typed, stored or automated.** Connection is done by a person through the platform's own consent screen.
@@ -224,7 +224,8 @@ Five issues were raised: three resolved, two open at the end (TT-002 restriction
 - One check per account per day. Re-running a day overwrites that day's row.
 - Checks run one at a time, which is fine for 15 accounts. See the scaling section in the reflection.
 - Dates are UTC.
-- The unit tests cover the modules. The CLI command wiring is checked by hand, not by automated tests.
+- The tests run against the mock platform only. There are no contract tests against real platform APIs or the Spikerz API, because no real adapter exists yet.
+- The workflow tests check that the workflow files are where GitHub reads them and call npm scripts that exist. Only a run on GitHub proves they pass there.
 - Token refresh is recorded as a manual action. The tool does not refresh tokens.
 
 ## Tests
@@ -234,4 +235,10 @@ npm test          # unit tests
 npm run typecheck # strict TypeScript
 ```
 
-54 tests across the store, importer, credentials, health-check engine (anomaly detection, retry, re-run behaviour), mock scenarios, reports, alerts, issues and state rebuild.
+87 tests in 9 files:
+
+- **Modules**: store, importer, credentials, health-check engine (anomaly detection, retry, re-run behaviour), mock scenarios, reports, alerts, issues, state rebuild, scheduler.
+- **Unknown states**: an issue stays open, and the maintenance log does not say "cleared", when a failed check or a disconnected account could not have observed the anomaly.
+- **Failure paths**: a failing alert webhook does not fail the health check; partial runs list the accounts that were not checked; stale issue files are removed.
+- **CLI end to end**: the real CLI is spawned in a temporary directory for import, add / update / view, invalid input, a secret-column import, a health check that writes every report file, maintenance actions, retirement and `creds`.
+- **Workflows**: files are in `.github/workflows/` and only call npm scripts that exist.

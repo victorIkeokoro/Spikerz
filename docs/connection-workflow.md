@@ -7,9 +7,9 @@ How a test account goes from "exists in the inventory" to "connected to the Spik
 **All 15 accounts are mock accounts, and connection is manual.**
 
 - I did not create real social-media accounts. Bulk-creating accounts for testing runs against the terms of every platform in scope (fake-identity and automation clauses), triggers bot detection, and in a 72-hour window would have produced restricted accounts rather than useful test data. A real programme needs platform-sanctioned test assets (Meta test users / test Pages, TikTok sandbox apps, X developer test accounts, LinkedIn developer test companies) owned by the company.
-- I did not automate the connection step. Connecting an account means going through each platform's OAuth consent screen. Scripting someone's login and consent is credential handling the tool should not do, and it breaks on 2FA and CAPTCHA anyway. The connection is therefore a documented manual procedure, and the tool records that it happened, who did it, when, and where the evidence is.
+- I did not automate the connection step. Connecting a real account means going through each platform's OAuth consent screen. Scripting someone's login and consent is credential handling the tool should not do, and it breaks on 2FA and CAPTCHA anyway. The connection is therefore a documented manual procedure; after a person completes it, the tool records who did it, when, and where the evidence is.
 
-So for each mock account the workflow below was walked through and recorded with `account connect`; there is no live Spikerz connection behind a mock account. The evidence table at the bottom is where real screenshots go once authorised test accounts and Spikerz workspace access are available.
+For this mock submission, no Spikerz UI steps were performed. The `account connect` entries are mock onboarding records for the proposed workflow, not evidence of a completed connection. The evidence table at the bottom is where real screenshots go once authorised test accounts and Spikerz workspace access are available.
 
 ## Workflow
 
@@ -58,22 +58,22 @@ Marks the account `retired` and `disconnected`, keeps its history and audit trai
 
 ## Connection evidence
 
-| Account | Platform | Connected on | Evidence |
+| Account | Platform | Mock onboarding recorded | Evidence |
 |---|---|---|---|
-| LI-001 | LinkedIn | 2026-11-23 | Mock account - workflow walkthrough only |
-| LI-002 | LinkedIn | 2026-11-23 | Mock account - workflow walkthrough only |
-| LI-003 | LinkedIn | 2026-11-23 | Mock account - workflow walkthrough only |
-| FB-001 | Facebook | 2026-11-23 | Mock account - workflow walkthrough only |
-| FB-002 | Facebook | 2026-11-23 | Mock account - workflow walkthrough only |
-| FB-003 | Facebook | 2026-11-23 | Mock account - workflow walkthrough only |
-| IG-001 | Instagram | 2026-11-23 | Mock account - workflow walkthrough only |
-| IG-002 | Instagram | 2026-11-23 | Mock account - workflow walkthrough only |
-| IG-003 | Instagram | 2026-11-23 | Mock account - workflow walkthrough only |
-| TT-001 | TikTok | 2026-11-23 | Mock account - workflow walkthrough only |
-| TT-002 | TikTok | 2026-11-23 | Mock account - workflow walkthrough only |
-| TT-003 | TikTok | 2026-11-23 | Mock account - workflow walkthrough only |
-| X-001 | X | 2026-11-23 | Mock account - workflow walkthrough only |
-| X-002 | X | 2026-11-23 | Mock account - workflow walkthrough only |
-| X-003 | X | 2026-11-23 | Mock account - workflow walkthrough only |
+| LI-001 | LinkedIn | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| LI-002 | LinkedIn | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| LI-003 | LinkedIn | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| FB-001 | Facebook | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| FB-002 | Facebook | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| FB-003 | Facebook | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| IG-001 | Instagram | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| IG-002 | Instagram | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| IG-003 | Instagram | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| TT-001 | TikTok | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| TT-002 | TikTok | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| TT-003 | TikTok | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| X-001 | X | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| X-002 | X | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
+| X-003 | X | 2026-11-23 | Mock onboarding record only - no Spikerz UI connection performed |
 
 <!-- If Spikerz workspace access is available: add screenshots under docs/evidence/ and replace the Evidence cell with the image link. -->

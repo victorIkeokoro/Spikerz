@@ -1,12 +1,14 @@
 {
   "day": "2026-11-24",
-  "generated_at": "2026-11-23T09:59:36.216Z",
+  "generated_at": "2026-11-23T11:57:51.492Z",
   "totals": {
     "accounts": 15,
     "healthy": 13,
     "warning": 1,
-    "failing": 1
+    "failing": 1,
+    "not_checked": 0
   },
+  "not_checked": [],
   "alerts": [
     {
       "account_id": "FB-003",
@@ -31,7 +33,7 @@
   ],
   "results": [
     {
-      "id": 151,
+      "id": 16,
       "account_id": "FB-001",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -50,13 +52,13 @@
       "anomalies": [],
       "message": "OK",
       "attempts": 1,
-      "latency_ms": 0,
+      "latency_ms": 1,
       "run_mode": "simulated-clock",
       "platform": "Facebook",
       "health": "healthy"
     },
     {
-      "id": 152,
+      "id": 17,
       "account_id": "FB-002",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -83,7 +85,7 @@
       "health": "healthy"
     },
     {
-      "id": 153,
+      "id": 18,
       "account_id": "FB-003",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -111,7 +113,7 @@
       "health": "failing"
     },
     {
-      "id": 154,
+      "id": 19,
       "account_id": "IG-001",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -138,7 +140,7 @@
       "health": "healthy"
     },
     {
-      "id": 155,
+      "id": 20,
       "account_id": "IG-002",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -163,7 +165,7 @@
       "health": "healthy"
     },
     {
-      "id": 156,
+      "id": 21,
       "account_id": "IG-003",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -190,7 +192,7 @@
       "health": "healthy"
     },
     {
-      "id": 157,
+      "id": 22,
       "account_id": "LI-001",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -215,7 +217,7 @@
       "health": "healthy"
     },
     {
-      "id": 158,
+      "id": 23,
       "account_id": "LI-002",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -241,7 +243,7 @@
       "health": "healthy"
     },
     {
-      "id": 159,
+      "id": 24,
       "account_id": "LI-003",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -267,7 +269,7 @@
       "health": "healthy"
     },
     {
-      "id": 160,
+      "id": 25,
       "account_id": "TT-001",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -293,7 +295,7 @@
       "health": "healthy"
     },
     {
-      "id": 161,
+      "id": 26,
       "account_id": "TT-002",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -319,7 +321,7 @@
       "health": "healthy"
     },
     {
-      "id": 162,
+      "id": 27,
       "account_id": "TT-003",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -345,7 +347,7 @@
       "health": "healthy"
     },
     {
-      "id": 163,
+      "id": 28,
       "account_id": "X-001",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -371,7 +373,7 @@
       "health": "healthy"
     },
     {
-      "id": 164,
+      "id": 29,
       "account_id": "X-002",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",
@@ -398,7 +400,7 @@
       "health": "healthy"
     },
     {
-      "id": 165,
+      "id": 30,
       "account_id": "X-003",
       "checked_at": "2026-11-24T12:00:00.000Z",
       "check_day": "2026-11-24",

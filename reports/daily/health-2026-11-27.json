@@ -1,12 +1,14 @@
 {
   "day": "2026-11-27",
-  "generated_at": "2026-11-23T09:59:36.247Z",
+  "generated_at": "2026-11-23T11:57:51.519Z",
   "totals": {
     "accounts": 15,
     "healthy": 13,
     "warning": 0,
-    "failing": 2
+    "failing": 2,
+    "not_checked": 0
   },
+  "not_checked": [],
   "alerts": [
     {
       "account_id": "TT-002",
@@ -31,7 +33,7 @@
   ],
   "results": [
     {
-      "id": 196,
+      "id": 61,
       "account_id": "FB-001",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -56,7 +58,7 @@
       "health": "healthy"
     },
     {
-      "id": 197,
+      "id": 62,
       "account_id": "FB-002",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -83,7 +85,7 @@
       "health": "failing"
     },
     {
-      "id": 198,
+      "id": 63,
       "account_id": "FB-003",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -110,7 +112,7 @@
       "health": "healthy"
     },
     {
-      "id": 199,
+      "id": 64,
       "account_id": "IG-001",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -137,7 +139,7 @@
       "health": "healthy"
     },
     {
-      "id": 200,
+      "id": 65,
       "account_id": "IG-002",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -162,7 +164,7 @@
       "health": "healthy"
     },
     {
-      "id": 201,
+      "id": 66,
       "account_id": "IG-003",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -189,7 +191,7 @@
       "health": "healthy"
     },
     {
-      "id": 202,
+      "id": 67,
       "account_id": "LI-001",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -214,7 +216,7 @@
       "health": "healthy"
     },
     {
-      "id": 203,
+      "id": 68,
       "account_id": "LI-002",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -240,7 +242,7 @@
       "health": "healthy"
     },
     {
-      "id": 204,
+      "id": 69,
       "account_id": "LI-003",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -266,7 +268,7 @@
       "health": "healthy"
     },
     {
-      "id": 205,
+      "id": 70,
       "account_id": "TT-001",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -292,7 +294,7 @@
       "health": "healthy"
     },
     {
-      "id": 206,
+      "id": 71,
       "account_id": "TT-002",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -320,7 +322,7 @@
       "health": "failing"
     },
     {
-      "id": 207,
+      "id": 72,
       "account_id": "TT-003",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -346,7 +348,7 @@
       "health": "healthy"
     },
     {
-      "id": 208,
+      "id": 73,
       "account_id": "X-001",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -372,7 +374,7 @@
       "health": "healthy"
     },
     {
-      "id": 209,
+      "id": 74,
       "account_id": "X-002",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",
@@ -399,7 +401,7 @@
       "health": "healthy"
     },
     {
-      "id": 210,
+      "id": 75,
       "account_id": "X-003",
       "checked_at": "2026-11-27T12:00:00.000Z",
       "check_day": "2026-11-27",

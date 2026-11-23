@@ -3,7 +3,7 @@ import "dotenv/config";
 import { Command } from "commander";
 import { userInfo } from "node:os";
 import { writeFileSync } from "node:fs";
-import { buildAlerts, formatAlert, sendAlerts } from "./alerts.js";
+import { buildAlerts, formatAlert, notify } from "./alerts.js";
 import { healthState } from "./anomalies.js";
 import {
   DEFAULT_PATHS,
@@ -89,8 +89,9 @@ async function runCheck(opts: { date?: string; account?: string[]; reports: bool
   const prevDay = s.checkDays().filter((d) => d < day).pop();
   const alerts = buildAlerts(summary.results, s.list(), prevDay ? s.healthChecks({ day: prevDay }) : []);
   for (const a of alerts) console.log(formatAlert(a));
-  const sent = await sendAlerts(alerts, process.env.QA_ALERT_WEBHOOK_URL);
-  if (sent) console.log(`${sent} alert(s) sent to webhook`);
+  const notified = await notify(alerts, process.env.QA_ALERT_WEBHOOK_URL);
+  if (notified.sent) console.log(`${notified.sent} alert(s) sent to webhook`);
+  if (notified.error) console.error(`Warning: alert webhook failed (${notified.error}). Results were saved.`);
   if (opts.reports) {
     const files = [...writeDailyReports(s, day), ...writeSummaryArtifacts(s)];
     console.log(`Wrote ${files.length} report file(s) under reports/ and docs/`);
@@ -274,7 +275,9 @@ check
   .command("schedule")
   .description("Stay running and execute the health check on a cron schedule")
   .option("--cron <expr>", "cron expression (UTC)", "0 8 * * *")
-  .action((o) => scheduleDaily(o.cron, () => runCheck({ reports: true })));
+  .action((o) => {
+    scheduleDaily(o.cron, () => runCheck({ reports: true }));
+  });
 
 // ----- report ----------------------------------------------------------------
 const report = program.command("report").description("Reports");
