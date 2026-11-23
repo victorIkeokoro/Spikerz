@@ -1,0 +1,14 @@
+{
+  "description": "Scripted events for the mock platform layer. Days are 1-based offsets from monitoring_start. These events stand in for things real platforms do to test accounts so the detection, alerting, retry and reporting paths can be exercised deterministically.",
+  "monitoring_start": "2026-11-23",
+  "default_token_lifetime_days": 60,
+  "events": [
+    { "account_id": "X-003",  "from_day": 2, "to_day": 2, "effect": "rate_limited",       "fail_attempts": 2, "detail": "Too Many Requests returned by mock X API on the first two attempts" },
+    { "account_id": "FB-003", "from_day": 2, "to_day": 3, "effect": "permission_removed", "value": "pages_manage_posts", "detail": "Page admin role downgraded; pages_manage_posts no longer granted" },
+    { "account_id": "LI-002", "from_day": 3, "to_day": 3, "effect": "token_expired",      "detail": "401 invalid_token: access token expired and refresh token was not rotated" },
+    { "account_id": "TT-002", "from_day": 3, "to_day": 5, "effect": "restricted",         "detail": "Account flagged by platform integrity checks; API returns account_restricted" },
+    { "account_id": "LI-003", "from_day": 4, "to_day": 4, "effect": "token_expiring",     "days_left": 3, "detail": "Access token reaches end of lifetime in 3 days" },
+    { "account_id": "IG-001", "from_day": 4, "to_day": 4, "effect": "disconnected",       "detail": "Session invalidated after a password change on the linked account" },
+    { "account_id": "FB-002", "from_day": 5, "to_day": 5, "effect": "asset_removed",      "value": "page:Mock QA Page A", "detail": "Page no longer returned by /me/accounts for the connected user" }
+  ]
+}

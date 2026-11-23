@@ -1,0 +1,407 @@
+{
+  "day": "2026-11-23",
+  "generated_at": "2026-11-23T09:59:36.212Z",
+  "totals": {
+    "accounts": 15,
+    "healthy": 15,
+    "warning": 0,
+    "failing": 0
+  },
+  "alerts": [],
+  "results": [
+    {
+      "id": 136,
+      "account_id": "FB-001",
+      "checked_at": "2026-11-23T09:37:42.328Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "profile:mock-fb-qa-user-01"
+      ],
+      "permissions": [
+        "public_profile",
+        "pages_show_list"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "Facebook",
+      "health": "healthy"
+    },
+    {
+      "id": 137,
+      "account_id": "FB-002",
+      "checked_at": "2026-11-23T09:37:42.331Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "page:Mock QA Page A"
+      ],
+      "permissions": [
+        "pages_show_list",
+        "pages_read_engagement",
+        "pages_manage_posts",
+        "pages_manage_engagement"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "Facebook",
+      "health": "healthy"
+    },
+    {
+      "id": 138,
+      "account_id": "FB-003",
+      "checked_at": "2026-11-23T09:37:42.331Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "page:Mock QA Page B"
+      ],
+      "permissions": [
+        "pages_show_list",
+        "pages_read_engagement",
+        "pages_manage_posts",
+        "pages_manage_engagement"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "Facebook",
+      "health": "healthy"
+    },
+    {
+      "id": 139,
+      "account_id": "IG-001",
+      "checked_at": "2026-11-23T09:37:42.331Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "ig:mock_qa_business_01",
+        "page:Mock QA Page A"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments",
+        "instagram_content_publish"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "Instagram",
+      "health": "healthy"
+    },
+    {
+      "id": 140,
+      "account_id": "IG-002",
+      "checked_at": "2026-11-23T09:37:42.331Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "ig:mock_qa_creator_01"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "Instagram",
+      "health": "healthy"
+    },
+    {
+      "id": 141,
+      "account_id": "IG-003",
+      "checked_at": "2026-11-23T09:37:42.331Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "ig:mock_qa_business_02",
+        "page:Mock QA Page B"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments",
+        "instagram_content_publish"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "Instagram",
+      "health": "healthy"
+    },
+    {
+      "id": 142,
+      "account_id": "LI-001",
+      "checked_at": "2026-11-23T09:37:42.331Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "profile:mock-li-qa-member-01"
+      ],
+      "permissions": [
+        "r_basicprofile",
+        "w_member_social"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "LinkedIn",
+      "health": "healthy"
+    },
+    {
+      "id": 143,
+      "account_id": "LI-002",
+      "checked_at": "2026-11-23T09:37:42.331Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "page:Mock QA Company Page A"
+      ],
+      "permissions": [
+        "r_organization_social",
+        "w_organization_social",
+        "rw_organization_admin"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "LinkedIn",
+      "health": "healthy"
+    },
+    {
+      "id": 144,
+      "account_id": "LI-003",
+      "checked_at": "2026-11-23T09:37:42.331Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "page:Mock QA Company Page B"
+      ],
+      "permissions": [
+        "r_organization_social",
+        "w_organization_social",
+        "rw_organization_admin"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 1,
+      "run_mode": "live",
+      "platform": "LinkedIn",
+      "health": "healthy"
+    },
+    {
+      "id": 145,
+      "account_id": "TT-001",
+      "checked_at": "2026-11-23T09:37:42.332Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "tiktok:mock_qa_brand_01"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "TikTok",
+      "health": "healthy"
+    },
+    {
+      "id": 146,
+      "account_id": "TT-002",
+      "checked_at": "2026-11-23T09:37:42.332Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "tiktok:mock_qa_creator_01"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "TikTok",
+      "health": "healthy"
+    },
+    {
+      "id": 147,
+      "account_id": "TT-003",
+      "checked_at": "2026-11-23T09:37:42.332Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "tiktok:mock_qa_brand_02"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "TikTok",
+      "health": "healthy"
+    },
+    {
+      "id": 148,
+      "account_id": "X-001",
+      "checked_at": "2026-11-23T09:37:42.332Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "x:mock_qa_handle_01"
+      ],
+      "permissions": [
+        "tweet.read",
+        "users.read",
+        "offline.access"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "X",
+      "health": "healthy"
+    },
+    {
+      "id": 149,
+      "account_id": "X-002",
+      "checked_at": "2026-11-23T09:37:42.332Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "x:mock_qa_handle_02"
+      ],
+      "permissions": [
+        "tweet.read",
+        "tweet.write",
+        "users.read",
+        "offline.access"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "X",
+      "health": "healthy"
+    },
+    {
+      "id": 150,
+      "account_id": "X-003",
+      "checked_at": "2026-11-23T09:37:42.334Z",
+      "check_day": "2026-11-23",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "x:mock_qa_brand_01"
+      ],
+      "permissions": [
+        "tweet.read",
+        "tweet.write",
+        "users.read",
+        "dm.read",
+        "offline.access"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "live",
+      "platform": "X",
+      "health": "healthy"
+    }
+  ]
+}

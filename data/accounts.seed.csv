@@ -1,0 +1,16 @@
+account_id,platform,account_type,environment,owner,status,connection_status,connected_assets,permissions,last_health_check,notes,credential_ref_id
+LI-001,LinkedIn,profile,qa,qa-team,active,pending,profile:mock-li-qa-member-01,r_basicprofile;w_member_social,,Mock member profile used for personal-post flows,CRED-LI-001
+LI-002,LinkedIn,page,qa,qa-team,active,pending,page:Mock QA Company Page A,r_organization_social;w_organization_social;rw_organization_admin,,Mock company page - primary LinkedIn page under test,CRED-LI-002
+LI-003,LinkedIn,page,qa,qa-team,active,pending,page:Mock QA Company Page B,r_organization_social;w_organization_social;rw_organization_admin,,Mock company page - secondary / negative-path testing,CRED-LI-003
+FB-001,Facebook,profile,qa,qa-team,active,pending,profile:mock-fb-qa-user-01,public_profile;pages_show_list,,Mock profile that administers the two mock Pages,CRED-FB-001
+FB-002,Facebook,page,qa,qa-team,active,pending,page:Mock QA Page A,pages_show_list;pages_read_engagement;pages_manage_posts;pages_manage_engagement,,Mock Page - comment moderation flows,CRED-FB-002
+FB-003,Facebook,page,qa,qa-team,active,pending,page:Mock QA Page B,pages_show_list;pages_read_engagement;pages_manage_posts;pages_manage_engagement,,Mock Page - permission-change scenarios,CRED-FB-003
+IG-001,Instagram,business,qa,qa-team,active,pending,ig:mock_qa_business_01;page:Mock QA Page A,instagram_basic;instagram_manage_comments;instagram_content_publish,,Mock business account linked to Mock QA Page A,CRED-IG-001
+IG-002,Instagram,creator,qa,qa-team,active,pending,ig:mock_qa_creator_01,instagram_basic;instagram_manage_comments,,Mock creator account,CRED-IG-002
+IG-003,Instagram,business,qa,qa-team,active,pending,ig:mock_qa_business_02;page:Mock QA Page B,instagram_basic;instagram_manage_comments;instagram_content_publish,,Mock business account linked to Mock QA Page B,CRED-IG-003
+TT-001,TikTok,business,qa,qa-team,active,pending,tiktok:mock_qa_brand_01,user.info.basic;video.list;comment.list,,Mock business account,CRED-TT-001
+TT-002,TikTok,creator,qa,qa-team,active,pending,tiktok:mock_qa_creator_01,user.info.basic;video.list;comment.list,,Mock creator account - restriction scenario,CRED-TT-002
+TT-003,TikTok,business,qa,qa-team,active,pending,tiktok:mock_qa_brand_02,user.info.basic;video.list;comment.list,,Mock business account,CRED-TT-003
+X-001,X,profile,qa,qa-team,active,pending,x:mock_qa_handle_01,tweet.read;users.read;offline.access,,Mock read-only handle,CRED-X-001
+X-002,X,profile,qa,qa-team,active,pending,x:mock_qa_handle_02,tweet.read;tweet.write;users.read;offline.access,,Mock read/write handle,CRED-X-002
+X-003,X,business,qa,qa-team,active,pending,x:mock_qa_brand_01,tweet.read;tweet.write;users.read;dm.read;offline.access,,Mock brand handle - rate-limit and token-expiry scenarios,CRED-X-003

@@ -1,0 +1,186 @@
+[
+  {
+    "day": "2026-11-23",
+    "account_id": "LI-001",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "LI-002",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "LI-003",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "FB-001",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "FB-002",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "FB-003",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "IG-001",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "IG-002",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "IG-003",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "TT-001",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "TT-002",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "TT-003",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "X-001",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "X-002",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-23",
+    "account_id": "X-003",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection)",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-24",
+    "account_id": "X-003",
+    "kind": "maintenance",
+    "actor": "qa-engineer",
+    "detail": "Reviewed RETRY_RECOVERED warning: two HTTP 429 responses, third attempt succeeded. No action; watching for recurrence."
+  },
+  {
+    "day": "2026-11-24",
+    "account_id": "FB-003",
+    "kind": "maintenance",
+    "actor": "qa-engineer",
+    "detail": "Confirmed pages_manage_posts missing from granted scopes. Raised with Page owner to restore the admin role."
+  },
+  {
+    "day": "2026-11-25",
+    "account_id": "FB-003",
+    "kind": "maintenance",
+    "actor": "qa-engineer",
+    "detail": "Admin role restored on Mock QA Page B and account reconnected so pages_manage_posts is re-granted. Expect clear on next check."
+  },
+  {
+    "day": "2026-11-25",
+    "account_id": "LI-002",
+    "kind": "maintenance",
+    "actor": "qa-engineer",
+    "detail": "Token expired. Re-authorised the account to mint a new access token; opened follow-up to find out why refresh did not run."
+  },
+  {
+    "day": "2026-11-25",
+    "account_id": "TT-002",
+    "kind": "maintenance",
+    "actor": "qa-engineer",
+    "detail": "Account restricted by platform. Paused all tests that use TT-002; will re-check for 48h before replacing."
+  },
+  {
+    "day": "2026-11-26",
+    "account_id": "IG-001",
+    "kind": "connect",
+    "actor": "qa-engineer",
+    "detail": "Reconnected through the connection workflow after the session was invalidated by a password change",
+    "evidence": "docs/connection-workflow.md"
+  },
+  {
+    "day": "2026-11-26",
+    "account_id": "LI-003",
+    "kind": "maintenance",
+    "actor": "qa-engineer",
+    "detail": "Token expiring in 3 days. Re-authorised proactively to avoid a disconnect."
+  },
+  {
+    "day": "2026-11-27",
+    "account_id": "TT-002",
+    "kind": "maintenance",
+    "actor": "qa-engineer",
+    "detail": "Restriction has now lasted 3 checks (>48h). Proposed retirement via `account retire TT-002` and requested a standby TikTok test account."
+  },
+  {
+    "day": "2026-11-27",
+    "account_id": "FB-002",
+    "kind": "maintenance",
+    "actor": "qa-engineer",
+    "detail": "Mock QA Page A no longer returned for the connected user. Investigating whether the Page was unlinked or the user lost access; issue left open."
+  }
+]

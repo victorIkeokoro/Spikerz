@@ -1,0 +1,431 @@
+{
+  "day": "2026-11-24",
+  "generated_at": "2026-11-23T09:59:36.216Z",
+  "totals": {
+    "accounts": 15,
+    "healthy": 13,
+    "warning": 1,
+    "failing": 1
+  },
+  "alerts": [
+    {
+      "account_id": "FB-003",
+      "platform": "Facebook",
+      "code": "PERMISSION_MISSING",
+      "severity": "medium",
+      "message": "Expected permission no longer granted - Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts",
+      "at": "2026-11-24T12:00:00.000Z",
+      "recommended_action": "Restore the role/scope on the platform side, then reconnect in Spikerz so the missing permission is re-granted.",
+      "is_new": true
+    },
+    {
+      "account_id": "X-003",
+      "platform": "X",
+      "code": "RETRY_RECOVERED",
+      "severity": "low",
+      "message": "Check succeeded only after retry - succeeded on attempt 3 after: HTTP 429 Too Many Requests returned by mock X API on the first two attempts",
+      "at": "2026-11-24T12:00:00.000Z",
+      "recommended_action": "No action needed. If this recurs daily, lower check concurrency or stagger the schedule.",
+      "is_new": true
+    }
+  ],
+  "results": [
+    {
+      "id": 151,
+      "account_id": "FB-001",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "profile:mock-fb-qa-user-01"
+      ],
+      "permissions": [
+        "public_profile",
+        "pages_show_list"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "Facebook",
+      "health": "healthy"
+    },
+    {
+      "id": 152,
+      "account_id": "FB-002",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "page:Mock QA Page A"
+      ],
+      "permissions": [
+        "pages_show_list",
+        "pages_read_engagement",
+        "pages_manage_posts",
+        "pages_manage_engagement"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "Facebook",
+      "health": "healthy"
+    },
+    {
+      "id": 153,
+      "account_id": "FB-003",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "page:Mock QA Page B"
+      ],
+      "permissions": [
+        "pages_show_list",
+        "pages_read_engagement",
+        "pages_manage_engagement"
+      ],
+      "healthy": false,
+      "anomalies": [
+        "PERMISSION_MISSING"
+      ],
+      "message": "Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "Facebook",
+      "health": "failing"
+    },
+    {
+      "id": 154,
+      "account_id": "IG-001",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "ig:mock_qa_business_01",
+        "page:Mock QA Page A"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments",
+        "instagram_content_publish"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "Instagram",
+      "health": "healthy"
+    },
+    {
+      "id": 155,
+      "account_id": "IG-002",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "ig:mock_qa_creator_01"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "Instagram",
+      "health": "healthy"
+    },
+    {
+      "id": 156,
+      "account_id": "IG-003",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "ig:mock_qa_business_02",
+        "page:Mock QA Page B"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments",
+        "instagram_content_publish"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "Instagram",
+      "health": "healthy"
+    },
+    {
+      "id": 157,
+      "account_id": "LI-001",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "profile:mock-li-qa-member-01"
+      ],
+      "permissions": [
+        "r_basicprofile",
+        "w_member_social"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "LinkedIn",
+      "health": "healthy"
+    },
+    {
+      "id": 158,
+      "account_id": "LI-002",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "page:Mock QA Company Page A"
+      ],
+      "permissions": [
+        "r_organization_social",
+        "w_organization_social",
+        "rw_organization_admin"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "LinkedIn",
+      "health": "healthy"
+    },
+    {
+      "id": 159,
+      "account_id": "LI-003",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "page:Mock QA Company Page B"
+      ],
+      "permissions": [
+        "r_organization_social",
+        "w_organization_social",
+        "rw_organization_admin"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "LinkedIn",
+      "health": "healthy"
+    },
+    {
+      "id": 160,
+      "account_id": "TT-001",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "tiktok:mock_qa_brand_01"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "TikTok",
+      "health": "healthy"
+    },
+    {
+      "id": 161,
+      "account_id": "TT-002",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "tiktok:mock_qa_creator_01"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "TikTok",
+      "health": "healthy"
+    },
+    {
+      "id": 162,
+      "account_id": "TT-003",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "tiktok:mock_qa_brand_02"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "TikTok",
+      "health": "healthy"
+    },
+    {
+      "id": 163,
+      "account_id": "X-001",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "x:mock_qa_handle_01"
+      ],
+      "permissions": [
+        "tweet.read",
+        "users.read",
+        "offline.access"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "X",
+      "health": "healthy"
+    },
+    {
+      "id": 164,
+      "account_id": "X-002",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "x:mock_qa_handle_02"
+      ],
+      "permissions": [
+        "tweet.read",
+        "tweet.write",
+        "users.read",
+        "offline.access"
+      ],
+      "healthy": true,
+      "anomalies": [],
+      "message": "OK",
+      "attempts": 1,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "X",
+      "health": "healthy"
+    },
+    {
+      "id": 165,
+      "account_id": "X-003",
+      "checked_at": "2026-11-24T12:00:00.000Z",
+      "check_day": "2026-11-24",
+      "account_status": "active",
+      "connection_status": "connected",
+      "token_valid": true,
+      "token_expires_at": "2027-01-22T00:00:00.000Z",
+      "connected_assets": [
+        "x:mock_qa_brand_01"
+      ],
+      "permissions": [
+        "tweet.read",
+        "tweet.write",
+        "users.read",
+        "dm.read",
+        "offline.access"
+      ],
+      "healthy": true,
+      "anomalies": [
+        "RETRY_RECOVERED"
+      ],
+      "message": "succeeded on attempt 3 after: HTTP 429 Too Many Requests returned by mock X API on the first two attempts",
+      "attempts": 3,
+      "latency_ms": 0,
+      "run_mode": "simulated-clock",
+      "platform": "X",
+      "health": "warning"
+    }
+  ]
+}

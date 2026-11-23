@@ -1,0 +1,33 @@
+node_modules/
+dist/
+*.log
+
+# Local environment / secrets — never commit real credentials
+.env
+.env.local
+secrets/
+*.secret
+
+# Local runtime database (regenerated from seed + health checks)
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+
+# Coverage
+coverage/
+
+# OS
+.DS_Store
+
+# Other local env files (keep the example)
+.env.*
+!.env.example
+
+# Editors / tooling
+.idea/
+.vscode/
+*.swp
+.tsbuildinfo
+*.tsbuildinfo
+npm-debug.log*

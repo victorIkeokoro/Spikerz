@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QA test-account health dashboard</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --ink: #16202b; --muted: #5d6b7a; --line: #dfe4ea;
+    --ok: #0b7a4b; --ok-bg: #e3f4ec; --warn: #8a5a00; --warn-bg: #fdf1d3; --bad: #b3261e; --bad-bg: #fbe4e2;
+    --accent: #2456c9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10151b; --panel: #18202a; --ink: #e7ecf2; --muted: #9aa7b5; --line: #2a3542;
+      --ok: #5fd19d; --ok-bg: #12382a; --warn: #f0c45c; --warn-bg: #3d3010; --bad: #ff8f86; --bad-bg: #45191a;
+      --accent: #8fb0ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h2 { font-size: 17px; margin: 0 0 12px; }
+  p.sub { margin: 0 0 24px; color: var(--muted); }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin-bottom: 20px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 20px; }
+  .tile { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .tile .k { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .tile .v { font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  thead th { font-size: 12px; color: var(--muted); font-weight: 600; white-space: nowrap; }
+  .daynum { display: block; color: var(--ink); font-size: 13px; }
+  .date, .mode { display: block; font-weight: 400; }
+  .mode { font-size: 11px; }
+  .nw { white-space: nowrap; }
+  tr.group th { background: var(--bg); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .acct { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; }
+  .type { color: var(--muted); }
+  .cell { min-width: 120px; }
+  .cell .sym { display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center; border-radius: 50%; font-weight: 700; margin-right: 6px; }
+  .cell .codes { font-size: 11.5px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .healthy .sym { background: var(--ok-bg); color: var(--ok); }
+  .warning .sym { background: var(--warn-bg); color: var(--warn); }
+  .failing .sym { background: var(--bad-bg); color: var(--bad); }
+  .warning .codes { color: var(--warn); } .failing .codes { color: var(--bad); }
+  td.num { font-variant-numeric: tabular-nums; font-weight: 600; }
+  td.num.healthy { color: var(--ok); } td.num.warning { color: var(--warn); } td.num.failing { color: var(--bad); }
+  .none { color: var(--muted); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; border: 1px solid var(--line); }
+  .sev-critical, .sev-high, .open { background: var(--bad-bg); color: var(--bad); border-color: transparent; }
+  .sev-medium { background: var(--warn-bg); color: var(--warn); border-color: transparent; }
+  .sev-low, .new { background: var(--bg); color: var(--muted); }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; }
+  a { color: var(--accent); }
+  .legend { color: var(--muted); font-size: 13px; margin: 12px 0 0; }
+  .empty { color: var(--muted); margin: 0; }
+  footer { color: var(--muted); font-size: 12.5px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>QA test-account health dashboard</h1>
+  <p class="sub">15 accounts across 5 platforms, 5 monitored day(s). Mix of live runs and simulated-clock runs against the mock platform layer.</p>
+
+  <div class="tiles">
+    <div class="tile"><div class="k">Accounts</div><div class="v">15</div></div>
+    <div class="tile"><div class="k">Days monitored</div><div class="v">5</div></div>
+    <div class="tile"><div class="k">Checks run</div><div class="v">75</div></div>
+    <div class="tile"><div class="k">Pass rate</div><div class="v">89.3%</div></div>
+    <div class="tile"><div class="k">Failing checks</div><div class="v">8</div></div>
+    <div class="tile"><div class="k">Issues open / resolved</div><div class="v">2 / 3</div></div>
+  </div>
+
+  <section>
+    <h2>Account health by day</h2>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Account</th><th scope="col">Type</th><th scope="col"><span class="daynum">Day 1</span><span class="date">2026-11-23</span><span class="mode">live run</span></th><th scope="col"><span class="daynum">Day 2</span><span class="date">2026-11-24</span><span class="mode">simulated clock</span></th><th scope="col"><span class="daynum">Day 3</span><span class="date">2026-11-25</span><span class="mode">simulated clock</span></th><th scope="col"><span class="daynum">Day 4</span><span class="date">2026-11-26</span><span class="mode">simulated clock</span></th><th scope="col"><span class="daynum">Day 5</span><span class="date">2026-11-27</span><span class="mode">simulated clock</span></th></tr></thead>
+      <tbody><tr class="group"><th colspan="7" scope="colgroup">LinkedIn</th></tr>
+<tr><th scope="row"><span class="acct">LI-001</span></th><td class="type">profile</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr><th scope="row"><span class="acct">LI-002</span></th><td class="type">page</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell failing" title="Failing · error · TOKEN_EXPIRED · 401 invalid_token: access token expired and refresh token was not rotated"><span class="sym" aria-hidden="true">✕</span><span class="sr">Failing</span><span class="codes">TOKEN_EXPIRED</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr><th scope="row"><span class="acct">LI-003</span></th><td class="type">page</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell warning" title="Warning · connected · TOKEN_EXPIRING_SOON · Access token reaches end of lifetime in 3 days | token expires in 3 day(s)"><span class="sym" aria-hidden="true">!</span><span class="sr">Warning</span><span class="codes">TOKEN_EXPIRING_SOON</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr class="group"><th colspan="7" scope="colgroup">Facebook</th></tr>
+<tr><th scope="row"><span class="acct">FB-001</span></th><td class="type">profile</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr><th scope="row"><span class="acct">FB-002</span></th><td class="type">page</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell failing" title="Failing · connected · ASSET_MISSING · Page no longer returned by /me/accounts for the connected user | missing asset(s): page:Mock QA Page A"><span class="sym" aria-hidden="true">✕</span><span class="sr">Failing</span><span class="codes">ASSET_MISSING</span></td></tr>
+<tr><th scope="row"><span class="acct">FB-003</span></th><td class="type">page</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell failing" title="Failing · connected · PERMISSION_MISSING · Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts"><span class="sym" aria-hidden="true">✕</span><span class="sr">Failing</span><span class="codes">PERMISSION_MISSING</span></td><td class="cell failing" title="Failing · connected · PERMISSION_MISSING · Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts"><span class="sym" aria-hidden="true">✕</span><span class="sr">Failing</span><span class="codes">PERMISSION_MISSING</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr class="group"><th colspan="7" scope="colgroup">Instagram</th></tr>
+<tr><th scope="row"><span class="acct">IG-001</span></th><td class="type">business</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell failing" title="Failing · disconnected · DISCONNECTED · Session invalidated after a password change on the linked account"><span class="sym" aria-hidden="true">✕</span><span class="sr">Failing</span><span class="codes">DISCONNECTED</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr><th scope="row"><span class="acct">IG-002</span></th><td class="type">creator</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr><th scope="row"><span class="acct">IG-003</span></th><td class="type">business</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr class="group"><th colspan="7" scope="colgroup">TikTok</th></tr>
+<tr><th scope="row"><span class="acct">TT-001</span></th><td class="type">business</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr><th scope="row"><span class="acct">TT-002</span></th><td class="type">creator</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell failing" title="Failing · connected · ACCOUNT_RESTRICTED · Account flagged by platform integrity checks; API returns account_restricted"><span class="sym" aria-hidden="true">✕</span><span class="sr">Failing</span><span class="codes">ACCOUNT_RESTRICTED</span></td><td class="cell failing" title="Failing · connected · ACCOUNT_RESTRICTED · Account flagged by platform integrity checks; API returns account_restricted"><span class="sym" aria-hidden="true">✕</span><span class="sr">Failing</span><span class="codes">ACCOUNT_RESTRICTED</span></td><td class="cell failing" title="Failing · connected · ACCOUNT_RESTRICTED · Account flagged by platform integrity checks; API returns account_restricted"><span class="sym" aria-hidden="true">✕</span><span class="sr">Failing</span><span class="codes">ACCOUNT_RESTRICTED</span></td></tr>
+<tr><th scope="row"><span class="acct">TT-003</span></th><td class="type">business</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr class="group"><th colspan="7" scope="colgroup">X</th></tr>
+<tr><th scope="row"><span class="acct">X-001</span></th><td class="type">profile</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr><th scope="row"><span class="acct">X-002</span></th><td class="type">profile</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr>
+<tr><th scope="row"><span class="acct">X-003</span></th><td class="type">business</td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell warning" title="Warning · connected · RETRY_RECOVERED · succeeded on attempt 3 after: HTTP 429 Too Many Requests returned by mock X API on the first two attempts"><span class="sym" aria-hidden="true">!</span><span class="sr">Warning</span><span class="codes">RETRY_RECOVERED</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td><td class="cell healthy" title="Healthy · connected · no anomalies · OK"><span class="sym" aria-hidden="true">✓</span><span class="sr">Healthy</span></td></tr></tbody>
+    </table></div>
+    <p class="legend">✓ healthy · ! warning (no action required yet) · ✕ failing. Hover a cell for the recorded detail.</p>
+  </section>
+
+  <section>
+    <h2>Passing accounts per platform</h2>
+    <div class="scroll"><table>
+      <thead><tr><th scope="col">Platform</th><th scope="col"><span class="daynum">Day 1</span><span class="date">2026-11-23</span><span class="mode">live run</span></th><th scope="col"><span class="daynum">Day 2</span><span class="date">2026-11-24</span><span class="mode">simulated clock</span></th><th scope="col"><span class="daynum">Day 3</span><span class="date">2026-11-25</span><span class="mode">simulated clock</span></th><th scope="col"><span class="daynum">Day 4</span><span class="date">2026-11-26</span><span class="mode">simulated clock</span></th><th scope="col"><span class="daynum">Day 5</span><span class="date">2026-11-27</span><span class="mode">simulated clock</span></th></tr></thead>
+      <tbody><tr><th scope="row">LinkedIn</th><td class="num healthy">3/3</td><td class="num healthy">3/3</td><td class="num failing">2/3</td><td class="num warning">3/3</td><td class="num healthy">3/3</td></tr><tr><th scope="row">Facebook</th><td class="num healthy">3/3</td><td class="num failing">2/3</td><td class="num failing">2/3</td><td class="num healthy">3/3</td><td class="num failing">2/3</td></tr><tr><th scope="row">Instagram</th><td class="num healthy">3/3</td><td class="num healthy">3/3</td><td class="num healthy">3/3</td><td class="num failing">2/3</td><td class="num healthy">3/3</td></tr><tr><th scope="row">TikTok</th><td class="num healthy">3/3</td><td class="num healthy">3/3</td><td class="num failing">2/3</td><td class="num failing">2/3</td><td class="num failing">2/3</td></tr><tr><th scope="row">X</th><td class="num healthy">3/3</td><td class="num warning">3/3</td><td class="num healthy">3/3</td><td class="num healthy">3/3</td><td class="num healthy">3/3</td></tr></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Issues</h2>
+    <div class="scroll"><table><thead><tr><th>ID</th><th>Account</th><th>Platform</th><th>Code</th><th>Severity</th><th>First seen</th><th>Status</th><th>Recommended next action</th></tr></thead><tbody><tr>
+        <td class="nw"><a href="../docs/issues/ISS-001.md">ISS-001</a></td>
+        <td class="nw">FB-003</td><td>Facebook</td>
+        <td><code>PERMISSION_MISSING</code></td>
+        <td><span class="pill sev-medium">medium</span></td>
+        <td class="nw">2026-11-24</td>
+        <td class="nw">resolved 2026-11-26</td>
+        <td>Restore the role/scope on the platform side, then reconnect in Spikerz so the missing permission is re-granted.</td></tr><tr>
+        <td class="nw"><a href="../docs/issues/ISS-002.md">ISS-002</a></td>
+        <td class="nw">LI-002</td><td>LinkedIn</td>
+        <td><code>TOKEN_EXPIRED</code></td>
+        <td><span class="pill sev-high">high</span></td>
+        <td class="nw">2026-11-25</td>
+        <td class="nw">resolved 2026-11-26</td>
+        <td>Re-authorise the account to mint a new token; check why the scheduled refresh did not run.</td></tr><tr>
+        <td class="nw"><a href="../docs/issues/ISS-003.md">ISS-003</a></td>
+        <td class="nw">TT-002</td><td>TikTok</td>
+        <td><code>ACCOUNT_RESTRICTED</code></td>
+        <td><span class="pill sev-high">high</span></td>
+        <td class="nw">2026-11-25</td>
+        <td class="nw"><span class="pill open">open</span></td>
+        <td>Pause tests using this account, complete any platform verification prompts manually, and swap in a standby account if the restriction lasts more than 48h.</td></tr><tr>
+        <td class="nw"><a href="../docs/issues/ISS-004.md">ISS-004</a></td>
+        <td class="nw">IG-001</td><td>Instagram</td>
+        <td><code>DISCONNECTED</code></td>
+        <td><span class="pill sev-high">high</span></td>
+        <td class="nw">2026-11-26</td>
+        <td class="nw">resolved 2026-11-27</td>
+        <td>Reconnect the account through the Spikerz UI connection flow and re-run the health check.</td></tr><tr>
+        <td class="nw"><a href="../docs/issues/ISS-005.md">ISS-005</a></td>
+        <td class="nw">FB-002</td><td>Facebook</td>
+        <td><code>ASSET_MISSING</code></td>
+        <td><span class="pill sev-medium">medium</span></td>
+        <td class="nw">2026-11-27</td>
+        <td class="nw"><span class="pill open">open</span></td>
+        <td>Confirm the asset still exists and the connected user still has access, then re-select it in Spikerz.</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Alerts on the latest day (2026-11-27)</h2>
+    <div class="scroll"><table><thead><tr><th>Severity</th><th>Account</th><th>Code</th><th>Detail</th></tr></thead><tbody><tr><td><span class="pill sev-high">high</span></td>
+        <td>TT-002</td><td><code>ACCOUNT_RESTRICTED</code></td>
+        <td>Account restricted by platform - Account flagged by platform integrity checks; API returns account_restricted</td></tr><tr><td><span class="pill sev-medium">medium</span></td>
+        <td>FB-002</td><td><code>ASSET_MISSING</code> <span class="pill new">new</span></td>
+        <td>Expected connected asset is missing - Page no longer returned by /me/accounts for the connected user | missing asset(s): page:Mock QA Page A</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Account inventory</h2>
+    <div class="scroll"><table>
+      <thead><tr><th>ID</th><th>Platform</th><th>Type</th><th>Env</th><th>Owner</th><th>Status</th><th>Connection</th><th>Expected assets</th><th>Expected permissions</th><th>Credential ref</th></tr></thead>
+      <tbody><tr><td>FB-001</td><td>Facebook</td><td>profile</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>profile:mock-fb-qa-user-01</td><td>public_profile; pages_show_list</td>
+        <td><code>CRED-FB-001</code></td></tr><tr><td>FB-002</td><td>Facebook</td><td>page</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>page:Mock QA Page A</td><td>pages_show_list; pages_read_engagement; pages_manage_posts; pages_manage_engagement</td>
+        <td><code>CRED-FB-002</code></td></tr><tr><td>FB-003</td><td>Facebook</td><td>page</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>page:Mock QA Page B</td><td>pages_show_list; pages_read_engagement; pages_manage_posts; pages_manage_engagement</td>
+        <td><code>CRED-FB-003</code></td></tr><tr><td>IG-001</td><td>Instagram</td><td>business</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>ig:mock_qa_business_01; page:Mock QA Page A</td><td>instagram_basic; instagram_manage_comments; instagram_content_publish</td>
+        <td><code>CRED-IG-001</code></td></tr><tr><td>IG-002</td><td>Instagram</td><td>creator</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>ig:mock_qa_creator_01</td><td>instagram_basic; instagram_manage_comments</td>
+        <td><code>CRED-IG-002</code></td></tr><tr><td>IG-003</td><td>Instagram</td><td>business</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>ig:mock_qa_business_02; page:Mock QA Page B</td><td>instagram_basic; instagram_manage_comments; instagram_content_publish</td>
+        <td><code>CRED-IG-003</code></td></tr><tr><td>LI-001</td><td>LinkedIn</td><td>profile</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>profile:mock-li-qa-member-01</td><td>r_basicprofile; w_member_social</td>
+        <td><code>CRED-LI-001</code></td></tr><tr><td>LI-002</td><td>LinkedIn</td><td>page</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>page:Mock QA Company Page A</td><td>r_organization_social; w_organization_social; rw_organization_admin</td>
+        <td><code>CRED-LI-002</code></td></tr><tr><td>LI-003</td><td>LinkedIn</td><td>page</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>page:Mock QA Company Page B</td><td>r_organization_social; w_organization_social; rw_organization_admin</td>
+        <td><code>CRED-LI-003</code></td></tr><tr><td>TT-001</td><td>TikTok</td><td>business</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>tiktok:mock_qa_brand_01</td><td>user.info.basic; video.list; comment.list</td>
+        <td><code>CRED-TT-001</code></td></tr><tr><td>TT-002</td><td>TikTok</td><td>creator</td>
+        <td>qa</td><td>qa-team</td><td>restricted</td><td>connected</td>
+        <td>tiktok:mock_qa_creator_01</td><td>user.info.basic; video.list; comment.list</td>
+        <td><code>CRED-TT-002</code></td></tr><tr><td>TT-003</td><td>TikTok</td><td>business</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>tiktok:mock_qa_brand_02</td><td>user.info.basic; video.list; comment.list</td>
+        <td><code>CRED-TT-003</code></td></tr><tr><td>X-001</td><td>X</td><td>profile</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>x:mock_qa_handle_01</td><td>tweet.read; users.read; offline.access</td>
+        <td><code>CRED-X-001</code></td></tr><tr><td>X-002</td><td>X</td><td>profile</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>x:mock_qa_handle_02</td><td>tweet.read; tweet.write; users.read; offline.access</td>
+        <td><code>CRED-X-002</code></td></tr><tr><td>X-003</td><td>X</td><td>business</td>
+        <td>qa</td><td>qa-team</td><td>active</td><td>connected</td>
+        <td>x:mock_qa_brand_01</td><td>tweet.read; tweet.write; users.read; dm.read; offline.access</td>
+        <td><code>CRED-X-003</code></td></tr></tbody>
+    </table></div>
+  </section>
+
+  <footer>Generated 2026-11-23T09:59:36.248Z by qa-accounts. No credentials are stored in or rendered by this report - only credential reference IDs.</footer>
+</main>
+</body>
+</html>

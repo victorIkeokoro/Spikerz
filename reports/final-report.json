@@ -1,0 +1,4304 @@
+{
+  "generated_at": "2026-11-23T09:59:36.248Z",
+  "days": [
+    "2026-11-23",
+    "2026-11-24",
+    "2026-11-25",
+    "2026-11-26",
+    "2026-11-27"
+  ],
+  "accounts": [
+    {
+      "account_id": "FB-001",
+      "platform": "Facebook",
+      "account_type": "profile",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "profile:mock-fb-qa-user-01"
+      ],
+      "permissions": [
+        "public_profile",
+        "pages_show_list"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock profile that administers the two mock Pages",
+      "credential_ref_id": "CRED-FB-001"
+    },
+    {
+      "account_id": "FB-002",
+      "platform": "Facebook",
+      "account_type": "page",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "page:Mock QA Page A"
+      ],
+      "permissions": [
+        "pages_show_list",
+        "pages_read_engagement",
+        "pages_manage_posts",
+        "pages_manage_engagement"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock Page - comment moderation flows",
+      "credential_ref_id": "CRED-FB-002"
+    },
+    {
+      "account_id": "FB-003",
+      "platform": "Facebook",
+      "account_type": "page",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "page:Mock QA Page B"
+      ],
+      "permissions": [
+        "pages_show_list",
+        "pages_read_engagement",
+        "pages_manage_posts",
+        "pages_manage_engagement"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock Page - permission-change scenarios",
+      "credential_ref_id": "CRED-FB-003"
+    },
+    {
+      "account_id": "IG-001",
+      "platform": "Instagram",
+      "account_type": "business",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "ig:mock_qa_business_01",
+        "page:Mock QA Page A"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments",
+        "instagram_content_publish"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock business account linked to Mock QA Page A",
+      "credential_ref_id": "CRED-IG-001"
+    },
+    {
+      "account_id": "IG-002",
+      "platform": "Instagram",
+      "account_type": "creator",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "ig:mock_qa_creator_01"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock creator account",
+      "credential_ref_id": "CRED-IG-002"
+    },
+    {
+      "account_id": "IG-003",
+      "platform": "Instagram",
+      "account_type": "business",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "ig:mock_qa_business_02",
+        "page:Mock QA Page B"
+      ],
+      "permissions": [
+        "instagram_basic",
+        "instagram_manage_comments",
+        "instagram_content_publish"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock business account linked to Mock QA Page B",
+      "credential_ref_id": "CRED-IG-003"
+    },
+    {
+      "account_id": "LI-001",
+      "platform": "LinkedIn",
+      "account_type": "profile",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "profile:mock-li-qa-member-01"
+      ],
+      "permissions": [
+        "r_basicprofile",
+        "w_member_social"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock member profile used for personal-post flows",
+      "credential_ref_id": "CRED-LI-001"
+    },
+    {
+      "account_id": "LI-002",
+      "platform": "LinkedIn",
+      "account_type": "page",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "page:Mock QA Company Page A"
+      ],
+      "permissions": [
+        "r_organization_social",
+        "w_organization_social",
+        "rw_organization_admin"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock company page - primary LinkedIn page under test",
+      "credential_ref_id": "CRED-LI-002"
+    },
+    {
+      "account_id": "LI-003",
+      "platform": "LinkedIn",
+      "account_type": "page",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "page:Mock QA Company Page B"
+      ],
+      "permissions": [
+        "r_organization_social",
+        "w_organization_social",
+        "rw_organization_admin"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock company page - secondary / negative-path testing",
+      "credential_ref_id": "CRED-LI-003"
+    },
+    {
+      "account_id": "TT-001",
+      "platform": "TikTok",
+      "account_type": "business",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "tiktok:mock_qa_brand_01"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock business account",
+      "credential_ref_id": "CRED-TT-001"
+    },
+    {
+      "account_id": "TT-002",
+      "platform": "TikTok",
+      "account_type": "creator",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "restricted",
+      "connection_status": "connected",
+      "connected_assets": [
+        "tiktok:mock_qa_creator_01"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock creator account - restriction scenario",
+      "credential_ref_id": "CRED-TT-002"
+    },
+    {
+      "account_id": "TT-003",
+      "platform": "TikTok",
+      "account_type": "business",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "tiktok:mock_qa_brand_02"
+      ],
+      "permissions": [
+        "user.info.basic",
+        "video.list",
+        "comment.list"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock business account",
+      "credential_ref_id": "CRED-TT-003"
+    },
+    {
+      "account_id": "X-001",
+      "platform": "X",
+      "account_type": "profile",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "x:mock_qa_handle_01"
+      ],
+      "permissions": [
+        "tweet.read",
+        "users.read",
+        "offline.access"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock read-only handle",
+      "credential_ref_id": "CRED-X-001"
+    },
+    {
+      "account_id": "X-002",
+      "platform": "X",
+      "account_type": "profile",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "x:mock_qa_handle_02"
+      ],
+      "permissions": [
+        "tweet.read",
+        "tweet.write",
+        "users.read",
+        "offline.access"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock read/write handle",
+      "credential_ref_id": "CRED-X-002"
+    },
+    {
+      "account_id": "X-003",
+      "platform": "X",
+      "account_type": "business",
+      "environment": "qa",
+      "owner": "qa-team",
+      "status": "active",
+      "connection_status": "connected",
+      "connected_assets": [
+        "x:mock_qa_brand_01"
+      ],
+      "permissions": [
+        "tweet.read",
+        "tweet.write",
+        "users.read",
+        "dm.read",
+        "offline.access"
+      ],
+      "last_health_check": "2026-11-27T12:00:00.000Z",
+      "notes": "Mock brand handle - rate-limit and token-expiry scenarios",
+      "credential_ref_id": "CRED-X-003"
+    }
+  ],
+  "totals": {
+    "accounts": 15,
+    "days": 5,
+    "checks": 75,
+    "healthy": 65,
+    "warning": 2,
+    "failing": 8,
+    "pass_rate_pct": 89.3,
+    "issues_open": 2,
+    "issues_resolved": 3
+  },
+  "by_platform": {
+    "Facebook": {
+      "2026-11-23": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-24": {
+        "healthy": 2,
+        "warning": 0,
+        "failing": 1
+      },
+      "2026-11-25": {
+        "healthy": 2,
+        "warning": 0,
+        "failing": 1
+      },
+      "2026-11-26": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-27": {
+        "healthy": 2,
+        "warning": 0,
+        "failing": 1
+      }
+    },
+    "Instagram": {
+      "2026-11-23": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-24": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-25": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-26": {
+        "healthy": 2,
+        "warning": 0,
+        "failing": 1
+      },
+      "2026-11-27": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      }
+    },
+    "LinkedIn": {
+      "2026-11-23": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-24": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-25": {
+        "healthy": 2,
+        "warning": 0,
+        "failing": 1
+      },
+      "2026-11-26": {
+        "healthy": 2,
+        "warning": 1,
+        "failing": 0
+      },
+      "2026-11-27": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      }
+    },
+    "TikTok": {
+      "2026-11-23": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-24": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-25": {
+        "healthy": 2,
+        "warning": 0,
+        "failing": 1
+      },
+      "2026-11-26": {
+        "healthy": 2,
+        "warning": 0,
+        "failing": 1
+      },
+      "2026-11-27": {
+        "healthy": 2,
+        "warning": 0,
+        "failing": 1
+      }
+    },
+    "X": {
+      "2026-11-23": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-24": {
+        "healthy": 2,
+        "warning": 1,
+        "failing": 0
+      },
+      "2026-11-25": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-26": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      },
+      "2026-11-27": {
+        "healthy": 3,
+        "warning": 0,
+        "failing": 0
+      }
+    }
+  },
+  "matrix": {
+    "FB-001": {
+      "2026-11-23": {
+        "id": 136,
+        "account_id": "FB-001",
+        "checked_at": "2026-11-23T09:37:42.328Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-fb-qa-user-01"
+        ],
+        "permissions": [
+          "public_profile",
+          "pages_show_list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 151,
+        "account_id": "FB-001",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-fb-qa-user-01"
+        ],
+        "permissions": [
+          "public_profile",
+          "pages_show_list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 166,
+        "account_id": "FB-001",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-fb-qa-user-01"
+        ],
+        "permissions": [
+          "public_profile",
+          "pages_show_list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 181,
+        "account_id": "FB-001",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-fb-qa-user-01"
+        ],
+        "permissions": [
+          "public_profile",
+          "pages_show_list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 196,
+        "account_id": "FB-001",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-fb-qa-user-01"
+        ],
+        "permissions": [
+          "public_profile",
+          "pages_show_list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "FB-002": {
+      "2026-11-23": {
+        "id": 137,
+        "account_id": "FB-002",
+        "checked_at": "2026-11-23T09:37:42.331Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_posts",
+          "pages_manage_engagement"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 152,
+        "account_id": "FB-002",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_posts",
+          "pages_manage_engagement"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 167,
+        "account_id": "FB-002",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_posts",
+          "pages_manage_engagement"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 182,
+        "account_id": "FB-002",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_posts",
+          "pages_manage_engagement"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 197,
+        "account_id": "FB-002",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_posts",
+          "pages_manage_engagement"
+        ],
+        "healthy": false,
+        "anomalies": [
+          "ASSET_MISSING"
+        ],
+        "message": "Page no longer returned by /me/accounts for the connected user | missing asset(s): page:Mock QA Page A",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "failing"
+      }
+    },
+    "FB-003": {
+      "2026-11-23": {
+        "id": 138,
+        "account_id": "FB-003",
+        "checked_at": "2026-11-23T09:37:42.331Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_posts",
+          "pages_manage_engagement"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 153,
+        "account_id": "FB-003",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_engagement"
+        ],
+        "healthy": false,
+        "anomalies": [
+          "PERMISSION_MISSING"
+        ],
+        "message": "Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "failing"
+      },
+      "2026-11-25": {
+        "id": 168,
+        "account_id": "FB-003",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_engagement"
+        ],
+        "healthy": false,
+        "anomalies": [
+          "PERMISSION_MISSING"
+        ],
+        "message": "Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "failing"
+      },
+      "2026-11-26": {
+        "id": 183,
+        "account_id": "FB-003",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_posts",
+          "pages_manage_engagement"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 198,
+        "account_id": "FB-003",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "pages_show_list",
+          "pages_read_engagement",
+          "pages_manage_posts",
+          "pages_manage_engagement"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "IG-001": {
+      "2026-11-23": {
+        "id": 139,
+        "account_id": "IG-001",
+        "checked_at": "2026-11-23T09:37:42.331Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_01",
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 154,
+        "account_id": "IG-001",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_01",
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 169,
+        "account_id": "IG-001",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_01",
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 184,
+        "account_id": "IG-001",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "disconnected",
+        "token_valid": false,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_01",
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": false,
+        "anomalies": [
+          "DISCONNECTED"
+        ],
+        "message": "Session invalidated after a password change on the linked account",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "failing"
+      },
+      "2026-11-27": {
+        "id": 199,
+        "account_id": "IG-001",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_01",
+          "page:Mock QA Page A"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "IG-002": {
+      "2026-11-23": {
+        "id": 140,
+        "account_id": "IG-002",
+        "checked_at": "2026-11-23T09:37:42.331Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 155,
+        "account_id": "IG-002",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 170,
+        "account_id": "IG-002",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 185,
+        "account_id": "IG-002",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 200,
+        "account_id": "IG-002",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "IG-003": {
+      "2026-11-23": {
+        "id": 141,
+        "account_id": "IG-003",
+        "checked_at": "2026-11-23T09:37:42.331Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_02",
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 156,
+        "account_id": "IG-003",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_02",
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 171,
+        "account_id": "IG-003",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_02",
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 186,
+        "account_id": "IG-003",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_02",
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 201,
+        "account_id": "IG-003",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "ig:mock_qa_business_02",
+          "page:Mock QA Page B"
+        ],
+        "permissions": [
+          "instagram_basic",
+          "instagram_manage_comments",
+          "instagram_content_publish"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "LI-001": {
+      "2026-11-23": {
+        "id": 142,
+        "account_id": "LI-001",
+        "checked_at": "2026-11-23T09:37:42.331Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-li-qa-member-01"
+        ],
+        "permissions": [
+          "r_basicprofile",
+          "w_member_social"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 157,
+        "account_id": "LI-001",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-li-qa-member-01"
+        ],
+        "permissions": [
+          "r_basicprofile",
+          "w_member_social"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 172,
+        "account_id": "LI-001",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-li-qa-member-01"
+        ],
+        "permissions": [
+          "r_basicprofile",
+          "w_member_social"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 1,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 187,
+        "account_id": "LI-001",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-li-qa-member-01"
+        ],
+        "permissions": [
+          "r_basicprofile",
+          "w_member_social"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 202,
+        "account_id": "LI-001",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "profile:mock-li-qa-member-01"
+        ],
+        "permissions": [
+          "r_basicprofile",
+          "w_member_social"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "LI-002": {
+      "2026-11-23": {
+        "id": 143,
+        "account_id": "LI-002",
+        "checked_at": "2026-11-23T09:37:42.331Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page A"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 158,
+        "account_id": "LI-002",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page A"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 173,
+        "account_id": "LI-002",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "error",
+        "token_valid": false,
+        "token_expires_at": "2026-11-24T23:59:59.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page A"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": false,
+        "anomalies": [
+          "TOKEN_EXPIRED"
+        ],
+        "message": "401 invalid_token: access token expired and refresh token was not rotated",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "failing"
+      },
+      "2026-11-26": {
+        "id": 188,
+        "account_id": "LI-002",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page A"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 203,
+        "account_id": "LI-002",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page A"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "LI-003": {
+      "2026-11-23": {
+        "id": 144,
+        "account_id": "LI-003",
+        "checked_at": "2026-11-23T09:37:42.331Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page B"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 1,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 159,
+        "account_id": "LI-003",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page B"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 174,
+        "account_id": "LI-003",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page B"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 189,
+        "account_id": "LI-003",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2026-11-29T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page B"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [
+          "TOKEN_EXPIRING_SOON"
+        ],
+        "message": "Access token reaches end of lifetime in 3 days | token expires in 3 day(s)",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "warning"
+      },
+      "2026-11-27": {
+        "id": 204,
+        "account_id": "LI-003",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "page:Mock QA Company Page B"
+        ],
+        "permissions": [
+          "r_organization_social",
+          "w_organization_social",
+          "rw_organization_admin"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "TT-001": {
+      "2026-11-23": {
+        "id": 145,
+        "account_id": "TT-001",
+        "checked_at": "2026-11-23T09:37:42.332Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 160,
+        "account_id": "TT-001",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 175,
+        "account_id": "TT-001",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 190,
+        "account_id": "TT-001",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 1,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 205,
+        "account_id": "TT-001",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "TT-002": {
+      "2026-11-23": {
+        "id": 146,
+        "account_id": "TT-002",
+        "checked_at": "2026-11-23T09:37:42.332Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 161,
+        "account_id": "TT-002",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 176,
+        "account_id": "TT-002",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "restricted",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": false,
+        "anomalies": [
+          "ACCOUNT_RESTRICTED"
+        ],
+        "message": "Account flagged by platform integrity checks; API returns account_restricted",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "failing"
+      },
+      "2026-11-26": {
+        "id": 191,
+        "account_id": "TT-002",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "restricted",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": false,
+        "anomalies": [
+          "ACCOUNT_RESTRICTED"
+        ],
+        "message": "Account flagged by platform integrity checks; API returns account_restricted",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "failing"
+      },
+      "2026-11-27": {
+        "id": 206,
+        "account_id": "TT-002",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "restricted",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_creator_01"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": false,
+        "anomalies": [
+          "ACCOUNT_RESTRICTED"
+        ],
+        "message": "Account flagged by platform integrity checks; API returns account_restricted",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "failing"
+      }
+    },
+    "TT-003": {
+      "2026-11-23": {
+        "id": 147,
+        "account_id": "TT-003",
+        "checked_at": "2026-11-23T09:37:42.332Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_02"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 162,
+        "account_id": "TT-003",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_02"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 177,
+        "account_id": "TT-003",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_02"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 192,
+        "account_id": "TT-003",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_02"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 207,
+        "account_id": "TT-003",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "tiktok:mock_qa_brand_02"
+        ],
+        "permissions": [
+          "user.info.basic",
+          "video.list",
+          "comment.list"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "X-001": {
+      "2026-11-23": {
+        "id": 148,
+        "account_id": "X-001",
+        "checked_at": "2026-11-23T09:37:42.332Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 163,
+        "account_id": "X-001",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 178,
+        "account_id": "X-001",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 193,
+        "account_id": "X-001",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 208,
+        "account_id": "X-001",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "X-002": {
+      "2026-11-23": {
+        "id": 149,
+        "account_id": "X-002",
+        "checked_at": "2026-11-23T09:37:42.332Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_02"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 164,
+        "account_id": "X-002",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_02"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-25": {
+        "id": 179,
+        "account_id": "X-002",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_02"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 1,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 194,
+        "account_id": "X-002",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_02"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 209,
+        "account_id": "X-002",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_handle_02"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    },
+    "X-003": {
+      "2026-11-23": {
+        "id": 150,
+        "account_id": "X-003",
+        "checked_at": "2026-11-23T09:37:42.334Z",
+        "check_day": "2026-11-23",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "dm.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "live",
+        "health": "healthy"
+      },
+      "2026-11-24": {
+        "id": 165,
+        "account_id": "X-003",
+        "checked_at": "2026-11-24T12:00:00.000Z",
+        "check_day": "2026-11-24",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "dm.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [
+          "RETRY_RECOVERED"
+        ],
+        "message": "succeeded on attempt 3 after: HTTP 429 Too Many Requests returned by mock X API on the first two attempts",
+        "attempts": 3,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "warning"
+      },
+      "2026-11-25": {
+        "id": 180,
+        "account_id": "X-003",
+        "checked_at": "2026-11-25T12:00:00.000Z",
+        "check_day": "2026-11-25",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "dm.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-26": {
+        "id": 195,
+        "account_id": "X-003",
+        "checked_at": "2026-11-26T12:00:00.000Z",
+        "check_day": "2026-11-26",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "dm.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      },
+      "2026-11-27": {
+        "id": 210,
+        "account_id": "X-003",
+        "checked_at": "2026-11-27T12:00:00.000Z",
+        "check_day": "2026-11-27",
+        "account_status": "active",
+        "connection_status": "connected",
+        "token_valid": true,
+        "token_expires_at": "2027-01-22T00:00:00.000Z",
+        "connected_assets": [
+          "x:mock_qa_brand_01"
+        ],
+        "permissions": [
+          "tweet.read",
+          "tweet.write",
+          "users.read",
+          "dm.read",
+          "offline.access"
+        ],
+        "healthy": true,
+        "anomalies": [],
+        "message": "OK",
+        "attempts": 1,
+        "latency_ms": 0,
+        "run_mode": "simulated-clock",
+        "health": "healthy"
+      }
+    }
+  },
+  "issues": [
+    {
+      "id": "ISS-001",
+      "account_id": "FB-003",
+      "platform": "Facebook",
+      "code": "PERMISSION_MISSING",
+      "title": "Expected permission no longer granted",
+      "severity": "medium",
+      "first_seen": "2026-11-24",
+      "last_seen": "2026-11-25",
+      "resolved_on": "2026-11-26",
+      "status": "resolved",
+      "days_affected": 2,
+      "evidence": [
+        {
+          "id": 153,
+          "account_id": "FB-003",
+          "checked_at": "2026-11-24T12:00:00.000Z",
+          "check_day": "2026-11-24",
+          "account_status": "active",
+          "connection_status": "connected",
+          "token_valid": true,
+          "token_expires_at": "2027-01-22T00:00:00.000Z",
+          "connected_assets": [
+            "page:Mock QA Page B"
+          ],
+          "permissions": [
+            "pages_show_list",
+            "pages_read_engagement",
+            "pages_manage_engagement"
+          ],
+          "healthy": false,
+          "anomalies": [
+            "PERMISSION_MISSING"
+          ],
+          "message": "Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts",
+          "attempts": 1,
+          "latency_ms": 0,
+          "run_mode": "simulated-clock"
+        },
+        {
+          "id": 168,
+          "account_id": "FB-003",
+          "checked_at": "2026-11-25T12:00:00.000Z",
+          "check_day": "2026-11-25",
+          "account_status": "active",
+          "connection_status": "connected",
+          "token_valid": true,
+          "token_expires_at": "2027-01-22T00:00:00.000Z",
+          "connected_assets": [
+            "page:Mock QA Page B"
+          ],
+          "permissions": [
+            "pages_show_list",
+            "pages_read_engagement",
+            "pages_manage_engagement"
+          ],
+          "healthy": false,
+          "anomalies": [
+            "PERMISSION_MISSING"
+          ],
+          "message": "Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts",
+          "attempts": 1,
+          "latency_ms": 0,
+          "run_mode": "simulated-clock"
+        }
+      ],
+      "likely_cause": "A scope was revoked or the connecting user's role on the asset was downgraded.",
+      "recommended_action": "Restore the role/scope on the platform side, then reconnect in Spikerz so the missing permission is re-granted.",
+      "corrective_actions": [
+        {
+          "id": 236,
+          "account_id": "FB-003",
+          "action": "maintenance",
+          "actor": "qa-engineer",
+          "at": "2026-11-24T14:30:00.000Z",
+          "detail": "Confirmed pages_manage_posts missing from granted scopes. Raised with Page owner to restore the admin role."
+        },
+        {
+          "id": 237,
+          "account_id": "FB-003",
+          "action": "maintenance",
+          "actor": "qa-engineer",
+          "at": "2026-11-25T14:30:00.000Z",
+          "detail": "Admin role restored on Mock QA Page B and account reconnected so pages_manage_posts is re-granted. Expect clear on next check."
+        }
+      ]
+    },
+    {
+      "id": "ISS-002",
+      "account_id": "LI-002",
+      "platform": "LinkedIn",
+      "code": "TOKEN_EXPIRED",
+      "title": "Access token expired",
+      "severity": "high",
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-25",
+      "resolved_on": "2026-11-26",
+      "status": "resolved",
+      "days_affected": 1,
+      "evidence": [
+        {
+          "id": 173,
+          "account_id": "LI-002",
+          "checked_at": "2026-11-25T12:00:00.000Z",
+          "check_day": "2026-11-25",
+          "account_status": "active",
+          "connection_status": "error",
+          "token_valid": false,
+          "token_expires_at": "2026-11-24T23:59:59.000Z",
+          "connected_assets": [
+            "page:Mock QA Company Page A"
+          ],
+          "permissions": [
+            "r_organization_social",
+            "w_organization_social",
+            "rw_organization_admin"
+          ],
+          "healthy": false,
+          "anomalies": [
+            "TOKEN_EXPIRED"
+          ],
+          "message": "401 invalid_token: access token expired and refresh token was not rotated",
+          "attempts": 1,
+          "latency_ms": 0,
+          "run_mode": "simulated-clock"
+        }
+      ],
+      "likely_cause": "Access token reached end of life and was not refreshed (refresh token missing, rotated, or expired).",
+      "recommended_action": "Re-authorise the account to mint a new token; check why the scheduled refresh did not run.",
+      "corrective_actions": [
+        {
+          "id": 238,
+          "account_id": "LI-002",
+          "action": "maintenance",
+          "actor": "qa-engineer",
+          "at": "2026-11-25T14:30:00.000Z",
+          "detail": "Token expired. Re-authorised the account to mint a new access token; opened follow-up to find out why refresh did not run."
+        }
+      ]
+    },
+    {
+      "id": "ISS-003",
+      "account_id": "TT-002",
+      "platform": "TikTok",
+      "code": "ACCOUNT_RESTRICTED",
+      "title": "Account restricted by platform",
+      "severity": "high",
+      "first_seen": "2026-11-25",
+      "last_seen": "2026-11-27",
+      "resolved_on": null,
+      "status": "open",
+      "days_affected": 3,
+      "evidence": [
+        {
+          "id": 176,
+          "account_id": "TT-002",
+          "checked_at": "2026-11-25T12:00:00.000Z",
+          "check_day": "2026-11-25",
+          "account_status": "restricted",
+          "connection_status": "connected",
+          "token_valid": true,
+          "token_expires_at": "2027-01-22T00:00:00.000Z",
+          "connected_assets": [
+            "tiktok:mock_qa_creator_01"
+          ],
+          "permissions": [
+            "user.info.basic",
+            "video.list",
+            "comment.list"
+          ],
+          "healthy": false,
+          "anomalies": [
+            "ACCOUNT_RESTRICTED"
+          ],
+          "message": "Account flagged by platform integrity checks; API returns account_restricted",
+          "attempts": 1,
+          "latency_ms": 0,
+          "run_mode": "simulated-clock"
+        },
+        {
+          "id": 191,
+          "account_id": "TT-002",
+          "checked_at": "2026-11-26T12:00:00.000Z",
+          "check_day": "2026-11-26",
+          "account_status": "restricted",
+          "connection_status": "connected",
+          "token_valid": true,
+          "token_expires_at": "2027-01-22T00:00:00.000Z",
+          "connected_assets": [
+            "tiktok:mock_qa_creator_01"
+          ],
+          "permissions": [
+            "user.info.basic",
+            "video.list",
+            "comment.list"
+          ],
+          "healthy": false,
+          "anomalies": [
+            "ACCOUNT_RESTRICTED"
+          ],
+          "message": "Account flagged by platform integrity checks; API returns account_restricted",
+          "attempts": 1,
+          "latency_ms": 0,
+          "run_mode": "simulated-clock"
+        },
+        {
+          "id": 206,
+          "account_id": "TT-002",
+          "checked_at": "2026-11-27T12:00:00.000Z",
+          "check_day": "2026-11-27",
+          "account_status": "restricted",
+          "connection_status": "connected",
+          "token_valid": true,
+          "token_expires_at": "2027-01-22T00:00:00.000Z",
+          "connected_assets": [
+            "tiktok:mock_qa_creator_01"
+          ],
+          "permissions": [
+            "user.info.basic",
+            "video.list",
+            "comment.list"
+          ],
+          "healthy": false,
+          "anomalies": [
+            "ACCOUNT_RESTRICTED"
+          ],
+          "message": "Account flagged by platform integrity checks; API returns account_restricted",
+          "attempts": 1,
+          "latency_ms": 0,
+          "run_mode": "simulated-clock"
+        }
+      ],
+      "likely_cause": "Platform integrity checks flagged the account (unusual login pattern, new-account activity limits, or automation signals).",
+      "recommended_action": "Pause tests using this account, complete any platform verification prompts manually, and swap in a standby account if the restriction lasts more than 48h.",
+      "corrective_actions": [
+        {
+          "id": 239,
+          "account_id": "TT-002",
+          "action": "maintenance",
+          "actor": "qa-engineer",
+          "at": "2026-11-25T14:30:00.000Z",
+          "detail": "Account restricted by platform. Paused all tests that use TT-002; will re-check for 48h before replacing."
+        },
+        {
+          "id": 242,
+          "account_id": "TT-002",
+          "action": "maintenance",
+          "actor": "qa-engineer",
+          "at": "2026-11-27T14:30:00.000Z",
+          "detail": "Restriction has now lasted 3 checks (>48h). Proposed retirement via `account retire TT-002` and requested a standby TikTok test account."
+        }
+      ]
+    },
+    {
+      "id": "ISS-004",
+      "account_id": "IG-001",
+      "platform": "Instagram",
+      "code": "DISCONNECTED",
+      "title": "Account disconnected from Spikerz",
+      "severity": "high",
+      "first_seen": "2026-11-26",
+      "last_seen": "2026-11-26",
+      "resolved_on": "2026-11-27",
+      "status": "resolved",
+      "days_affected": 1,
+      "evidence": [
+        {
+          "id": 184,
+          "account_id": "IG-001",
+          "checked_at": "2026-11-26T12:00:00.000Z",
+          "check_day": "2026-11-26",
+          "account_status": "active",
+          "connection_status": "disconnected",
+          "token_valid": false,
+          "token_expires_at": "2027-01-22T00:00:00.000Z",
+          "connected_assets": [
+            "ig:mock_qa_business_01",
+            "page:Mock QA Page A"
+          ],
+          "permissions": [
+            "instagram_basic",
+            "instagram_manage_comments",
+            "instagram_content_publish"
+          ],
+          "healthy": false,
+          "anomalies": [
+            "DISCONNECTED"
+          ],
+          "message": "Session invalidated after a password change on the linked account",
+          "attempts": 1,
+          "latency_ms": 0,
+          "run_mode": "simulated-clock"
+        }
+      ],
+      "likely_cause": "The platform session/grant was invalidated (password change, user revoked the app, or forced logout).",
+      "recommended_action": "Reconnect the account through the Spikerz UI connection flow and re-run the health check.",
+      "corrective_actions": [
+        {
+          "id": 240,
+          "account_id": "IG-001",
+          "action": "connect",
+          "actor": "qa-engineer",
+          "at": "2026-11-26T07:00:00.000Z",
+          "detail": "Reconnected through the connection workflow after the session was invalidated by a password change [evidence: docs/connection-workflow.md]"
+        }
+      ]
+    },
+    {
+      "id": "ISS-005",
+      "account_id": "FB-002",
+      "platform": "Facebook",
+      "code": "ASSET_MISSING",
+      "title": "Expected connected asset is missing",
+      "severity": "medium",
+      "first_seen": "2026-11-27",
+      "last_seen": "2026-11-27",
+      "resolved_on": null,
+      "status": "open",
+      "days_affected": 1,
+      "evidence": [
+        {
+          "id": 197,
+          "account_id": "FB-002",
+          "checked_at": "2026-11-27T12:00:00.000Z",
+          "check_day": "2026-11-27",
+          "account_status": "active",
+          "connection_status": "connected",
+          "token_valid": true,
+          "token_expires_at": "2027-01-22T00:00:00.000Z",
+          "connected_assets": [],
+          "permissions": [
+            "pages_show_list",
+            "pages_read_engagement",
+            "pages_manage_posts",
+            "pages_manage_engagement"
+          ],
+          "healthy": false,
+          "anomalies": [
+            "ASSET_MISSING"
+          ],
+          "message": "Page no longer returned by /me/accounts for the connected user | missing asset(s): page:Mock QA Page A",
+          "attempts": 1,
+          "latency_ms": 0,
+          "run_mode": "simulated-clock"
+        }
+      ],
+      "likely_cause": "The asset (page / handle) was unlinked, unpublished, or the connected user lost access to it.",
+      "recommended_action": "Confirm the asset still exists and the connected user still has access, then re-select it in Spikerz.",
+      "corrective_actions": [
+        {
+          "id": 243,
+          "account_id": "FB-002",
+          "action": "maintenance",
+          "actor": "qa-engineer",
+          "at": "2026-11-27T14:30:00.000Z",
+          "detail": "Mock QA Page A no longer returned for the connected user. Investigating whether the Page was unlinked or the user lost access; issue left open."
+        }
+      ]
+    }
+  ],
+  "latest_alerts": [
+    {
+      "account_id": "TT-002",
+      "platform": "TikTok",
+      "code": "ACCOUNT_RESTRICTED",
+      "severity": "high",
+      "message": "Account restricted by platform - Account flagged by platform integrity checks; API returns account_restricted",
+      "at": "2026-11-27T12:00:00.000Z",
+      "recommended_action": "Pause tests using this account, complete any platform verification prompts manually, and swap in a standby account if the restriction lasts more than 48h.",
+      "is_new": false
+    },
+    {
+      "account_id": "FB-002",
+      "platform": "Facebook",
+      "code": "ASSET_MISSING",
+      "severity": "medium",
+      "message": "Expected connected asset is missing - Page no longer returned by /me/accounts for the connected user | missing asset(s): page:Mock QA Page A",
+      "at": "2026-11-27T12:00:00.000Z",
+      "recommended_action": "Confirm the asset still exists and the connected user still has access, then re-select it in Spikerz.",
+      "is_new": true
+    }
+  ],
+  "audit": [
+    {
+      "id": 190,
+      "account_id": "LI-001",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.195Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 191,
+      "account_id": "LI-002",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.195Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 192,
+      "account_id": "LI-003",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.195Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 193,
+      "account_id": "FB-001",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.195Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 194,
+      "account_id": "FB-002",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.195Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 195,
+      "account_id": "FB-003",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 196,
+      "account_id": "IG-001",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 197,
+      "account_id": "IG-002",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 198,
+      "account_id": "IG-003",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 199,
+      "account_id": "TT-001",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 200,
+      "account_id": "TT-002",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 201,
+      "account_id": "TT-003",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 202,
+      "account_id": "X-001",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 203,
+      "account_id": "X-002",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 204,
+      "account_id": "X-003",
+      "action": "create",
+      "actor": "rebuild",
+      "at": "2026-11-23T09:59:36.196Z",
+      "detail": "imported from inventory file"
+    },
+    {
+      "id": 205,
+      "account_id": "LI-001",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.197Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 206,
+      "account_id": "LI-001",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 207,
+      "account_id": "LI-002",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.197Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 208,
+      "account_id": "LI-002",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 209,
+      "account_id": "LI-003",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.197Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 210,
+      "account_id": "LI-003",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 211,
+      "account_id": "FB-001",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.198Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 212,
+      "account_id": "FB-001",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 213,
+      "account_id": "FB-002",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.198Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 214,
+      "account_id": "FB-002",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 215,
+      "account_id": "FB-003",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.198Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 216,
+      "account_id": "FB-003",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 217,
+      "account_id": "IG-001",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.198Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 218,
+      "account_id": "IG-001",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 219,
+      "account_id": "IG-002",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.198Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 220,
+      "account_id": "IG-002",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 221,
+      "account_id": "IG-003",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.198Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 222,
+      "account_id": "IG-003",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 223,
+      "account_id": "TT-001",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.198Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 224,
+      "account_id": "TT-001",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 225,
+      "account_id": "TT-002",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.199Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 226,
+      "account_id": "TT-002",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 227,
+      "account_id": "TT-003",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.199Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 228,
+      "account_id": "TT-003",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 229,
+      "account_id": "X-001",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.199Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 230,
+      "account_id": "X-001",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 231,
+      "account_id": "X-002",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.199Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 232,
+      "account_id": "X-002",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 233,
+      "account_id": "X-003",
+      "action": "update",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T09:59:36.199Z",
+      "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
+    },
+    {
+      "id": 234,
+      "account_id": "X-003",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-23T07:00:00.000Z",
+      "detail": "Onboarded: connection workflow walked through and recorded against the mock platform layer (mock account - no live Spikerz connection) [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 235,
+      "account_id": "X-003",
+      "action": "maintenance",
+      "actor": "qa-engineer",
+      "at": "2026-11-24T14:30:00.000Z",
+      "detail": "Reviewed RETRY_RECOVERED warning: two HTTP 429 responses, third attempt succeeded. No action; watching for recurrence."
+    },
+    {
+      "id": 236,
+      "account_id": "FB-003",
+      "action": "maintenance",
+      "actor": "qa-engineer",
+      "at": "2026-11-24T14:30:00.000Z",
+      "detail": "Confirmed pages_manage_posts missing from granted scopes. Raised with Page owner to restore the admin role."
+    },
+    {
+      "id": 237,
+      "account_id": "FB-003",
+      "action": "maintenance",
+      "actor": "qa-engineer",
+      "at": "2026-11-25T14:30:00.000Z",
+      "detail": "Admin role restored on Mock QA Page B and account reconnected so pages_manage_posts is re-granted. Expect clear on next check."
+    },
+    {
+      "id": 238,
+      "account_id": "LI-002",
+      "action": "maintenance",
+      "actor": "qa-engineer",
+      "at": "2026-11-25T14:30:00.000Z",
+      "detail": "Token expired. Re-authorised the account to mint a new access token; opened follow-up to find out why refresh did not run."
+    },
+    {
+      "id": 239,
+      "account_id": "TT-002",
+      "action": "maintenance",
+      "actor": "qa-engineer",
+      "at": "2026-11-25T14:30:00.000Z",
+      "detail": "Account restricted by platform. Paused all tests that use TT-002; will re-check for 48h before replacing."
+    },
+    {
+      "id": 240,
+      "account_id": "IG-001",
+      "action": "connect",
+      "actor": "qa-engineer",
+      "at": "2026-11-26T07:00:00.000Z",
+      "detail": "Reconnected through the connection workflow after the session was invalidated by a password change [evidence: docs/connection-workflow.md]"
+    },
+    {
+      "id": 241,
+      "account_id": "LI-003",
+      "action": "maintenance",
+      "actor": "qa-engineer",
+      "at": "2026-11-26T14:30:00.000Z",
+      "detail": "Token expiring in 3 days. Re-authorised proactively to avoid a disconnect."
+    },
+    {
+      "id": 242,
+      "account_id": "TT-002",
+      "action": "maintenance",
+      "actor": "qa-engineer",
+      "at": "2026-11-27T14:30:00.000Z",
+      "detail": "Restriction has now lasted 3 checks (>48h). Proposed retirement via `account retire TT-002` and requested a standby TikTok test account."
+    },
+    {
+      "id": 243,
+      "account_id": "FB-002",
+      "action": "maintenance",
+      "actor": "qa-engineer",
+      "at": "2026-11-27T14:30:00.000Z",
+      "detail": "Mock QA Page A no longer returned for the connected user. Investigating whether the Page was unlinked or the user lost access; issue left open."
+    },
+    {
+      "id": 244,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.328Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 245,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.331Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 246,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.331Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 247,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.331Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 248,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.331Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 249,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.331Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 250,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.331Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 251,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.331Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 252,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.331Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 253,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.332Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 254,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.332Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 255,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.332Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 256,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.332Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 257,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.332Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 258,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-23T09:37:42.334Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 259,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 260,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 261,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "anomalies: PERMISSION_MISSING"
+    },
+    {
+      "id": 262,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 263,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 264,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 265,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 266,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 267,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 268,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 269,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 270,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 271,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 272,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 273,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 274,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 275,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 276,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "anomalies: PERMISSION_MISSING"
+    },
+    {
+      "id": 277,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 278,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 279,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 280,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 281,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "anomalies: TOKEN_EXPIRED"
+    },
+    {
+      "id": 282,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 283,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 284,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "anomalies: ACCOUNT_RESTRICTED"
+    },
+    {
+      "id": 285,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 286,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 287,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 288,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 289,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 290,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 291,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 292,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "anomalies: DISCONNECTED"
+    },
+    {
+      "id": 293,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 294,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 295,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 296,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 297,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 298,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 299,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "anomalies: ACCOUNT_RESTRICTED"
+    },
+    {
+      "id": 300,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 301,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 302,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 303,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 304,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 305,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "anomalies: ASSET_MISSING"
+    },
+    {
+      "id": 306,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 307,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 308,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 309,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 310,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 311,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 312,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 313,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 314,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "anomalies: ACCOUNT_RESTRICTED"
+    },
+    {
+      "id": 315,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 316,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 317,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 318,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 319,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 320,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 321,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "anomalies: PERMISSION_MISSING"
+    },
+    {
+      "id": 322,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 323,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 324,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 325,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 326,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 327,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 328,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 329,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 330,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 331,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 332,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 333,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-24T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 334,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 335,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 336,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "anomalies: PERMISSION_MISSING"
+    },
+    {
+      "id": 337,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 338,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 339,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 340,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 341,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "anomalies: TOKEN_EXPIRED"
+    },
+    {
+      "id": 342,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 343,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 344,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "anomalies: ACCOUNT_RESTRICTED"
+    },
+    {
+      "id": 345,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 346,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 347,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 348,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-25T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 349,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 350,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 351,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 352,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "anomalies: DISCONNECTED"
+    },
+    {
+      "id": 353,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 354,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 355,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 356,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 357,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 358,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 359,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "anomalies: ACCOUNT_RESTRICTED"
+    },
+    {
+      "id": 360,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 361,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 362,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 363,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-26T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 364,
+      "account_id": "FB-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 365,
+      "account_id": "FB-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "anomalies: ASSET_MISSING"
+    },
+    {
+      "id": 366,
+      "account_id": "FB-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 367,
+      "account_id": "IG-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 368,
+      "account_id": "IG-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 369,
+      "account_id": "IG-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 370,
+      "account_id": "LI-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 371,
+      "account_id": "LI-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 372,
+      "account_id": "LI-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 373,
+      "account_id": "TT-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 374,
+      "account_id": "TT-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "anomalies: ACCOUNT_RESTRICTED"
+    },
+    {
+      "id": 375,
+      "account_id": "TT-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 376,
+      "account_id": "X-001",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 377,
+      "account_id": "X-002",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    },
+    {
+      "id": 378,
+      "account_id": "X-003",
+      "action": "health_check",
+      "actor": "healthcheck",
+      "at": "2026-11-27T12:00:00.000Z",
+      "detail": "healthy"
+    }
+  ]
+}

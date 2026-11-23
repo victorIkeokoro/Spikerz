@@ -1,0 +1,48 @@
+name: Daily health check
+
+# Runs the health check once per calendar day and commits the resulting
+# reports back to the repository, so the git history is the evidence trail:
+# one bot commit per monitored day.
+on:
+  schedule:
+    - cron: "0 8 * * *" # 08:00 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-health-check
+  cancel-in-progress: false
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Rebuild database from tracked files
+        run: npm run rebuild
+      - name: Run health check for today
+        run: npm run check
+        env:
+          QA_ACTOR: github-actions
+          # Real platform adapters would read their secrets here, e.g.
+          # QA_CRED_LI_001: ${{ secrets.QA_CRED_LI_001 }}
+          QA_ALERT_WEBHOOK_URL: ${{ secrets.QA_ALERT_WEBHOOK_URL }}
+      - name: Commit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports docs/maintenance-log.md docs/issues data/exports
+          git diff --cached --quiet || git commit -m "chore(health): daily health check $(date -u +%F)"
+          git push
+      - name: Upload health report
+        uses: actions/upload-artifact@v4
+        with:
+          name: health-report-${{ github.run_id }}
+          path: reports/

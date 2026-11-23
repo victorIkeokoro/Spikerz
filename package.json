@@ -1,0 +1,45 @@
+{
+  "name": "spikerz-qa-accounts",
+  "version": "1.0.0",
+  "description": "QA test-account management and daily health-monitoring tool for a controlled set of social-media test accounts.",
+  "type": "module",
+  "bin": {
+    "qa-accounts": "./dist/cli.js"
+  },
+  "scripts": {
+    "cli": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "seed": "tsx src/cli.ts account import --file data/accounts.seed.csv --reset",
+    "rebuild": "tsx src/cli.ts state rebuild",
+    "check": "tsx src/cli.ts check run",
+    "report": "tsx src/cli.ts report all",
+    "generate:5day": "tsx scripts/generate-5day.ts"
+  },
+  "keywords": [
+    "qa",
+    "test-automation",
+    "account-management",
+    "health-check",
+    "monitoring"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.7",
+    "node-cron": "^4.6.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.10.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.12"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

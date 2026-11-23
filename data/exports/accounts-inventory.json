@@ -1,0 +1,306 @@
+[
+  {
+    "account_id": "FB-001",
+    "platform": "Facebook",
+    "account_type": "profile",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "profile:mock-fb-qa-user-01"
+    ],
+    "permissions": [
+      "public_profile",
+      "pages_show_list"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock profile that administers the two mock Pages",
+    "credential_ref_id": "CRED-FB-001"
+  },
+  {
+    "account_id": "FB-002",
+    "platform": "Facebook",
+    "account_type": "page",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "page:Mock QA Page A"
+    ],
+    "permissions": [
+      "pages_show_list",
+      "pages_read_engagement",
+      "pages_manage_posts",
+      "pages_manage_engagement"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock Page - comment moderation flows",
+    "credential_ref_id": "CRED-FB-002"
+  },
+  {
+    "account_id": "FB-003",
+    "platform": "Facebook",
+    "account_type": "page",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "page:Mock QA Page B"
+    ],
+    "permissions": [
+      "pages_show_list",
+      "pages_read_engagement",
+      "pages_manage_posts",
+      "pages_manage_engagement"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock Page - permission-change scenarios",
+    "credential_ref_id": "CRED-FB-003"
+  },
+  {
+    "account_id": "IG-001",
+    "platform": "Instagram",
+    "account_type": "business",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "ig:mock_qa_business_01",
+      "page:Mock QA Page A"
+    ],
+    "permissions": [
+      "instagram_basic",
+      "instagram_manage_comments",
+      "instagram_content_publish"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock business account linked to Mock QA Page A",
+    "credential_ref_id": "CRED-IG-001"
+  },
+  {
+    "account_id": "IG-002",
+    "platform": "Instagram",
+    "account_type": "creator",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "ig:mock_qa_creator_01"
+    ],
+    "permissions": [
+      "instagram_basic",
+      "instagram_manage_comments"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock creator account",
+    "credential_ref_id": "CRED-IG-002"
+  },
+  {
+    "account_id": "IG-003",
+    "platform": "Instagram",
+    "account_type": "business",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "ig:mock_qa_business_02",
+      "page:Mock QA Page B"
+    ],
+    "permissions": [
+      "instagram_basic",
+      "instagram_manage_comments",
+      "instagram_content_publish"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock business account linked to Mock QA Page B",
+    "credential_ref_id": "CRED-IG-003"
+  },
+  {
+    "account_id": "LI-001",
+    "platform": "LinkedIn",
+    "account_type": "profile",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "profile:mock-li-qa-member-01"
+    ],
+    "permissions": [
+      "r_basicprofile",
+      "w_member_social"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock member profile used for personal-post flows",
+    "credential_ref_id": "CRED-LI-001"
+  },
+  {
+    "account_id": "LI-002",
+    "platform": "LinkedIn",
+    "account_type": "page",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "page:Mock QA Company Page A"
+    ],
+    "permissions": [
+      "r_organization_social",
+      "w_organization_social",
+      "rw_organization_admin"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock company page - primary LinkedIn page under test",
+    "credential_ref_id": "CRED-LI-002"
+  },
+  {
+    "account_id": "LI-003",
+    "platform": "LinkedIn",
+    "account_type": "page",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "page:Mock QA Company Page B"
+    ],
+    "permissions": [
+      "r_organization_social",
+      "w_organization_social",
+      "rw_organization_admin"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock company page - secondary / negative-path testing",
+    "credential_ref_id": "CRED-LI-003"
+  },
+  {
+    "account_id": "TT-001",
+    "platform": "TikTok",
+    "account_type": "business",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "tiktok:mock_qa_brand_01"
+    ],
+    "permissions": [
+      "user.info.basic",
+      "video.list",
+      "comment.list"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock business account",
+    "credential_ref_id": "CRED-TT-001"
+  },
+  {
+    "account_id": "TT-002",
+    "platform": "TikTok",
+    "account_type": "creator",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "restricted",
+    "connection_status": "connected",
+    "connected_assets": [
+      "tiktok:mock_qa_creator_01"
+    ],
+    "permissions": [
+      "user.info.basic",
+      "video.list",
+      "comment.list"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock creator account - restriction scenario",
+    "credential_ref_id": "CRED-TT-002"
+  },
+  {
+    "account_id": "TT-003",
+    "platform": "TikTok",
+    "account_type": "business",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "tiktok:mock_qa_brand_02"
+    ],
+    "permissions": [
+      "user.info.basic",
+      "video.list",
+      "comment.list"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock business account",
+    "credential_ref_id": "CRED-TT-003"
+  },
+  {
+    "account_id": "X-001",
+    "platform": "X",
+    "account_type": "profile",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "x:mock_qa_handle_01"
+    ],
+    "permissions": [
+      "tweet.read",
+      "users.read",
+      "offline.access"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock read-only handle",
+    "credential_ref_id": "CRED-X-001"
+  },
+  {
+    "account_id": "X-002",
+    "platform": "X",
+    "account_type": "profile",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "x:mock_qa_handle_02"
+    ],
+    "permissions": [
+      "tweet.read",
+      "tweet.write",
+      "users.read",
+      "offline.access"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock read/write handle",
+    "credential_ref_id": "CRED-X-002"
+  },
+  {
+    "account_id": "X-003",
+    "platform": "X",
+    "account_type": "business",
+    "environment": "qa",
+    "owner": "qa-team",
+    "status": "active",
+    "connection_status": "connected",
+    "connected_assets": [
+      "x:mock_qa_brand_01"
+    ],
+    "permissions": [
+      "tweet.read",
+      "tweet.write",
+      "users.read",
+      "dm.read",
+      "offline.access"
+    ],
+    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "notes": "Mock brand handle - rate-limit and token-expiry scenarios",
+    "credential_ref_id": "CRED-X-003"
+  }
+]
