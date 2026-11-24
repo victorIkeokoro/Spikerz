@@ -2,7 +2,7 @@
 
 Generated from the health-check history and audit trail by `qa-accounts report all`. One section per monitored calendar day. Do not edit by hand - record actions with `qa-accounts maintenance add` and regenerate.
 
-> **Data source.** All accounts are mock accounts served by the mock platform layer. 4 of 5 day(s) below (2026-11-24, 2026-11-25, 2026-11-26, 2026-11-27) are simulated-clock runs: the real health-check engine executed with an injected date, and the actions logged on those days are the scripted responses from `data/maintenance-actions.json`. Days marked "live-clock run" were executed on that calendar day.
+> **Data source.** All accounts are mock accounts served by the mock platform layer. 3 of 5 day(s) below (2026-11-25, 2026-11-26, 2026-11-27) are simulated-clock runs: the real health-check engine executed with an injected date, and the actions logged on those days are the scripted responses from `data/maintenance-actions.json`. Days marked "live-clock run" were executed on that calendar day.
 
 ## Day 0 - setup and onboarding
 
@@ -23,7 +23,7 @@ Generated from the health-check history and audit trail by `qa-accounts report a
 
 ## Day 2 - 2026-11-24
 
-- Check type: simulated-clock run · 15 accounts checked · 13 healthy, 1 warning, 1 failing.
+- Check type: live-clock run · 15 accounts checked · 13 healthy, 1 warning, 1 failing.
 - Changes since previous check:
   - **FB-003** raised `PERMISSION_MISSING` - Page admin role downgraded; pages_manage_posts no longer granted | missing permission(s): pages_manage_posts
   - **X-003** raised `RETRY_RECOVERED` - succeeded on attempt 3 after: HTTP 429 Too Many Requests returned by mock X API on the first two attempts
