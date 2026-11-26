@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T18:32:18.873Z",
+  "generated_at": "2026-11-26T18:14:44.888Z",
   "days": [
     "2026-11-23",
     "2026-11-24",
@@ -538,7 +538,7 @@
       "2026-11-26": {
         "id": 46,
         "account_id": "FB-001",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.869Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -555,8 +555,8 @@
         "anomalies": [],
         "message": "OK",
         "attempts": 1,
-        "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "latency_ms": 1,
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -666,7 +666,7 @@
       "2026-11-26": {
         "id": 47,
         "account_id": "FB-002",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.871Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -686,7 +686,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -800,7 +800,7 @@
       "2026-11-26": {
         "id": 48,
         "account_id": "FB-003",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.871Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -820,7 +820,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -932,7 +932,7 @@
       "2026-11-26": {
         "id": 49,
         "account_id": "IG-001",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.871Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "disconnected",
@@ -954,7 +954,7 @@
         "message": "Session invalidated after a password change on the linked account",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "failing"
       },
       "2026-11-27": {
@@ -1060,7 +1060,7 @@
       "2026-11-26": {
         "id": 50,
         "account_id": "IG-002",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.872Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -1077,8 +1077,8 @@
         "anomalies": [],
         "message": "OK",
         "attempts": 1,
-        "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "latency_ms": 1,
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -1188,7 +1188,7 @@
       "2026-11-26": {
         "id": 51,
         "account_id": "IG-003",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.872Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -1208,7 +1208,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -1314,7 +1314,7 @@
       "2026-11-26": {
         "id": 52,
         "account_id": "LI-001",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.872Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -1332,7 +1332,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -1441,7 +1441,7 @@
       "2026-11-26": {
         "id": 53,
         "account_id": "LI-002",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.872Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -1460,7 +1460,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -1568,7 +1568,7 @@
       "2026-11-26": {
         "id": 54,
         "account_id": "LI-003",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.872Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -1588,8 +1588,8 @@
         ],
         "message": "Access token reaches end of lifetime in 3 days | token expires in 3 day(s)",
         "attempts": 1,
-        "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "latency_ms": 1,
+        "run_mode": "live",
         "health": "warning"
       },
       "2026-11-27": {
@@ -1697,7 +1697,7 @@
       "2026-11-26": {
         "id": 55,
         "account_id": "TT-001",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.873Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -1716,7 +1716,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -1826,7 +1826,7 @@
       "2026-11-26": {
         "id": 56,
         "account_id": "TT-002",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.873Z",
         "check_day": "2026-11-26",
         "account_status": "restricted",
         "connection_status": "connected",
@@ -1847,7 +1847,7 @@
         "message": "Account flagged by platform integrity checks; API returns account_restricted",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "failing"
       },
       "2026-11-27": {
@@ -1957,7 +1957,7 @@
       "2026-11-26": {
         "id": 57,
         "account_id": "TT-003",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.873Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -1976,7 +1976,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -2084,7 +2084,7 @@
       "2026-11-26": {
         "id": 58,
         "account_id": "X-001",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.873Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -2103,7 +2103,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -2214,7 +2214,7 @@
       "2026-11-26": {
         "id": 59,
         "account_id": "X-002",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.874Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -2234,7 +2234,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -2351,7 +2351,7 @@
       "2026-11-26": {
         "id": 60,
         "account_id": "X-003",
-        "checked_at": "2026-11-26T12:00:00.000Z",
+        "checked_at": "2026-11-26T18:14:44.874Z",
         "check_day": "2026-11-26",
         "account_status": "active",
         "connection_status": "connected",
@@ -2372,7 +2372,7 @@
         "message": "OK",
         "attempts": 1,
         "latency_ms": 0,
-        "run_mode": "simulated-clock",
+        "run_mode": "live",
         "health": "healthy"
       },
       "2026-11-27": {
@@ -2587,7 +2587,7 @@
         {
           "id": 56,
           "account_id": "TT-002",
-          "checked_at": "2026-11-26T12:00:00.000Z",
+          "checked_at": "2026-11-26T18:14:44.873Z",
           "check_day": "2026-11-26",
           "account_status": "restricted",
           "connection_status": "connected",
@@ -2608,7 +2608,7 @@
           "message": "Account flagged by platform integrity checks; API returns account_restricted",
           "attempts": 1,
           "latency_ms": 0,
-          "run_mode": "simulated-clock"
+          "run_mode": "live"
         },
         {
           "id": 71,
@@ -2674,7 +2674,7 @@
         {
           "id": 49,
           "account_id": "IG-001",
-          "checked_at": "2026-11-26T12:00:00.000Z",
+          "checked_at": "2026-11-26T18:14:44.871Z",
           "check_day": "2026-11-26",
           "account_status": "active",
           "connection_status": "disconnected",
@@ -2696,7 +2696,7 @@
           "message": "Session invalidated after a password change on the linked account",
           "attempts": 1,
           "latency_ms": 0,
-          "run_mode": "simulated-clock"
+          "run_mode": "live"
         }
       ],
       "likely_cause": "The platform session/grant was invalidated (password change, user revoked the app, or forced logout).",
@@ -2793,7 +2793,7 @@
       "account_id": "LI-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.528Z",
+      "at": "2026-11-26T18:14:44.464Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2801,7 +2801,7 @@
       "account_id": "LI-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.528Z",
+      "at": "2026-11-26T18:14:44.464Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2809,7 +2809,7 @@
       "account_id": "LI-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.528Z",
+      "at": "2026-11-26T18:14:44.464Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2817,7 +2817,7 @@
       "account_id": "FB-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.528Z",
+      "at": "2026-11-26T18:14:44.464Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2825,7 +2825,7 @@
       "account_id": "FB-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.528Z",
+      "at": "2026-11-26T18:14:44.464Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2833,7 +2833,7 @@
       "account_id": "FB-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.528Z",
+      "at": "2026-11-26T18:14:44.464Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2841,7 +2841,7 @@
       "account_id": "IG-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.465Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2849,7 +2849,7 @@
       "account_id": "IG-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.465Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2857,7 +2857,7 @@
       "account_id": "IG-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.465Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2865,7 +2865,7 @@
       "account_id": "TT-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.465Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2873,7 +2873,7 @@
       "account_id": "TT-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.465Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2881,7 +2881,7 @@
       "account_id": "TT-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.465Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2889,7 +2889,7 @@
       "account_id": "X-001",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.465Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2897,7 +2897,7 @@
       "account_id": "X-002",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.466Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2905,7 +2905,7 @@
       "account_id": "X-003",
       "action": "create",
       "actor": "rebuild",
-      "at": "2026-11-25T18:32:18.529Z",
+      "at": "2026-11-26T18:14:44.466Z",
       "detail": "imported from inventory file"
     },
     {
@@ -2913,7 +2913,7 @@
       "account_id": "LI-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.530Z",
+      "at": "2026-11-26T18:14:44.466Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -2929,7 +2929,7 @@
       "account_id": "LI-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.530Z",
+      "at": "2026-11-26T18:14:44.467Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -2945,7 +2945,7 @@
       "account_id": "LI-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.530Z",
+      "at": "2026-11-26T18:14:44.467Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -2961,7 +2961,7 @@
       "account_id": "FB-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.531Z",
+      "at": "2026-11-26T18:14:44.467Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -2977,7 +2977,7 @@
       "account_id": "FB-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.531Z",
+      "at": "2026-11-26T18:14:44.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -2993,7 +2993,7 @@
       "account_id": "FB-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.531Z",
+      "at": "2026-11-26T18:14:44.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3009,7 +3009,7 @@
       "account_id": "IG-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.531Z",
+      "at": "2026-11-26T18:14:44.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3025,7 +3025,7 @@
       "account_id": "IG-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.531Z",
+      "at": "2026-11-26T18:14:44.468Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3041,7 +3041,7 @@
       "account_id": "IG-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.531Z",
+      "at": "2026-11-26T18:14:44.469Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3057,7 +3057,7 @@
       "account_id": "TT-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.532Z",
+      "at": "2026-11-26T18:14:44.469Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3073,7 +3073,7 @@
       "account_id": "TT-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.532Z",
+      "at": "2026-11-26T18:14:44.469Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3089,7 +3089,7 @@
       "account_id": "TT-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.532Z",
+      "at": "2026-11-26T18:14:44.470Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3105,7 +3105,7 @@
       "account_id": "X-001",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.532Z",
+      "at": "2026-11-26T18:14:44.470Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3121,7 +3121,7 @@
       "account_id": "X-002",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.532Z",
+      "at": "2026-11-26T18:14:44.470Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3137,7 +3137,7 @@
       "account_id": "X-003",
       "action": "update",
       "actor": "qa-engineer",
-      "at": "2026-11-25T18:32:18.533Z",
+      "at": "2026-11-26T18:14:44.470Z",
       "detail": "fields changed: connection_status: \"pending\" -> \"connected\""
     },
     {
@@ -3465,7 +3465,7 @@
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.858Z",
       "detail": "healthy"
     },
     {
@@ -3473,7 +3473,7 @@
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.859Z",
       "detail": "healthy"
     },
     {
@@ -3481,7 +3481,7 @@
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.859Z",
       "detail": "anomalies: PERMISSION_MISSING"
     },
     {
@@ -3489,7 +3489,7 @@
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.859Z",
       "detail": "healthy"
     },
     {
@@ -3497,7 +3497,7 @@
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.859Z",
       "detail": "healthy"
     },
     {
@@ -3505,7 +3505,7 @@
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.859Z",
       "detail": "healthy"
     },
     {
@@ -3513,7 +3513,7 @@
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.860Z",
       "detail": "healthy"
     },
     {
@@ -3521,7 +3521,7 @@
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.860Z",
       "detail": "anomalies: TOKEN_EXPIRED"
     },
     {
@@ -3529,7 +3529,7 @@
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.860Z",
       "detail": "healthy"
     },
     {
@@ -3537,7 +3537,7 @@
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.860Z",
       "detail": "healthy"
     },
     {
@@ -3545,7 +3545,7 @@
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.860Z",
       "detail": "anomalies: ACCOUNT_RESTRICTED"
     },
     {
@@ -3553,7 +3553,7 @@
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.860Z",
       "detail": "healthy"
     },
     {
@@ -3561,7 +3561,7 @@
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.861Z",
       "detail": "healthy"
     },
     {
@@ -3569,7 +3569,7 @@
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.861Z",
       "detail": "healthy"
     },
     {
@@ -3577,7 +3577,7 @@
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T12:00:00.000Z",
+      "at": "2026-11-25T18:32:18.861Z",
       "detail": "healthy"
     },
     {
@@ -3825,7 +3825,7 @@
       "account_id": "FB-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.858Z",
+      "at": "2026-11-26T18:14:44.869Z",
       "detail": "healthy"
     },
     {
@@ -3833,7 +3833,7 @@
       "account_id": "FB-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.859Z",
+      "at": "2026-11-26T18:14:44.871Z",
       "detail": "healthy"
     },
     {
@@ -3841,23 +3841,23 @@
       "account_id": "FB-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.859Z",
-      "detail": "anomalies: PERMISSION_MISSING"
+      "at": "2026-11-26T18:14:44.871Z",
+      "detail": "healthy"
     },
     {
       "id": 133,
       "account_id": "IG-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.859Z",
-      "detail": "healthy"
+      "at": "2026-11-26T18:14:44.871Z",
+      "detail": "anomalies: DISCONNECTED"
     },
     {
       "id": 134,
       "account_id": "IG-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.859Z",
+      "at": "2026-11-26T18:14:44.872Z",
       "detail": "healthy"
     },
     {
@@ -3865,7 +3865,7 @@
       "account_id": "IG-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.859Z",
+      "at": "2026-11-26T18:14:44.872Z",
       "detail": "healthy"
     },
     {
@@ -3873,7 +3873,7 @@
       "account_id": "LI-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.860Z",
+      "at": "2026-11-26T18:14:44.872Z",
       "detail": "healthy"
     },
     {
@@ -3881,15 +3881,15 @@
       "account_id": "LI-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.860Z",
-      "detail": "anomalies: TOKEN_EXPIRED"
+      "at": "2026-11-26T18:14:44.872Z",
+      "detail": "healthy"
     },
     {
       "id": 138,
       "account_id": "LI-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.860Z",
+      "at": "2026-11-26T18:14:44.872Z",
       "detail": "healthy"
     },
     {
@@ -3897,7 +3897,7 @@
       "account_id": "TT-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.860Z",
+      "at": "2026-11-26T18:14:44.873Z",
       "detail": "healthy"
     },
     {
@@ -3905,7 +3905,7 @@
       "account_id": "TT-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.860Z",
+      "at": "2026-11-26T18:14:44.873Z",
       "detail": "anomalies: ACCOUNT_RESTRICTED"
     },
     {
@@ -3913,7 +3913,7 @@
       "account_id": "TT-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.860Z",
+      "at": "2026-11-26T18:14:44.873Z",
       "detail": "healthy"
     },
     {
@@ -3921,7 +3921,7 @@
       "account_id": "X-001",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.861Z",
+      "at": "2026-11-26T18:14:44.873Z",
       "detail": "healthy"
     },
     {
@@ -3929,7 +3929,7 @@
       "account_id": "X-002",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.861Z",
+      "at": "2026-11-26T18:14:44.874Z",
       "detail": "healthy"
     },
     {
@@ -3937,7 +3937,7 @@
       "account_id": "X-003",
       "action": "health_check",
       "actor": "healthcheck",
-      "at": "2026-11-25T18:32:18.861Z",
+      "at": "2026-11-26T18:14:44.874Z",
       "detail": "healthy"
     }
   ]

@@ -2,7 +2,7 @@
 
 Generated from the health-check history and audit trail by `qa-accounts report all`. One section per monitored calendar day. Do not edit by hand - record actions with `qa-accounts maintenance add` and regenerate.
 
-> **Data source.** All accounts are mock accounts served by the mock platform layer. 2 of 5 day(s) below (2026-11-26, 2026-11-27) are simulated-clock runs: the real health-check engine executed with an injected date, and the actions logged on those days are the scripted responses from `data/maintenance-actions.json`. Days marked "live-clock run" were executed on that calendar day.
+> **Data source.** All accounts are mock accounts served by the mock platform layer. 1 of 5 day(s) below (2026-11-27) are simulated-clock runs: the real health-check engine executed with an injected date, and the actions logged on those days are the scripted responses from `data/maintenance-actions.json`. Days marked "live-clock run" were executed on that calendar day.
 
 ## Day 0 - setup and onboarding
 
@@ -47,7 +47,7 @@ Generated from the health-check history and audit trail by `qa-accounts report a
 
 ## Day 4 - 2026-11-26
 
-- Check type: simulated-clock run · 15 accounts checked · 12 healthy, 1 warning, 2 failing.
+- Check type: live-clock run · 15 accounts checked · 12 healthy, 1 warning, 2 failing.
 - Changes since previous check:
   - **FB-003** cleared `PERMISSION_MISSING`
   - **IG-001** raised `DISCONNECTED` - Session invalidated after a password change on the linked account
