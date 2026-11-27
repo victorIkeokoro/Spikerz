@@ -14,7 +14,7 @@
       "public_profile",
       "pages_show_list"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.305Z",
     "notes": "Mock profile that administers the two mock Pages",
     "credential_ref_id": "CRED-FB-001"
   },
@@ -35,7 +35,7 @@
       "pages_manage_posts",
       "pages_manage_engagement"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.307Z",
     "notes": "Mock Page - comment moderation flows",
     "credential_ref_id": "CRED-FB-002"
   },
@@ -56,7 +56,7 @@
       "pages_manage_posts",
       "pages_manage_engagement"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.307Z",
     "notes": "Mock Page - permission-change scenarios",
     "credential_ref_id": "CRED-FB-003"
   },
@@ -77,7 +77,7 @@
       "instagram_manage_comments",
       "instagram_content_publish"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.307Z",
     "notes": "Mock business account linked to Mock QA Page A",
     "credential_ref_id": "CRED-IG-001"
   },
@@ -96,7 +96,7 @@
       "instagram_basic",
       "instagram_manage_comments"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.307Z",
     "notes": "Mock creator account",
     "credential_ref_id": "CRED-IG-002"
   },
@@ -117,7 +117,7 @@
       "instagram_manage_comments",
       "instagram_content_publish"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.307Z",
     "notes": "Mock business account linked to Mock QA Page B",
     "credential_ref_id": "CRED-IG-003"
   },
@@ -136,7 +136,7 @@
       "r_basicprofile",
       "w_member_social"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.308Z",
     "notes": "Mock member profile used for personal-post flows",
     "credential_ref_id": "CRED-LI-001"
   },
@@ -156,7 +156,7 @@
       "w_organization_social",
       "rw_organization_admin"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.308Z",
     "notes": "Mock company page - primary LinkedIn page under test",
     "credential_ref_id": "CRED-LI-002"
   },
@@ -176,7 +176,7 @@
       "w_organization_social",
       "rw_organization_admin"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.308Z",
     "notes": "Mock company page - secondary / negative-path testing",
     "credential_ref_id": "CRED-LI-003"
   },
@@ -196,7 +196,7 @@
       "video.list",
       "comment.list"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.308Z",
     "notes": "Mock business account",
     "credential_ref_id": "CRED-TT-001"
   },
@@ -216,7 +216,7 @@
       "video.list",
       "comment.list"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.308Z",
     "notes": "Mock creator account - restriction scenario",
     "credential_ref_id": "CRED-TT-002"
   },
@@ -236,7 +236,7 @@
       "video.list",
       "comment.list"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.308Z",
     "notes": "Mock business account",
     "credential_ref_id": "CRED-TT-003"
   },
@@ -256,7 +256,7 @@
       "users.read",
       "offline.access"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.308Z",
     "notes": "Mock read-only handle",
     "credential_ref_id": "CRED-X-001"
   },
@@ -277,7 +277,7 @@
       "users.read",
       "offline.access"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.309Z",
     "notes": "Mock read/write handle",
     "credential_ref_id": "CRED-X-002"
   },
@@ -299,7 +299,7 @@
       "dm.read",
       "offline.access"
     ],
-    "last_health_check": "2026-11-27T12:00:00.000Z",
+    "last_health_check": "2026-11-27T17:57:21.309Z",
     "notes": "Mock brand handle - rate-limit and token-expiry scenarios",
     "credential_ref_id": "CRED-X-003"
   }

@@ -2,8 +2,6 @@
 
 Generated from the health-check history and audit trail by `qa-accounts report all`. One section per monitored calendar day. Do not edit by hand - record actions with `qa-accounts maintenance add` and regenerate.
 
-> **Data source.** All accounts are mock accounts served by the mock platform layer. 1 of 5 day(s) below (2026-11-27) are simulated-clock runs: the real health-check engine executed with an injected date, and the actions logged on those days are the scripted responses from `data/maintenance-actions.json`. Days marked "live-clock run" were executed on that calendar day.
-
 ## Day 0 - setup and onboarding
 
 - 15 account record(s) in the inventory:
@@ -61,7 +59,7 @@ Generated from the health-check history and audit trail by `qa-accounts report a
 
 ## Day 5 - 2026-11-27
 
-- Check type: simulated-clock run · 15 accounts checked · 13 healthy, 0 warning, 2 failing.
+- Check type: live-clock run · 15 accounts checked · 13 healthy, 0 warning, 2 failing.
 - Changes since previous check:
   - **FB-002** raised `ASSET_MISSING` - Page no longer returned by /me/accounts for the connected user | missing asset(s): page:Mock QA Page A
   - **IG-001** cleared `DISCONNECTED`
